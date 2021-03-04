@@ -1,7 +1,8 @@
 .sidebar-container {
-	width: 21%;
+	width: 24%;
 	padding-left: 2rem;
 	padding-top: 2rem;
+	border-right: 1px solid #dbdbdb;
 }
 
 .balance {
