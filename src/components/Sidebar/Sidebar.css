@@ -1,0 +1,21 @@
+.sidebar-container {
+	width: 21%;
+	padding-left: 2rem;
+	padding-top: 2rem;
+}
+
+.balance {
+	color: #6e6e6e;
+	font-size: 20px;
+}
+
+.balance-details {
+	font-size: 25px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+
+.top-div {
+	text-align: left;
+}

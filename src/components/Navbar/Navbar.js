@@ -46,7 +46,7 @@ function Navbar() {
 				</div>
 
 				<div className="inner-div">
-					<img src={Exchange} alt="" />
+					<img alt="" />
 					<a href="" className="navbar-links">
 						Address book
 					</a>
