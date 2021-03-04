@@ -2,6 +2,7 @@
 	padding-left: 2rem;
 	padding-top: 2rem;
 	font-size: 14px;
+	width: 45%;
 }
 
 .top-section {
@@ -35,7 +36,7 @@
 }
 
 .btn {
-	margin-right: 2rem;
+	/* margin-right: 2rem; */
 	background-color: #4c566c;
 	border: 1px solid #4c566c;
 	width: 148px;
@@ -47,12 +48,13 @@
 
 .large-btn {
 	margin-top: 2rem;
-	width: 90%;
+	width: 100%;
 	background-color: #4c566c;
 	color: white;
 	height: 35px;
 	border-radius: 7px;
 	border: none;
+	margin-top: 10rem;
 }
 
 .load-transaction {

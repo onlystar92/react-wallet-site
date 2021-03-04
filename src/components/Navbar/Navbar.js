@@ -12,7 +12,7 @@ function Navbar() {
 
 	return (
 		<div className="navbar-container">
-			<div>
+			<div className="logo">
 				<img src={Logo} alt="" />
 			</div>
 
@@ -59,8 +59,8 @@ function Navbar() {
 				className="dropdown"
 			>
 				Antony
+				{open && <Dropdown />}
 			</div>
-			{open && <Dropdown />}
 		</div>
 	);
 }
