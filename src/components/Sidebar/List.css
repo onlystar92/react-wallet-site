@@ -1,0 +1,34 @@
+.list-container {
+	margin-left: 1.5rem;
+	margin-top: 0.5rem;
+	border-right: 1px solid #dbdbdb;
+}
+
+.list-head {
+	display: flex;
+	align-items: center;
+}
+
+.list-title {
+	font-weight: bold;
+	margin-left: 0.5rem;
+	color: #ec681c;
+	font-size: 16px;
+}
+
+.caret {
+	margin-left: 1rem;
+}
+
+.sublist {
+	text-align: left;
+	margin-left: 2rem;
+}
+
+.sublist-item {
+	margin-bottom: 1rem;
+}
+
+.item-desc {
+	margin-left: 2rem;
+}

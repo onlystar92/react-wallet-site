@@ -1,0 +1,60 @@
+.dashboard-container {
+	padding-left: 2rem;
+	padding-top: 2rem;
+	font-size: 14px;
+}
+
+.top-section {
+	text-align: left;
+}
+
+.title {
+	margin-left: 1rem;
+}
+
+.edit {
+	margin-left: 1rem;
+}
+.key {
+	margin-left: 1rem;
+}
+
+.graph {
+	display: flex;
+	text-align: left;
+	margin-top: 1rem;
+	border: 0.5px solid #707070;
+	border-radius: 5px;
+	padding-left: 1rem;
+}
+
+.btn-grp {
+	display: flex;
+	margin-top: 2rem;
+	justify-content: space-between;
+}
+
+.btn {
+	margin-right: 2rem;
+	background-color: #4c566c;
+	border: 1px solid #4c566c;
+	width: 148px;
+	height: 46px;
+	color: white;
+	font-size: 14px;
+	border-radius: 7px;
+}
+
+.large-btn {
+	margin-top: 2rem;
+	width: 90%;
+	background-color: #4c566c;
+	color: white;
+	height: 35px;
+	border-radius: 7px;
+	border: none;
+}
+
+.load-transaction {
+	margin-top: 4rem;
+}
