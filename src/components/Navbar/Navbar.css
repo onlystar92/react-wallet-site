@@ -1,12 +1,17 @@
 .navbar-container {
 	display: flex;
 	background-color: #4c566c;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	padding-left: 2rem;
 	padding-right: 2rem;
 	padding-top: 1.2rem;
 	padding-bottom: 1.2rem;
 	align-items: center;
+}
+
+.logo {
+	width: 21.8%;
+	text-align: left;
 }
 
 .navbar-links {
@@ -19,8 +24,9 @@
 .dropdown {
 	color: white;
 	cursor: pointer;
-	width: 12.5%;
+	position: relative;
 	text-align: start;
+	font-weight: bold;
 }
 
 .inner-div {
@@ -30,4 +36,6 @@
 
 .outer-div {
 	display: flex;
+	width: 60%;
+	font-weight: bold;
 }
