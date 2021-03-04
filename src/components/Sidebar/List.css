@@ -6,6 +6,7 @@
 .list-head {
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 
 .list-title {
@@ -33,6 +34,7 @@
 	margin-bottom: 1rem;
 	display: grid;
 	grid-template-columns: 0.2fr 0.4fr 1fr;
+	cursor: pointer;
 }
 
 .item-title {
