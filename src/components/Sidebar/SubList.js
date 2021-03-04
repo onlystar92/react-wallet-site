@@ -18,14 +18,22 @@ function SubList({ items, idx }) {
 			<div className="sublist">
 				{items.map((item, idx) => (
 					<>
-						<div className="sublist-item">
+						<div className="sublist-item"
+							onClick={() =>
+								setisOpen(
+									isOpen.map((item, i) =>
+										i === idx ? !item : item,
+									),
+								)
+							}
+						>
 							{item.icon ? (
 								<img src={item.icon} alt="" />
 							) : (
-								<div
-									style={{ width: "20px", height: "20px" }}
-								></div>
-							)}
+									<div
+										style={{ width: "20px", height: "20px" }}
+									></div>
+								)}
 							<span className="item-title">{item.title}</span>
 							<span className="item-desc">
 								{item.description}
@@ -37,17 +45,10 @@ function SubList({ items, idx }) {
 										style={
 											!isOpen[idx]
 												? {
-														transform:
-															"rotate(180deg)",
-												  }
+													transform:
+														"rotate(180deg)",
+												}
 												: {}
-										}
-										onClick={() =>
-											setisOpen(
-												isOpen.map((item, i) =>
-													i === idx ? !item : item,
-												),
-											)
 										}
 									/>
 								)}

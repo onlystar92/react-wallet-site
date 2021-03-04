@@ -8,7 +8,7 @@ function ListHead({ icon, title, items }) {
 
 	return (
 		<>
-			<div className="list-head">
+			<div className="list-head" onClick={() => setisOpen(!isOpen)}>
 				<img src={icon} alt="" />
 				<p className="list-title">{title}</p>
 				<img
@@ -16,7 +16,6 @@ function ListHead({ icon, title, items }) {
 					src={Caret}
 					alt=""
 					style={!isOpen ? { transform: "rotate(180deg)" } : {}}
-					onClick={() => setisOpen(!isOpen)}
 				/>
 			</div>
 			{isOpen && <SubList items={items} />}
