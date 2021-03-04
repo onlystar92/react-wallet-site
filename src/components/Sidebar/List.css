@@ -21,13 +21,26 @@
 
 .sublist {
 	text-align: left;
+	margin-left: 1rem;
+}
+
+.subsublist {
+	text-align: left;
 	margin-left: 2rem;
 }
 
 .sublist-item {
 	margin-bottom: 1rem;
+	display: grid;
+	grid-template-columns: 0.2fr 0.4fr 1fr;
+}
+
+.item-title {
+	/* margin-left: 1rem; */
+	text-align: left;
 }
 
 .item-desc {
-	margin-left: 2rem;
+	/* margin-left: 2rem; */
+	white-space: pre;
 }
