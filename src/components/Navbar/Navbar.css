@@ -1,0 +1,33 @@
+.navbar-container {
+	display: flex;
+	background-color: #4c566c;
+	justify-content: space-between;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	align-items: center;
+}
+
+.navbar-links {
+	color: white;
+	text-decoration: none;
+	margin-right: 2rem;
+	margin-left: 0.3rem;
+}
+
+.dropdown {
+	color: white;
+	cursor: pointer;
+	width: 12.5%;
+	text-align: start;
+}
+
+.inner-div {
+	display: flex;
+	align-items: center;
+}
+
+.outer-div {
+	display: flex;
+}
