@@ -39,3 +39,16 @@
 	width: 60%;
 	font-weight: bold;
 }
+
+.navbar-nav > li {
+	float: left;
+	position: relative;
+}
+.navbar-light .navbar-nav .active a::after {
+	border-bottom: 5px solid #df642b;
+	bottom: -10px;
+	content: " ";
+	left: 0;
+	position: absolute;
+	right: 0;
+}
