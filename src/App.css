@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 .App {
 	text-align: center;
+	font-family: "Inter", sans-serif;
 }
 
 .App-logo {
@@ -30,6 +33,7 @@
 
 .body {
 	display: flex;
+	margin-bottom: 6.4rem;
 }
 
 @keyframes App-logo-spin {

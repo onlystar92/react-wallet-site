@@ -7,6 +7,8 @@
 
 .top-section {
 	text-align: left;
+	display: flex;
+	align-items: center;
 }
 
 .title {
@@ -24,7 +26,7 @@
 	display: flex;
 	text-align: left;
 	margin-top: 1rem;
-	border: 0.5px solid #707070;
+	border: 0.5px solid #dfe3eb;
 	border-radius: 5px;
 	padding-left: 1rem;
 }
@@ -44,6 +46,7 @@
 	color: white;
 	font-size: 14px;
 	border-radius: 7px;
+	font-family: "Inter", sans-serif;
 }
 
 .large-btn {
@@ -53,8 +56,10 @@
 	color: white;
 	height: 35px;
 	border-radius: 7px;
+	font-size: 14px;
 	border: none;
 	margin-top: 10rem;
+	font-family: "Inter", sans-serif;
 }
 
 .load-transaction {

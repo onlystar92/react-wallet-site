@@ -1,13 +1,16 @@
 import React from "react";
 import "./List.css";
 
-function SubSubList({ items }) {
+function SubSubList({ items, setCounter3 }) {
 	return (
 		<>
 			<div className="subsublist">
 				{items &&
-					items.map((item) => (
-						<div className="sublist-item">
+					items.map((item, idx) => (
+						<div
+							className="sublist-item"
+							onClick={() => setCounter3(idx)}
+						>
 							{item.icon ? (
 								<img src={item.icon} alt="" />
 							) : (

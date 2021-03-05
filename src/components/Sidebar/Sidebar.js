@@ -3,7 +3,7 @@ import List from "./List";
 import "./Sidebar.css";
 import Eye from "../../assets/eye.png";
 
-function Sidebar() {
+function Sidebar({ data, setCounter1, setCounter2, setCounter3 }) {
 	return (
 		<div className="sidebar-container">
 			<div className="top-div">
@@ -14,7 +14,12 @@ function Sidebar() {
 				</div>
 			</div>
 
-			<List />
+			<List
+				data={data}
+				setCounter1={setCounter1}
+				setCounter2={setCounter2}
+				setCounter3={setCounter3}
+			/>
 		</div>
 	);
 }

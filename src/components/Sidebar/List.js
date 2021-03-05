@@ -2,18 +2,23 @@ import React from "react";
 import "./List.css";
 
 import ListHead from "./ListHead";
-import Data from "../../assets/SideBarItems";
 
-function List() {
+function List({ data, setCounter1, setCounter2, setCounter3 }) {
 	return (
 		<div className="list-container">
-			{Data.map((item) => (
-				<ListHead
-					icon={item.icon}
-					title={item.title}
-					items={item.items}
-				/>
-			))}
+			{data.map((item, idx) => {
+				return (
+					<ListHead
+						setCounter1={setCounter1}
+						idx={idx}
+						icon={item.icon}
+						title={item.title}
+						items={item.items}
+						setCounter2={setCounter2}
+						setCounter3={setCounter3}
+					/>
+				);
+			})}
 		</div>
 	);
 }

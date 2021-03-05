@@ -3,37 +3,36 @@ import "./List.css";
 import Caret from "../../assets/caret.png";
 import List from "./SubSubList";
 
-function SubList({ items, idx }) {
+function SubList({ items, setCounter2, setCounter3 }) {
 	const [isOpen, setisOpen] = useState(
 		Array.apply(null, Array(items.length)).map(function (x, i) {
 			return false;
 		}),
 	);
 
-	console.log("isopne", isOpen);
-	console.log("items", items);
-
 	return (
 		<>
 			<div className="sublist">
 				{items.map((item, idx) => (
 					<>
-						<div className="sublist-item"
-							onClick={() =>
+						<div
+							className="sublist-item"
+							onClick={() => {
 								setisOpen(
 									isOpen.map((item, i) =>
 										i === idx ? !item : item,
 									),
-								)
-							}
+								);
+								setCounter2(idx);
+							}}
 						>
 							{item.icon ? (
 								<img src={item.icon} alt="" />
 							) : (
-									<div
-										style={{ width: "20px", height: "20px" }}
-									></div>
-								)}
+								<div
+									style={{ width: "20px", height: "20px" }}
+								></div>
+							)}
 							<span className="item-title">{item.title}</span>
 							<span className="item-desc">
 								{item.description}
@@ -45,11 +44,18 @@ function SubList({ items, idx }) {
 										style={
 											!isOpen[idx]
 												? {
-													transform:
-														"rotate(180deg)",
-												}
+														transform:
+															"rotate(180deg)",
+												  }
 												: {}
 										}
+										// onClick={() =>
+										// 	setisOpen(
+										// 		isOpen.map((item, i) =>
+										// 			i === idx ? !item : item,
+										// 		),
+										// 	)
+										// }
 									/>
 								)}
 							</span>
@@ -59,6 +65,7 @@ function SubList({ items, idx }) {
 								items={item.items}
 								idx={idx}
 								length={items.length}
+								setCounter3={setCounter3}
 							/>
 						)}
 					</>

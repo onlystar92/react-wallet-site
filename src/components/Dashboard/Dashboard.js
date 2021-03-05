@@ -3,12 +3,13 @@ import "./Dashboard.css";
 import Pencil from "../../assets/iconmonstr-pencil-14.png";
 import Load from "../../assets/Image 5.png";
 
-function Dashboard() {
+function Dashboard({ title, description, icon }) {
 	return (
 		<div className="dashboard-container">
 			<div className="top-section">
-				<span>ETH</span>
-				<span className="title">Etherum</span>
+				<img src={icon} alt="" />
+				<span style={{ marginLeft: "0.5rem" }}>{title}</span>
+				<span className="title">{description}</span>
 				<img className="edit" src={Pencil} alt="" />
 				<span className="key">
 					0x7f057dbb1128a4fff9711344c38e820d17b78707
@@ -17,7 +18,7 @@ function Dashboard() {
 			<div className="graph">
 				<div>
 					<div style={{ marginBottom: "3px", marginTop: "7px" }}>
-						ETH Price
+						{title} Price
 					</div>
 					<div style={{ fontWeight: "bold", marginBottom: "3px" }}>
 						$1,355.88
