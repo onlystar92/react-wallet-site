@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Data from "./assets/SideBarItems";
 import { useState } from "react";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
 function App() {
 	const data = Data;
@@ -39,9 +40,10 @@ function App() {
 					description={x.description}
 					icon={x.icon}
 				/>
+				<TransactionHistory />
 			</div>
 
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }
