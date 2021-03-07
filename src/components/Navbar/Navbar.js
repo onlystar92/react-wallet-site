@@ -13,11 +13,8 @@ function Navbar({ setisOpen, isOpen }) {
 
 	return (
 		<>
-			<nav
-				class="navbar navbar-expand-lg navbar-light d-flex pt-4 pb-4"
-				style={{ boxShadow: "0px 5px 12px #F0F2F77C" }}
-			>
-				<div style={{ width: "27%", textAlign: "left" }}>
+			<nav class="navbar navbar-expand-lg navbar-light d-flex pt-4 pb-4 navbar-container">
+				<div className="inner-nav">
 					<img
 						onClick={() => setisOpen(!isOpen)}
 						className="mr-4"
@@ -65,10 +62,7 @@ function Navbar({ setisOpen, isOpen }) {
 					</ul>
 				</div>
 
-				<div
-					className="d-flex align-items-center"
-					style={{ margin: "auto", marginRight: "0" }}
-				>
+				<div className="d-flex align-items-center nav-right">
 					<img src={Profile} alt="" />
 					<div className="text-left mx-3">
 						<p className="m-0 mb-1 font-weight-bold">

@@ -1,3 +1,28 @@
+.listHeadContainer {
+	cursor: pointer;
+	background-color: #526daa;
+}
+
+.listHeadTitleStyle {
+	color: white;
+	font-size: 16px;
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+}
+
+.title {
+	font-size: 12px;
+	color: #4c566c;
+}
+
+.desc {
+	font-size: 12px;
+	color: #a7abb6;
+}
+
 .list-container {
 	margin-left: 1.5rem;
 	margin-top: 0.5rem;
@@ -45,4 +70,17 @@
 .item-desc {
 	/* margin-left: 2rem; */
 	white-space: pre;
+}
+
+.sub-active {
+	outline: none;
+	border: none;
+	width: 100%;
+	background-color: white;
+}
+
+.sub-active:focus {
+	background-color: #f0f2f8;
+	outline: none;
+	border-left: 5px solid #526daa;
 }

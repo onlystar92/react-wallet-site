@@ -1,18 +1,57 @@
+.heading {
+	font-size: 35px;
+	color: #1d2943;
+}
+
+.percentage {
+	color: #56e19f;
+}
+
+.code {
+	color: #a1a1a3;
+}
+
 @keyframes dashboard-open {
 	from {
-		transform: translateX(-200px);
+		transform: translateX(0px);
+		width: 100%;
 	}
 	to {
 		transform: translateX(0px);
+		width: 60%;
 	}
 }
 
 @keyframes dashboard-close {
 	from {
 		transform: translateX(0px);
+		width: 60%;
 	}
 	to {
-		transform: translateX(-200px);
+		transform: translateX(0);
+		width: 100%;
+	}
+}
+
+@keyframes dashboard-open2 {
+	from {
+		transform: translateX(0px);
+		width: 72%;
+	}
+	to {
+		transform: translateX(0px);
+		width: 60%;
+	}
+}
+
+@keyframes dashboard-close2 {
+	from {
+		transform: translateX(0px);
+		width: 60%;
+	}
+	to {
+		transform: translateX(0);
+		width: 72%;
 	}
 }
 
@@ -31,6 +70,26 @@
 	padding-top: 2rem;
 	font-size: 14px;
 	animation-name: dashboard-close;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+}
+
+.dashboard-open2 {
+	padding-left: 2rem;
+	padding-top: 2rem;
+	font-size: 14px;
+	animation-name: dashboard-open2;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+}
+
+.dashboard-close2 {
+	padding-left: 2rem;
+	padding-top: 2rem;
+	font-size: 14px;
+	animation-name: dashboard-close2;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 	overflow: hidden;

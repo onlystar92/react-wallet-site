@@ -1,21 +1,11 @@
 import React from "react";
 import TransactionHistoryItem from "./TransactionHistoryItem";
-
-const transactionHistoryContainer = {
-	width: "24%",
-	position: "absolute",
-	right: "0",
-	borderRadius: "12px",
-};
-const transactionHistoryHead = { fontSize: "25px", color: "#455A64" };
+import "./TransactionHistory.css";
 
 function TransactionHistory() {
 	return (
-		<div
-			className="mt-4 rounded-3 bg-white ml-4 mr-4 text-left pt-4 pl-4 pr-4"
-			style={transactionHistoryContainer}
-		>
-			<p className="font-weight-bold" style={transactionHistoryHead}>
+		<div className="mt-4 rounded-3 bg-white ml-4 mr-4 text-left pt-4 pl-4 pr-4 transactionHistoryContainer">
+			<p className="font-weight-bold transactionHistoryHead">
 				Transaction History
 			</p>
 			<TransactionHistoryItem status="COMPLETED" />

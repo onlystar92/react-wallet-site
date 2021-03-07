@@ -1,0 +1,26 @@
+.transactionHistoryContainer {
+	width: 24%;
+	position: absolute;
+	right: 0;
+	border-radius: 12px;
+}
+
+.transactionHistoryHead {
+	font-size: 25px;
+	color: #455a64;
+}
+
+.titleStyle {
+	color: #526daa;
+	font-size: 18px;
+}
+
+.subTitleStyle {
+	color: #ff3131;
+	font-size: 20px;
+}
+
+.descriptionStyle {
+	color: #1d2943;
+	font-size: 16px;
+}

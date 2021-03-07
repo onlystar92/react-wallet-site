@@ -1,27 +1,54 @@
 .sidebar-container {
-	width: 21%;
-	padding-left: 2rem;
-	padding-top: 2rem;
-	border-right: 1px solid #dbdbdb;
-	/* min-height: 85vh; */
-	height: 100%;
+	z-index: 3;
+}
+
+.balanceStyle {
+	color: #8e94a1;
+	font-size: 16px;
+}
+
+.balanceAmount {
+	font-size: 16px;
+}
+
+.innerContainer {
+	width: 90%;
+	margin: auto;
+	z-index: 3;
+	background-color: white;
+	border-radius: 12px;
+}
+
+.addWallet {
+	color: #526daa;
+	font-size: 14px;
+}
+
+.addSquare {
+	color: #526daa;
+	transform: scale(1.7);
 }
 
 @keyframes close-sidebar {
 	from {
 		transform: translateX(0);
+		width: 300px;
 	}
 	to {
 		transform: translateX(-500px);
+		width: 0px;
+		height: 0;
 	}
 }
 
 @keyframes open-sidebar {
 	from {
 		transform: translateX(-500px);
+		width: 0px;
 	}
 	to {
 		transform: translateX(0);
+		width: 300px;
 	}
 }
 

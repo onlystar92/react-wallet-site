@@ -6,11 +6,11 @@ function IndividualValues({ setsubOpen, subOpen }) {
 		<div
 			className={subOpen ? "container-open" : "container-close"}
 			style={{
-				marginTop: "1rem",
+				marginTop: "4rem",
 				width: "144px",
 				marginLeft: "1rem",
-				backgroundColor: "white",
 				borderRadius: "12px",
+				zIndex: "2",
 			}}
 		>
 			<div className="text-center">
@@ -27,24 +27,14 @@ function IndividualValues({ setsubOpen, subOpen }) {
 
 			<div className="text-left mt-4">
 				<div className="d-flex align-items-center">
-					<div
-						style={{
-							display: "inline-block",
-							height: "45px",
-							width: "5px",
-							backgroundColor: "#526DAA",
-						}}
-					></div>
-					<span
-						className=" font-weight-bold ml-2"
-						style={{ fontSize: "12px", color: "#4C566C" }}
-					>
+					<div className="wrapper"></div>
+					<span className=" font-weight-bold ml-2 text">
 						View your individual wallet balances here
 					</span>
 				</div>
 
-				<div style={{ marginTop: "3.9rem", fontSize: "12px" }}>
-					<div className="py-2" style={{ height: "40px" }}>
+				<div className="bottomDiv">
+					<div className="py-2 item-height">
 						<span
 							className="font-weight-bold"
 							style={{ color: "#4C566C" }}
@@ -52,7 +42,7 @@ function IndividualValues({ setsubOpen, subOpen }) {
 							1.4224231
 						</span>
 						<span
-							className="font-weight-bold ml-2"
+							className="font-weight-bold ml-2 grey"
 							style={{ color: "#A7ABB6" }}
 						>
 							$62,098.31
@@ -60,19 +50,28 @@ function IndividualValues({ setsubOpen, subOpen }) {
 					</div>
 					<div className="py-2" style={{ height: "40px" }}>
 						<span style={{ color: "#4C566C" }}>2000000</span>
-						<span className="ml-2" style={{ color: "#A7ABB6" }}>
+						<span
+							className="ml-2 grey"
+							style={{ color: "#A7ABB6" }}
+						>
 							$4000.00
 						</span>
 					</div>
 					<div className="py-2" style={{ height: "40px" }}>
 						<span style={{ color: "#4C566C" }}>2300</span>
-						<span className="ml-2" style={{ color: "#A7ABB6" }}>
+						<span
+							className="ml-2 grey"
+							style={{ color: "#A7ABB6" }}
+						>
 							$1400.00
 						</span>
 					</div>
 					<div className="py-2" style={{ height: "40px" }}>
 						<span style={{ color: "#4C566C" }}>461.90</span>
-						<span className="ml-2" style={{ color: "#A7ABB6" }}>
+						<span
+							className="ml-2 grey"
+							style={{ color: "#A7ABB6" }}
+						>
 							$456.90
 						</span>
 					</div>

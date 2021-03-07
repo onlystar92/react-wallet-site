@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import SubList from "./SubList";
+import "./List.css";
 
 function ListHead({ icon, title, items, idx }) {
 	const [isOpen, setisOpen] = useState(true);
-
-	const listHeadContainer = { cursor: "pointer", backgroundColor: "#526DAA" };
-	const titleStyle = { color: "white", fontSize: "16px" };
 	const caretStyle = {
 		transform: isOpen ? "rotate(180deg)" : "",
 		color: "white",
@@ -14,15 +12,14 @@ function ListHead({ icon, title, items, idx }) {
 	return (
 		<>
 			<div
-				className="d-flex align-items-center justify-content-between pl-4 pt-3 pr-4 pb-3"
-				style={listHeadContainer}
+				className="d-flex align-items-center justify-content-between pl-4 pt-3 pr-4 pb-3 listHeadContainer"
 				onClick={() => {
 					setisOpen(!isOpen);
 				}}
 			>
 				<div>
 					<img src={icon} alt="" />
-					<span className="font-weight-bold ml-3" style={titleStyle}>
+					<span className="font-weight-bold ml-3 listHeadTitleStyle">
 						{title}
 					</span>
 				</div>

@@ -1,4 +1,5 @@
 import React from "react";
+import "./TransactionHistory.css";
 
 function TransactionHistoryItem({ status }) {
 	const statusStyle = {
@@ -11,9 +12,9 @@ function TransactionHistoryItem({ status }) {
 				? "#505CBA14"
 				: "",
 		width: "134px",
-		height: "47px",
+		height: "39px",
 		borderRadius: "11px",
-		fontSize: "16px",
+		fontSize: "14px",
 		color:
 			status === "COMPLETED"
 				? "#A8C33B"
@@ -24,22 +25,16 @@ function TransactionHistoryItem({ status }) {
 				: "",
 	};
 
-	const titleStyle = { color: "#526DAA", fontSize: "20px" };
-	const subTitleStyle = { color: "#FF3131", fontSize: "20px" };
-	const descriptionStyle = { color: "#1D2943", fontSize: "16px" };
-
 	return (
-		<div className="d-flex justify-content-between align-items-center mb-4">
+		<div className="d-flex justify-content-between  mb-4">
 			<div>
-				<div className="font-weight-bold mb-1" style={titleStyle}>
+				<div className="font-weight-bold mb-1 titleStyle">
 					0x7…b78707
 				</div>
-				<div className="font-weight-bold mb-1" style={subTitleStyle}>
+				<div className="font-weight-bold mb-1 subTitleStyle">
 					-0.24 ETH
 				</div>
-				<div className="mb-1" style={descriptionStyle}>
-					3 Days Ago
-				</div>
+				<div className="mb-1 descriptionStyle">3 Days Ago</div>
 			</div>
 			<div
 				className="d-flex justify-content-center align-items-center font-weight-bold"

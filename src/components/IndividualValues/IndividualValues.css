@@ -1,3 +1,36 @@
+.individual-container {
+	margin-top: 4rem;
+	width: 144px;
+	margin-left: 1rem;
+	border-radius: 12px;
+	z-index: 5;
+}
+
+.wrapper {
+	display: inline-block;
+	height: 45px;
+	width: 5px;
+	background-color: #526daa;
+}
+
+.text {
+	font-size: 12px;
+	color: #4c566c;
+}
+
+.bottomDiv {
+	margin-top: 3.9rem;
+	font-size: 12px;
+}
+
+.item-height {
+	height: 40px;
+}
+
+.grey-color {
+	color: "#A7ABB6";
+}
+
 .container-open {
 	/* position: absolute; */
 	animation-name: container-open;
@@ -16,20 +49,28 @@
 
 @keyframes container-open {
 	from {
-		/* opacity: 0; */
+		opacity: 0;
 		transform: translateX(-200px);
+		width: 0px;
 	}
 	to {
+		opacity: 1;
+
 		transform: translateX(0px);
+		width: 144px;
 	}
 }
 
 @keyframes container-close {
 	from {
-		/* opacity: 1; */
+		opacity: 1;
 		transform: translateX(0px);
+		width: 144px;
 	}
 	to {
+		opacity: 0;
+
 		transform: translateX(-200px);
+		width: 0px;
 	}
 }

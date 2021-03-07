@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import List from "./SubSubList";
 import { setDesc, setTitle, setIcon } from "../../slices/slice";
 import { useDispatch } from "react-redux";
+import "./List.css";
 
 function SubList({ items }) {
 	const [isOpen, setisOpen] = useState(
@@ -12,24 +13,16 @@ function SubList({ items }) {
 
 	const dispatch = useDispatch();
 
-	const icon = { width: "20px", height: "20px" };
-	const title = { fontSize: "12px", color: "#4C566C" };
-	const desc = { fontSize: "12px", color: "#A7ABB6" };
-
 	return (
 		<>
 			{items.map((item, idx) => (
 				<>
-					<div
-						className="d-flex justify-content-between align-items-center pl-4 pt-2 pr-4 pb-2"
+					<button
+						className="d-flex justify-content-between align-items-center pl-4 pt-2 pr-4 pb-2 sub-active"
 						style={{ cursor: "pointer" }}
 						onClick={() => {
 							dispatch(setTitle(item.title));
 							dispatch(setDesc(item.description));
-							dispatch(setIcon(item.icon));
-							// localStorage.setItem("icon", item.icon);
-							// localStorage.setItem("title", item.title);
-							// localStorage.setItem("desc", item.description);
 							setisOpen(
 								isOpen.map((item, i) =>
 									i === idx ? !item : item,
@@ -39,14 +32,12 @@ function SubList({ items }) {
 					>
 						<div>
 							{item.icon ? (
-								<img style={icon} src={item.icon} alt="" />
+								<img className="icon" src={item.icon} alt="" />
 							) : (
-								<div style={icon}></div>
+								<div className="icon"></div>
 							)}
-							<span className="ml-3" style={title}>
-								{item.title}
-							</span>
-							<span className="ml-3" style={desc}>
+							<span className="ml-3 title">{item.title}</span>
+							<span className="ml-3 desc">
 								{item.description}
 							</span>
 						</div>
@@ -66,7 +57,7 @@ function SubList({ items }) {
 								class="fas fa-caret-down"
 							></i>
 						)}
-					</div>
+					</button>
 
 					{isOpen[idx] && <List items={item.items} />}
 				</>
