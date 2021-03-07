@@ -5,6 +5,7 @@ const transactionHistoryContainer = {
 	width: "24%",
 	position: "absolute",
 	right: "0",
+	borderRadius: "12px",
 };
 const transactionHistoryHead = { fontSize: "25px", color: "#455A64" };
 

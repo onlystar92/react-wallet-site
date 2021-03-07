@@ -17,7 +17,7 @@ function Navbar({ setisOpen, isOpen }) {
 				class="navbar navbar-expand-lg navbar-light d-flex pt-4 pb-4"
 				style={{ boxShadow: "0px 5px 12px #F0F2F77C" }}
 			>
-				<div style={{ width: "28%", textAlign: "left" }}>
+				<div style={{ width: "27%", textAlign: "left" }}>
 					<img
 						onClick={() => setisOpen(!isOpen)}
 						className="mr-4"

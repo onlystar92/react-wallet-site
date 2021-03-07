@@ -11,6 +11,7 @@ const innerContainer = {
 	margin: "auto",
 	zIndex: "1",
 	backgroundColor: "white",
+	borderRadius: "12px",
 };
 const addSquare = {
 	color: "#526DAA",

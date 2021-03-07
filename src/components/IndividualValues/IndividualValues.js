@@ -5,7 +5,13 @@ function IndividualValues({ setsubOpen, subOpen }) {
 	return (
 		<div
 			className={subOpen ? "container-open" : "container-close"}
-			style={{ marginTop: "4rem", width: "144px", marginLeft: "1rem" }}
+			style={{
+				marginTop: "1rem",
+				width: "144px",
+				marginLeft: "1rem",
+				backgroundColor: "white",
+				borderRadius: "12px",
+			}}
 		>
 			<div className="text-center">
 				<i
@@ -37,7 +43,7 @@ function IndividualValues({ setsubOpen, subOpen }) {
 					</span>
 				</div>
 
-				<div style={{ marginTop: "0.7rem", fontSize: "12px" }}>
+				<div style={{ marginTop: "3.9rem", fontSize: "12px" }}>
 					<div className="py-2" style={{ height: "40px" }}>
 						<span
 							className="font-weight-bold"

@@ -25,7 +25,7 @@ function SubList({ items }) {
 						style={{ cursor: "pointer" }}
 						onClick={() => {
 							dispatch(setTitle(item.title));
-							dispatch(setDesc(item.desc));
+							dispatch(setDesc(item.description));
 							dispatch(setIcon(item.icon));
 							// localStorage.setItem("icon", item.icon);
 							// localStorage.setItem("title", item.title);
