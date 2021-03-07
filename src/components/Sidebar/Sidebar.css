@@ -7,6 +7,36 @@
 	height: 100%;
 }
 
+@keyframes close-sidebar {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-350px);
+	}
+}
+
+@keyframes open-sidebar {
+	from {
+		transform: translateX(-350px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.sidebar-open {
+	animation-name: open-sidebar;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.sidebar-close {
+	animation-name: close-sidebar;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
 .balance {
 	color: #6e6e6e;
 	font-size: 20px;

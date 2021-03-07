@@ -1,0 +1,31 @@
+.container-open {
+	animation-name: open;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.container-close {
+	animation-name: close;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes open {
+	from {
+		transform: translateX(-100px);
+	}
+	to {
+		transform: translateX(0px);
+		/* opacity: 1; */
+	}
+}
+
+@keyframes close {
+	from {
+		transform: translateX(0px);
+	}
+	to {
+		transform: translateX(-100px);
+		/* opacity: 0; */
+	}
+}

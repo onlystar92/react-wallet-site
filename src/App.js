@@ -9,6 +9,8 @@ import TransactionHistory from "./components/TransactionHistory/TransactionHisto
 
 function App() {
 	const data = Data;
+	const [isOpen, setisOpen] = useState(true);
+	const [subOpen, setsubOpen] = useState(false);
 	const [counter1, setCounter1] = useState(0);
 	const [counter2, setCounter2] = useState(0);
 	const [counter3, setCounter3] = useState(0);
@@ -25,21 +27,35 @@ function App() {
 
 	console.log("x", x.title, x.description);
 
+	console.log("subopen", subOpen);
+
 	return (
 		<div className="App">
-			<Navbar />
+			<Navbar setisOpen={setisOpen} isOpen={isOpen} />
 			<div className="body">
 				<Sidebar
 					data={data}
+					isOpen={isOpen}
+					subOpen={subOpen}
+					setsubOpen={setsubOpen}
 					setCounter1={setCounter1}
 					setCounter2={setCounter2}
 					setCounter3={setCounter3}
 				/>
-				<Dashboard
-					title={x.title}
-					description={x.description}
-					icon={x.icon}
-				/>
+				<div
+					className={`d-flex justify-content-between ${
+						!isOpen ? "body-right-close" : "body-right-open"
+					}`}
+				>
+					<Dashboard
+						title={x.title}
+						description={x.description}
+						icon={x.icon}
+						subOpen={subOpen}
+						isOpen={isOpen}
+						setsubOpen={setsubOpen}
+					/>
+				</div>
 				<TransactionHistory />
 			</div>
 

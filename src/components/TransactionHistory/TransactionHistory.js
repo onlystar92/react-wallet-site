@@ -1,7 +1,11 @@
 import React from "react";
 import TransactionHistoryItem from "./TransactionHistoryItem";
 
-const transactionHistoryContainer = { width: "24%" };
+const transactionHistoryContainer = {
+	width: "24%",
+	position: "absolute",
+	right: "0",
+};
 const transactionHistoryHead = { fontSize: "25px", color: "#455A64" };
 
 function TransactionHistory() {

@@ -31,8 +31,44 @@
 	color: #61dafb;
 }
 
+@keyframes close {
+	from {
+		transform: translateX(700px);
+	}
+	to {
+		transform: translateX(400px);
+		/* width: 100%; */
+	}
+}
+
+@keyframes open {
+	from {
+		transform: translateX(400px);
+	}
+	to {
+		transform: translateX(700px);
+		/* width: 80%; */
+	}
+}
+
+.body-right-open {
+	animation-name: open;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	/* background-color: red; */
+}
+
+.body-right-close {
+	animation-name: close;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	/* background-color: red; */
+}
+
 .body {
 	display: flex;
+	position: relative;
+	background-color: #fafbfe;
 }
 
 @keyframes App-logo-spin {

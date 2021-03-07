@@ -3,8 +3,9 @@ import Logo from "../../assets/2local logo wht.svg";
 import Toggler from "../../assets/Group 7942.svg";
 import Profile from "../../assets/Rectangle 337.png";
 import Caret from "../../assets/caret.svg";
+import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ setisOpen, isOpen }) {
 	const [open, setopen] = useState(false);
 	const path = typeof window !== undefined && window.location.pathname;
 
@@ -17,7 +18,13 @@ function Navbar() {
 				style={{ boxShadow: "0px 5px 12px #F0F2F77C" }}
 			>
 				<div>
-					<img className="mr-4" src={Toggler} alt="" />
+					<img
+						onClick={() => setisOpen(!isOpen)}
+						className="mr-4"
+						style={{ cursor: "pointer" }}
+						src={Toggler}
+						alt=""
+					/>
 
 					<a class="navbar-brand" href="#">
 						<img src={Logo} alt="" />
