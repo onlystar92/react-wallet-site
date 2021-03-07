@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import SubList from "./SubList";
 
-function ListHead({
-	icon,
-	title,
-	items,
-	setCounter1,
-	setCounter2,
-	setCounter3,
-	idx,
-}) {
+function ListHead({ icon, title, items, idx }) {
 	const [isOpen, setisOpen] = useState(true);
 
 	const listHeadContainer = { cursor: "pointer", backgroundColor: "#526DAA" };
@@ -26,7 +18,6 @@ function ListHead({
 				style={listHeadContainer}
 				onClick={() => {
 					setisOpen(!isOpen);
-					setCounter1(idx);
 				}}
 			>
 				<div>
@@ -39,13 +30,7 @@ function ListHead({
 				<i style={caretStyle} class="fas fa-caret-down"></i>
 			</div>
 
-			{isOpen && (
-				<SubList
-					items={items}
-					setCounter2={setCounter2}
-					setCounter3={setCounter3}
-				/>
-			)}
+			{isOpen && <SubList items={items} />}
 		</>
 	);
 }

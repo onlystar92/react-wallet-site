@@ -5,19 +5,22 @@ function IndividualValues({ setsubOpen, subOpen }) {
 	return (
 		<div
 			className={subOpen ? "container-open" : "container-close"}
-			style={{ marginTop: "4rem", width: "144px" }}
+			style={{ marginTop: "4rem", width: "144px", marginLeft: "1rem" }}
 		>
-			<i
-				onClick={() => setsubOpen(false)}
-				style={{
-					color: "#FA1818",
-					transform: "scale(2)",
-					cursor: "pointer",
-				}}
-				class="fas fa-times"
-			></i>
+			<div className="text-center">
+				<i
+					onClick={() => setsubOpen(false)}
+					style={{
+						color: "#FA1818",
+						transform: "scale(2)",
+						cursor: "pointer",
+					}}
+					class="fas fa-times"
+				></i>
+			</div>
+
 			<div className="text-left mt-4">
-				<div className="d-flex align-items-center mb-5">
+				<div className="d-flex align-items-center">
 					<div
 						style={{
 							display: "inline-block",
@@ -34,7 +37,7 @@ function IndividualValues({ setsubOpen, subOpen }) {
 					</span>
 				</div>
 
-				<div style={{ marginTop: "4rem", fontSize: "12px" }}>
+				<div style={{ marginTop: "0.7rem", fontSize: "12px" }}>
 					<div className="py-2" style={{ height: "40px" }}>
 						<span
 							className="font-weight-bold"

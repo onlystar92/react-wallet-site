@@ -11,21 +11,6 @@ function App() {
 	const data = Data;
 	const [isOpen, setisOpen] = useState(true);
 	const [subOpen, setsubOpen] = useState(false);
-	const [counter1, setCounter1] = useState(0);
-	const [counter2, setCounter2] = useState(0);
-	const [counter3, setCounter3] = useState(0);
-
-	var x = data[counter1].items[counter2].items
-		? data[counter1].items[counter2].items[counter3]
-		: data[counter1].items
-		? data[counter1].items[counter2]
-		: "";
-
-	console.log("counter1", counter1);
-	console.log("counter2", counter2);
-	console.log("counter3", counter3);
-
-	console.log("x", x.title, x.description);
 
 	console.log("subopen", subOpen);
 
@@ -44,15 +29,9 @@ function App() {
 					isOpen={isOpen}
 					subOpen={subOpen}
 					setsubOpen={setsubOpen}
-					setCounter1={setCounter1}
-					setCounter2={setCounter2}
-					setCounter3={setCounter3}
 				/>
 
 				<Dashboard
-					title={x.title}
-					description={x.description}
-					icon={x.icon}
 					subOpen={subOpen}
 					isOpen={isOpen}
 					setsubOpen={setsubOpen}

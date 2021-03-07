@@ -18,20 +18,12 @@ const addSquare = {
 };
 const addWallet = { color: "#526DAA", fontSize: "14px" };
 
-function Sidebar({
-	data,
-	setCounter1,
-	setCounter2,
-	setCounter3,
-	isOpen,
-	setsubOpen,
-	subOpen,
-}) {
+function Sidebar({ data, isOpen, setsubOpen, subOpen }) {
 	console.log("isopen", isOpen);
 	return (
 		<>
 			<div
-				className={`d-flex mt-4  ml-1 text-left pt-4 ${
+				className={`d-flex mt-4  ml-3 text-left pt-4 ${
 					!isOpen ? "sidebar-close" : "sidebar-open"
 				}`}
 				style={sideBarContainer}
@@ -71,12 +63,7 @@ function Sidebar({
 						></i>
 					</div>
 
-					<List
-						data={data}
-						setCounter1={setCounter1}
-						setCounter2={setCounter2}
-						setCounter3={setCounter3}
-					/>
+					<List data={data} />
 				</div>
 				<IndividualValues subOpen={subOpen} setsubOpen={setsubOpen} />
 			</div>

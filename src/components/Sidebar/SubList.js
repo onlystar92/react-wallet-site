@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import List from "./SubSubList";
+import { setDesc, setTitle, setIcon } from "../../slices/slice";
+import { useDispatch } from "react-redux";
 
-function SubList({ items, setCounter2, setCounter3 }) {
+function SubList({ items }) {
 	const [isOpen, setisOpen] = useState(
 		Array.apply(null, Array(items.length)).map(function (x, i) {
 			return true;
 		}),
 	);
+
+	const dispatch = useDispatch();
 
 	const icon = { width: "20px", height: "20px" };
 	const title = { fontSize: "12px", color: "#4C566C" };
@@ -20,12 +24,17 @@ function SubList({ items, setCounter2, setCounter3 }) {
 						className="d-flex justify-content-between align-items-center pl-4 pt-2 pr-4 pb-2"
 						style={{ cursor: "pointer" }}
 						onClick={() => {
+							dispatch(setTitle(item.title));
+							dispatch(setDesc(item.desc));
+							dispatch(setIcon(item.icon));
+							// localStorage.setItem("icon", item.icon);
+							// localStorage.setItem("title", item.title);
+							// localStorage.setItem("desc", item.description);
 							setisOpen(
 								isOpen.map((item, i) =>
 									i === idx ? !item : item,
 								),
 							);
-							setCounter2(idx);
 						}}
 					>
 						<div>
@@ -59,14 +68,7 @@ function SubList({ items, setCounter2, setCounter3 }) {
 						)}
 					</div>
 
-					{isOpen[idx] && (
-						<List
-							items={item.items}
-							idx={idx}
-							length={items.length}
-							setCounter3={setCounter3}
-						/>
-					)}
+					{isOpen[idx] && <List items={item.items} />}
 				</>
 			))}
 		</>
