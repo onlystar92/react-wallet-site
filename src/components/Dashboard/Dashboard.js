@@ -3,6 +3,7 @@ import "./Dashboard.css";
 import { useSelector } from "react-redux";
 import { selectDesc, selectTitle, selectIcon } from "../../slices/slice";
 import Graph from "../Graph/Graph";
+import DashboardTab from "./DashboardTab";
 
 function Dashboard({ isOpen, subOpen }) {
 	var title = useSelector(selectTitle);
@@ -37,6 +38,8 @@ function Dashboard({ isOpen, subOpen }) {
 				<div className="code">02d5d94756cdc38e0fc712e629b9fb</div>
 			</div>
 			<Graph isOpen={isOpen} />
+			<DashboardTab />
+			<hr className="mt-4" />
 		</div>
 	);
 }

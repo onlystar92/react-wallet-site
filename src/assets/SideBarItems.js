@@ -20,47 +20,101 @@ const data = [
 		title: "Exchange",
 		items: [
 			{
+				id: "1",
 				icon: BNB,
 				title: "BNB",
 				description: "Binance Coin",
 				items: [
-					{ icon: L2L, title: "L2L", description: "2local" },
-					{ icon: BUSD, title: "BUSD", description: "Binance USD" },
-					{ icon: ETH, title: "BETH", description: "Binance ETH" },
+					{
+						id: "1.1",
+						icon: L2L,
+						title: "L2L",
+						description: "2local",
+					},
+					{
+						id: "1.2",
+						icon: BUSD,
+						title: "BUSD",
+						description: "Binance USD",
+					},
+					{
+						id: "1.3",
+						icon: ETH,
+						title: "BETH",
+						description: "Binance ETH",
+					},
 				],
 			},
 			{
+				id: "2",
 				icon: BNB,
 				title: "BNB",
 				description: "Corporate Wallet",
 				items: [
-					{ icon: L2L, title: "L2L", description: "2local" },
-					{ icon: ETH, title: "ETH", description: "Ethereum" },
-					{ icon: USD, title: "USD", description: "USD" },
-					{ icon: XLM, title: "XLM", description: "Stellars" },
-					{ icon: BTC, title: "BTC", description: "Bitcoin" },
+					{
+						id: "2.1",
+						icon: L2L,
+						title: "L2L",
+						description: "2local",
+					},
+					{
+						id: "2.2",
+						icon: ETH,
+						title: "ETH",
+						description: "Ethereum",
+					},
+					{
+						id: "2.3",
+						icon: USD,
+						title: "USD",
+						description: "USD",
+					},
+					{
+						id: "2.4",
+						icon: XLM,
+						title: "XLM",
+						description: "Stellars",
+					},
+					{
+						id: "2.5",
+						icon: BTC,
+						title: "BTC",
+						description: "Bitcoin",
+					},
 				],
 			},
 		],
 	},
 	{
+		id: "3",
 		icon: LaunchPool,
 		title: "Launch Pool",
 		items: [
-			{ icon: BNBL2L, title: "BNB", description: "L2L" },
-			{ icon: BETHL2L, title: "BETH", description: "L2L" },
-			{ icon: BUSDL2L, title: "BUSD", description: "L2L" },
+			{ id: "3.1", icon: BNBL2L, title: "BNB", description: "L2L" },
+			{ id: "3.2", icon: BETHL2L, title: "BETH", description: "L2L" },
+			{ id: "3.3", icon: BUSDL2L, title: "BUSD", description: "L2L" },
 		],
 	},
 	{
+		id: "4",
 		icon: YieldFarming,
 		title: "Yield Farming",
-		items: [{ icon: BNBL2L, title: "BNB", description: "L2L" }],
+		items: [
+			{
+				id: "4.1",
+				icon: BNBL2L,
+				title: "BNB",
+				description: "L2L",
+			},
+		],
 	},
 	{
+		id: "5",
 		icon: AirDrop,
 		title: "Airdrop",
-		items: [{ icon: L2L2Local, title: "L2L", description: "2local" }],
+		items: [
+			{ id: "5.1", icon: L2L2Local, title: "L2L", description: "2local" },
+		],
 	},
 ];
 

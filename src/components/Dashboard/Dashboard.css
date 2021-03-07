@@ -1,3 +1,22 @@
+.tab {
+	color: #9ea3ae;
+	font-weight: bold;
+	font-size: 18px;
+	width: 60%;
+	margin-top: 3rem;
+	margin-left: 2.5rem;
+}
+
+.tab > div {
+	cursor: pointer;
+}
+
+.tab-active {
+	border-bottom: 5px solid #df642b;
+	margin-bottom: -1.5rem;
+	color: #1d2943;
+}
+
 .heading {
 	font-size: 35px;
 	color: #1d2943;

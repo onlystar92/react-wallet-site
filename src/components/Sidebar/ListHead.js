@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SubList from "./SubList";
 import "./List.css";
 
-function ListHead({ icon, title, items, idx }) {
+function ListHead({ icon, title, items }) {
 	const [isOpen, setisOpen] = useState(true);
 	const caretStyle = {
 		transform: isOpen ? "rotate(180deg)" : "",

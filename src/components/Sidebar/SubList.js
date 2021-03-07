@@ -13,13 +13,21 @@ function SubList({ items }) {
 
 	const dispatch = useDispatch();
 
+	const getActive = (item) => {
+		if (item.id === localStorage.getItem("id")) {
+			return "sub-menu-active";
+		}
+	};
+
 	return (
 		<>
 			{items.map((item, idx) => (
 				<>
 					<button
-						className="d-flex justify-content-between align-items-center pl-4 pt-2 pr-4 pb-2 sub-active pointer"
+						className={`d-flex justify-content-between align-items-center pl-4 pt-2 pr-4 pb-2 sub-active pointer `}
 						onClick={() => {
+							localStorage.setItem("id", item.id);
+
 							dispatch(setTitle(item.title));
 							dispatch(setDesc(item.description));
 							setisOpen(
