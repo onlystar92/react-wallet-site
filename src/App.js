@@ -1,12 +1,14 @@
+import { useEffect, useState } from "react";
 import "./App.css";
-import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Data from "./assets/SideBarItems";
-import { useEffect, useState } from "react";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 import IndividualValues from "./components/IndividualValues/IndividualValues";
+import Card from "./components/Cards/CardContainer";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
 	const data = Data;
@@ -22,34 +24,42 @@ function App() {
 	}, [isOpen]);
 
 	return (
-		<div className="App">
-			<Navbar setisOpen={setisOpen} isOpen={isOpen} />
-			<div className="body">
-				<div className="d-flex body-left">
-					<Sidebar
-						data={data}
-						isOpen={isOpen}
-						subOpen={subOpen}
-						setsubOpen={setsubOpen}
-					/>
+		<Router>
+			<div className="App">
+				<Navbar setisOpen={setisOpen} isOpen={isOpen} />
+				<div className="body">
+					<div className="d-flex body-left">
+						<Sidebar
+							data={data}
+							isOpen={isOpen}
+							subOpen={subOpen}
+							setsubOpen={setsubOpen}
+						/>
 
-					<IndividualValues
-						subOpen={subOpen}
-						setsubOpen={setsubOpen}
-					/>
+						<IndividualValues
+							subOpen={subOpen}
+							setsubOpen={setsubOpen}
+						/>
 
-					<Dashboard
-						subOpen={subOpen}
-						isOpen={isOpen}
-						setsubOpen={setsubOpen}
-					/>
+						<Dashboard
+							subOpen={subOpen}
+							isOpen={isOpen}
+							setsubOpen={setsubOpen}
+						/>
+					</div>
+
+					<TransactionHistory />
 				</div>
 
-				<TransactionHistory />
-			</div>
+				{/* <Footer /> */}
 
-			{/* <Footer /> */}
-		</div>
+				<Switch>
+					<Route path="/card">
+						<Card />
+					</Route>
+				</Switch>
+			</div>
+		</Router>
 	);
 }
 
