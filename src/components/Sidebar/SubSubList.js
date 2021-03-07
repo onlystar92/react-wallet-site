@@ -1,30 +1,28 @@
 import React from "react";
-import "./List.css";
 
 function SubSubList({ items, setCounter3 }) {
+	const icon = { width: "20px", height: "20px" };
+
 	return (
 		<>
-			<div className="subsublist">
-				{items &&
-					items.map((item, idx) => (
-						<div
-							className="sublist-item"
-							onClick={() => setCounter3(idx)}
-						>
+			{items &&
+				items.map((item, idx) => (
+					<div
+						className="d-flex justify-content-between align-items-center ml-4 pl-4 pt-2 pr-4 pb-2"
+						style={{ cursor: "pointer" }}
+						onClick={() => setCounter3(idx)}
+					>
+						<div>
 							{item.icon ? (
-								<img src={item.icon} alt="" />
+								<img style={icon} src={item.icon} alt="" />
 							) : (
-								<div
-									style={{ width: "20px", height: "20px" }}
-								></div>
+								<div className="col" style={icon}></div>
 							)}
-							<span className="item-title">{item.title}</span>
-							<span className="item-desc">
-								{item.description}
-							</span>
+							<span className="col">{item.title}</span>
+							<span className="col">{item.description}</span>
 						</div>
-					))}
-			</div>
+					</div>
+				))}
 		</>
 	);
 }

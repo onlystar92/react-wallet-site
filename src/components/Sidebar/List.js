@@ -1,11 +1,10 @@
 import React from "react";
-import "./List.css";
 
 import ListHead from "./ListHead";
 
 function List({ data, setCounter1, setCounter2, setCounter3 }) {
 	return (
-		<div className="list-container">
+		<div>
 			{data.map((item, idx) => {
 				return (
 					<ListHead

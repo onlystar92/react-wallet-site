@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import "./List.css";
-import Caret from "../../assets/caret.png";
 import SubList from "./SubList";
 
 function ListHead({
@@ -12,27 +10,35 @@ function ListHead({
 	setCounter3,
 	idx,
 }) {
-	const [isOpen, setisOpen] = useState(false);
+	const [isOpen, setisOpen] = useState(true);
+
+	const listHeadContainer = { cursor: "pointer", backgroundColor: "#526DAA" };
+	const titleStyle = { color: "white", fontSize: "16px" };
+	const caretStyle = {
+		transform: isOpen ? "rotate(180deg)" : "",
+		color: "white",
+	};
 
 	return (
 		<>
 			<div
-				className="list-head"
+				className="d-flex align-items-center justify-content-between pl-4 pt-3 pr-4 pb-3"
+				style={listHeadContainer}
 				onClick={() => {
 					setisOpen(!isOpen);
 					setCounter1(idx);
 				}}
 			>
-				<img src={icon} alt="" />
-				<p className="list-title">{title}</p>
-				<img
-					className="caret"
-					src={Caret}
-					alt=""
-					style={!isOpen ? { transform: "rotate(180deg)" } : {}}
-					// onClick={() => setisOpen(!isOpen)}
-				/>
+				<div>
+					<img src={icon} alt="" />
+					<span className="font-weight-bold ml-3" style={titleStyle}>
+						{title}
+					</span>
+				</div>
+
+				<i style={caretStyle} class="fas fa-caret-down"></i>
 			</div>
+
 			{isOpen && (
 				<SubList
 					items={items}

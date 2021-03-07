@@ -1,11 +1,18 @@
-import Exchange from "./2local exchange_color.png";
-import LaunchPool from "./launchpad_color.png";
-import YieldFarming from "./Grow_plant_color.png";
-import AirDrop from "./Airdrop_color.png";
+import Exchange from "./2local exchange.png";
+import LaunchPool from "./Launchpad.png";
+import YieldFarming from "./Grow_plant.png";
+import AirDrop from "./Airdrop.png";
 import ETH from "./ETH.png";
 import BNB from "./BNB.png";
 import BUSD from "./busd.png";
 import L2L from "./2local_symbol_wht.png";
+import USD from "./usd-coin-usdc-logo.svg";
+import XLM from "./xlm.svg";
+import BTC from "./btc.svg";
+import BNBL2L from "./bnb-l2l.svg";
+import BETHL2L from "./beth-l2l.svg";
+import BUSDL2L from "./busd-l2l.svg";
+import L2L2Local from "./l2l-2local.svg";
 
 const data = [
 	{
@@ -29,9 +36,9 @@ const data = [
 				items: [
 					{ icon: L2L, title: "L2L", description: "2local" },
 					{ icon: ETH, title: "ETH", description: "Ethereum" },
-					{ title: "USD", description: "USD" },
-					{ title: "XLM", description: "Stellars" },
-					{ title: "BTC", description: "Bitcoin" },
+					{ icon: USD, title: "USD", description: "USD" },
+					{ icon: XLM, title: "XLM", description: "Stellars" },
+					{ icon: BTC, title: "BTC", description: "Bitcoin" },
 				],
 			},
 		],
@@ -40,20 +47,20 @@ const data = [
 		icon: LaunchPool,
 		title: "Launch Pool",
 		items: [
-			{ title: "BNB", description: "L2L" },
-			{ title: "BETH", description: "L2L" },
-			{ title: "BUSD", description: "L2L" },
+			{ icon: BNBL2L, title: "BNB", description: "L2L" },
+			{ icon: BETHL2L, title: "BETH", description: "L2L" },
+			{ icon: BUSDL2L, title: "BUSD", description: "L2L" },
 		],
 	},
 	{
 		icon: YieldFarming,
 		title: "Yield Farming",
-		items: [{ title: "BNB", description: "L2L" }],
+		items: [{ icon: BNBL2L, title: "BNB", description: "L2L" }],
 	},
 	{
 		icon: AirDrop,
 		title: "Airdrop",
-		items: [{ title: "L2L", description: "2local" }],
+		items: [{ icon: L2L2Local, title: "L2L", description: "2local" }],
 	},
 ];
 
