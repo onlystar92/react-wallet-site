@@ -1,7 +1,7 @@
 import React from "react";
 import List from "./List";
 
-const sideBarContainer = { width: "24%" };
+const sideBarContainer = { width: "20%" };
 const balanceStyle = { color: "#8E94A1", fontSize: "16px" };
 const balanceAmount = { fontSize: "16px" };
 const innerContainer = {
@@ -17,7 +17,7 @@ const addWallet = { color: "#526DAA", fontSize: "14px" };
 function Sidebar({ data, setCounter1, setCounter2, setCounter3 }) {
 	return (
 		<div
-			className="mt-4 rounded-3 bg-white ml-4 mr-4 text-left pt-4"
+			className="mt-4 rounded-3 bg-white ml-1 text-left pt-4"
 			style={sideBarContainer}
 		>
 			<div style={innerContainer}>

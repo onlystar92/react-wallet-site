@@ -9,6 +9,8 @@ function SubList({ items, setCounter2, setCounter3 }) {
 	);
 
 	const icon = { width: "20px", height: "20px" };
+	const title = { fontSize: "12px", color: "#4C566C" };
+	const desc = { fontSize: "12px", color: "#A7ABB6" };
 
 	return (
 		<>
@@ -30,10 +32,14 @@ function SubList({ items, setCounter2, setCounter3 }) {
 							{item.icon ? (
 								<img style={icon} src={item.icon} alt="" />
 							) : (
-								<div className="col" style={icon}></div>
+								<div style={icon}></div>
 							)}
-							<span className="col">{item.title}</span>
-							<span className="col">{item.description}</span>
+							<span className="ml-3" style={title}>
+								{item.title}
+							</span>
+							<span className="ml-3" style={desc}>
+								{item.description}
+							</span>
 						</div>
 
 						{item.items && (
