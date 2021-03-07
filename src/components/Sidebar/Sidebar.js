@@ -3,11 +3,6 @@ import List from "./List";
 import "./Sidebar.css";
 
 function Sidebar({ data, isOpen, setsubOpen, subOpen }) {
-	const addSquare = {
-		color: "#526DAA",
-		transform: "scale(1.7)",
-	};
-
 	return (
 		<>
 			<div
@@ -21,10 +16,7 @@ function Sidebar({ data, isOpen, setsubOpen, subOpen }) {
 						<div className="font-weight-bold balanceAmount">
 							$137.17
 						</div>
-						<i
-							style={{ color: "#DF642B", width: "20px" }}
-							class="fas fa-eye"
-						></i>
+						<i class="fas fa-eye eye"></i>
 						<i
 							onClick={() => {
 								setsubOpen(!subOpen);
@@ -37,17 +29,11 @@ function Sidebar({ data, isOpen, setsubOpen, subOpen }) {
 						></i>
 					</div>
 
-					<div
-						className="d-flex align-items-center justify-content-between pl-4 pt-3 pr-4 pb-3"
-						style={{ backgroundColor: "#EFF2F7" }}
-					>
+					<div className="d-flex align-items-center justify-content-between pl-4 pt-3 pr-4 pb-3 wallet">
 						<span className="font-weight-bold addWallet">
 							Add new wallet
 						</span>
-						<i
-							style={addSquare}
-							class="far fa-plus-square ml-5"
-						></i>
+						<i class="far fa-plus-square ml-5 addSquare"></i>
 					</div>
 
 					<List data={data} />

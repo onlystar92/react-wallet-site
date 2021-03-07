@@ -31,10 +31,7 @@ function Dashboard({ isOpen, subOpen }) {
 					<span className="font-weight-bold">
 						1 {title} : 38,447.38 USD
 					</span>
-					<i
-						style={{ color: "#56E19F" }}
-						class="ml-2 fas fa-arrow-up"
-					></i>
+					<i class="ml-2 fas fa-arrow-up arrow-up"></i>
 					<span className="ml-2 percentage">8.68%</span>
 				</div>
 				<div className="code">02d5d94756cdc38e0fc712e629b9fb</div>

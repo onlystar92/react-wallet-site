@@ -82,5 +82,10 @@
 .sub-active:focus {
 	background-color: #f0f2f8;
 	outline: none;
+	box-sizing: border-box;
 	border-left: 5px solid #526daa;
+}
+
+.pointer {
+	cursor: pointer;
 }

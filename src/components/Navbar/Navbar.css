@@ -3,8 +3,13 @@
 }
 
 .inner-nav {
-	width: 26%;
+	width: 444px;
 	text-align: left;
+	margin-right: 3rem;
+}
+
+.brand {
+	cursor: pointer;
 }
 
 .nav-right {

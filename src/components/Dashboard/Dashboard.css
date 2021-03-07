@@ -11,6 +11,10 @@
 	color: #a1a1a3;
 }
 
+.arrow-up {
+	color: #56e19f;
+}
+
 @keyframes dashboard-open {
 	from {
 		transform: translateX(0px);

@@ -25,7 +25,7 @@ function App() {
 		<div className="App">
 			<Navbar setisOpen={setisOpen} isOpen={isOpen} />
 			<div className="body">
-				<div className="d-flex " style={{ width: "74%" }}>
+				<div className="d-flex body-left">
 					<Sidebar
 						data={data}
 						isOpen={isOpen}

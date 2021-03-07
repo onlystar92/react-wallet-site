@@ -17,8 +17,7 @@ function Navbar({ setisOpen, isOpen }) {
 				<div className="inner-nav">
 					<img
 						onClick={() => setisOpen(!isOpen)}
-						className="mr-4"
-						style={{ cursor: "pointer" }}
+						className="mr-4 brand"
 						src={Toggler}
 						alt=""
 					/>

@@ -16,12 +16,7 @@ function IndividualValues({ setsubOpen, subOpen }) {
 			<div className="text-center">
 				<i
 					onClick={() => setsubOpen(false)}
-					style={{
-						color: "#FA1818",
-						transform: "scale(2)",
-						cursor: "pointer",
-					}}
-					class="fas fa-times"
+					class="fas fa-times cross"
 				></i>
 			</div>
 
@@ -35,45 +30,24 @@ function IndividualValues({ setsubOpen, subOpen }) {
 
 				<div className="bottomDiv">
 					<div className="py-2 item-height">
-						<span
-							className="font-weight-bold"
-							style={{ color: "#4C566C" }}
-						>
+						<span className="font-weight-bold color-dark">
 							1.4224231
 						</span>
-						<span
-							className="font-weight-bold ml-2 grey"
-							style={{ color: "#A7ABB6" }}
-						>
+						<span className="font-weight-bold ml-2 color-grey">
 							$62,098.31
 						</span>
 					</div>
-					<div className="py-2" style={{ height: "40px" }}>
-						<span style={{ color: "#4C566C" }}>2000000</span>
-						<span
-							className="ml-2 grey"
-							style={{ color: "#A7ABB6" }}
-						>
-							$4000.00
-						</span>
+					<div className="py-2 item-height">
+						<span className="color-dark">2000000</span>
+						<span className="ml-2 color-grey">$4000.00</span>
 					</div>
-					<div className="py-2" style={{ height: "40px" }}>
-						<span style={{ color: "#4C566C" }}>2300</span>
-						<span
-							className="ml-2 grey"
-							style={{ color: "#A7ABB6" }}
-						>
-							$1400.00
-						</span>
+					<div className="py-2 item-height">
+						<span className="color-dark">2300</span>
+						<span className="ml-2 color-grey">$1400.00</span>
 					</div>
-					<div className="py-2" style={{ height: "40px" }}>
-						<span style={{ color: "#4C566C" }}>461.90</span>
-						<span
-							className="ml-2 grey"
-							style={{ color: "#A7ABB6" }}
-						>
-							$456.90
-						</span>
+					<div className="py-2 item-height">
+						<span className="color-dark">461.90</span>
+						<span className="ml-2 color-grey">$456.90</span>
 					</div>
 				</div>
 			</div>

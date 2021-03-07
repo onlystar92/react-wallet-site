@@ -18,8 +18,7 @@ function SubList({ items }) {
 			{items.map((item, idx) => (
 				<>
 					<button
-						className="d-flex justify-content-between align-items-center pl-4 pt-2 pr-4 pb-2 sub-active"
-						style={{ cursor: "pointer" }}
+						className="d-flex justify-content-between align-items-center pl-4 pt-2 pr-4 pb-2 sub-active pointer"
 						onClick={() => {
 							dispatch(setTitle(item.title));
 							dispatch(setDesc(item.description));

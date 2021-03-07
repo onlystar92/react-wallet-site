@@ -27,8 +27,18 @@
 	height: 40px;
 }
 
-.grey-color {
-	color: "#A7ABB6";
+.color-grey {
+	color: #a7abb6;
+}
+
+.color-dark {
+	color: #4c566c;
+}
+
+.cross {
+	color: #fa1818;
+	transform: scale(2);
+	cursor: pointer;
 }
 
 .container-open {
@@ -69,7 +79,6 @@
 	}
 	to {
 		opacity: 0;
-
 		transform: translateX(-200px);
 		width: 0px;
 	}

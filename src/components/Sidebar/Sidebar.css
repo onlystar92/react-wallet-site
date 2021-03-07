@@ -19,6 +19,15 @@
 	border-radius: 12px;
 }
 
+.addSquare {
+	color: #526daa;
+	transform: scale(1.7);
+}
+
+.wallet {
+	background-color: #eff2f7;
+}
+
 .addWallet {
 	color: #526daa;
 	font-size: 14px;
@@ -80,4 +89,9 @@
 
 .top-div {
 	text-align: left;
+}
+
+.eye {
+	color: #df642b;
+	width: 20px;
 }
