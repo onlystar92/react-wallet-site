@@ -33,36 +33,36 @@
 
 @keyframes close {
 	from {
-		transform: translateX(700px);
+		transform: translateX(350px);
 	}
 	to {
-		transform: translateX(400px);
+		transform: translateX(0px);
 		/* width: 100%; */
 	}
 }
 
-@keyframes open {
+@keyframes body-right-open {
 	from {
-		transform: translateX(400px);
+		transform: translateX(0px);
 	}
 	to {
-		transform: translateX(700px);
+		transform: translateX(350px);
 		/* width: 80%; */
 	}
 }
 
 .body-right-open {
-	animation-name: open;
+	animation-name: body-right-open;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
-	/* background-color: red; */
+	background-color: red;
 }
 
 .body-right-close {
 	animation-name: close;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
-	/* background-color: red; */
+	background-color: red;
 }
 
 .body {

@@ -4,7 +4,7 @@ import "./IndividualValues.css";
 function IndividualValues({ setsubOpen, subOpen }) {
 	return (
 		<div
-			// className={subOpen ? "container-open" : "container-close"}
+			className={subOpen ? "container-open" : "container-close"}
 			style={{ marginTop: "4rem", width: "144px" }}
 		>
 			<i
@@ -35,7 +35,7 @@ function IndividualValues({ setsubOpen, subOpen }) {
 				</div>
 
 				<div style={{ marginTop: "4rem", fontSize: "12px" }}>
-					<div className="mb-3">
+					<div className="py-2" style={{ height: "40px" }}>
 						<span
 							className="font-weight-bold"
 							style={{ color: "#4C566C" }}
@@ -49,19 +49,19 @@ function IndividualValues({ setsubOpen, subOpen }) {
 							$62,098.31
 						</span>
 					</div>
-					<div className="mb-3">
+					<div className="py-2" style={{ height: "40px" }}>
 						<span style={{ color: "#4C566C" }}>2000000</span>
 						<span className="ml-2" style={{ color: "#A7ABB6" }}>
 							$4000.00
 						</span>
 					</div>
-					<div className="mb-3">
+					<div className="py-2" style={{ height: "40px" }}>
 						<span style={{ color: "#4C566C" }}>2300</span>
 						<span className="ml-2" style={{ color: "#A7ABB6" }}>
 							$1400.00
 						</span>
 					</div>
-					<div className="mb-3">
+					<div className="py-2" style={{ height: "40px" }}>
 						<span style={{ color: "#4C566C" }}>461.90</span>
 						<span className="ml-2" style={{ color: "#A7ABB6" }}>
 							$456.90

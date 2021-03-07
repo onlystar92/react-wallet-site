@@ -12,13 +12,13 @@
 		transform: translateX(0);
 	}
 	to {
-		transform: translateX(-350px);
+		transform: translateX(-500px);
 	}
 }
 
 @keyframes open-sidebar {
 	from {
-		transform: translateX(-350px);
+		transform: translateX(-500px);
 	}
 	to {
 		transform: translateX(0);
@@ -29,12 +29,14 @@
 	animation-name: open-sidebar;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
+	overflow: hidden;
 }
 
 .sidebar-close {
 	animation-name: close-sidebar;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
+	overflow: hidden;
 }
 
 .balance {

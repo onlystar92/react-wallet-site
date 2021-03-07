@@ -7,10 +7,11 @@ import IndividualValues from "../IndividualValues/IndividualValues";
 function Dashboard({ title, description, icon, subOpen, setsubOpen, isOpen }) {
 	return (
 		<>
-			{subOpen && isOpen && (
-				<IndividualValues subOpen={subOpen} setsubOpen={setsubOpen} />
-			)}
-			<div className="dashboard-container">
+			{/* <IndividualValues subOpen={subOpen} setsubOpen={setsubOpen} /> */}
+
+			<div
+			// className={`${subOpen ? "dashboard-open" : "dashboard-close"}`}
+			>
 				<div className="top-section">
 					<img src={icon} alt="" />
 					<span style={{ marginLeft: "0.5rem" }}>{title}</span>

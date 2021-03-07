@@ -1,7 +1,39 @@
-.dashboard-container {
+@keyframes dashboard-open {
+	from {
+		transform: translateX(-200px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes dashboard-close {
+	from {
+		transform: translateX(0px);
+	}
+	to {
+		transform: translateX(-200px);
+	}
+}
+
+.dashboard-open {
 	padding-left: 2rem;
 	padding-top: 2rem;
 	font-size: 14px;
+	animation-name: dashboard-open;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+}
+
+.dashboard-close {
+	padding-left: 2rem;
+	padding-top: 2rem;
+	font-size: 14px;
+	animation-name: dashboard-close;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	overflow: hidden;
 }
 
 .top-section {

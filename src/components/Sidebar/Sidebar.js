@@ -1,12 +1,16 @@
 import React from "react";
 import List from "./List";
 import "./Sidebar.css";
-const sideBarContainer = { width: "20%" };
+import IndividualValues from "../IndividualValues/IndividualValues";
+
+const sideBarContainer = { width: "25%" };
 const balanceStyle = { color: "#8E94A1", fontSize: "16px" };
 const balanceAmount = { fontSize: "16px" };
 const innerContainer = {
 	width: "90%",
 	margin: "auto",
+	zIndex: "1",
+	backgroundColor: "white",
 };
 const addSquare = {
 	color: "#526DAA",
@@ -27,7 +31,7 @@ function Sidebar({
 	return (
 		<>
 			<div
-				className={`mt-4  ml-1 text-left pt-4 ${
+				className={`d-flex mt-4  ml-1 text-left pt-4 ${
 					!isOpen ? "sidebar-close" : "sidebar-open"
 				}`}
 				style={sideBarContainer}
@@ -38,7 +42,10 @@ function Sidebar({
 						<div className="font-weight-bold" style={balanceAmount}>
 							$137.17
 						</div>
-						<i style={{ color: "#DF642B" }} class="fas fa-eye"></i>
+						<i
+							style={{ color: "#DF642B", width: "20px" }}
+							class="fas fa-eye"
+						></i>
 						<i
 							onClick={() => {
 								setsubOpen(!subOpen);
@@ -71,8 +78,8 @@ function Sidebar({
 						setCounter3={setCounter3}
 					/>
 				</div>
+				<IndividualValues subOpen={subOpen} setsubOpen={setsubOpen} />
 			</div>
-			{/* {!isOpen && <div style={{ width: "20%" }}></div>} */}
 		</>
 	);
 }

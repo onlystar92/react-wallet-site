@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Data from "./assets/SideBarItems";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
 function App() {
@@ -29,6 +29,12 @@ function App() {
 
 	console.log("subopen", subOpen);
 
+	useEffect(() => {
+		if (!isOpen) {
+			setsubOpen(false);
+		}
+	}, [isOpen]);
+
 	return (
 		<div className="App">
 			<Navbar setisOpen={setisOpen} isOpen={isOpen} />
@@ -42,20 +48,16 @@ function App() {
 					setCounter2={setCounter2}
 					setCounter3={setCounter3}
 				/>
-				<div
-					className={`d-flex justify-content-between ${
-						!isOpen ? "body-right-close" : "body-right-open"
-					}`}
-				>
-					<Dashboard
-						title={x.title}
-						description={x.description}
-						icon={x.icon}
-						subOpen={subOpen}
-						isOpen={isOpen}
-						setsubOpen={setsubOpen}
-					/>
-				</div>
+
+				<Dashboard
+					title={x.title}
+					description={x.description}
+					icon={x.icon}
+					subOpen={subOpen}
+					isOpen={isOpen}
+					setsubOpen={setsubOpen}
+				/>
+
 				<TransactionHistory />
 			</div>
 
