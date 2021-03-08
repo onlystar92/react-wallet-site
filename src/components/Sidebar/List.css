@@ -79,7 +79,7 @@
 	background-color: white;
 }
 
-.sub-active:focus {
+.sub-menu-active {
 	background-color: #f0f2f8;
 	outline: none;
 	box-sizing: border-box;

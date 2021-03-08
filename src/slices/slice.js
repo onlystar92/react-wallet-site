@@ -7,6 +7,7 @@ export const slice = createSlice({
 		desc: "",
 		icon: "",
 		tab: "",
+		sidebarActive: "",
 	},
 	reducers: {
 		setTitle: (state, action) => {
@@ -21,6 +22,9 @@ export const slice = createSlice({
 		setTab: (state, action) => {
 			state.tab = action.payload;
 		},
+		setSidebarActive: (state, action) => {
+			state.sidebarActive = action.payload;
+		},
 	},
 });
 
@@ -28,7 +32,14 @@ export const selectTitle = (state) => state.slice.title;
 export const selectDesc = (state) => state.slice.desc;
 export const selectIcon = (state) => state.slice.icon;
 export const selectTab = (state) => state.slice.tab;
+export const selectSidebar = (state) => state.slice.sidebarActive;
 
-export const { setTitle, setDesc, setIcon, setTab } = slice.actions;
+export const {
+	setTitle,
+	setDesc,
+	setIcon,
+	setTab,
+	setSidebarActive,
+} = slice.actions;
 
 export default slice.reducer;
