@@ -1,17 +1,13 @@
 import React from "react";
+import IndividualItems from "./IndividualItems";
 import "./IndividualValues.css";
 
-function IndividualValues({ setsubOpen, subOpen }) {
+function IndividualValues({ setsubOpen, subOpen, data }) {
 	return (
 		<div
-			className={subOpen ? "container-open" : "container-close"}
-			style={{
-				marginTop: "4rem",
-				width: "144px",
-				marginLeft: "1rem",
-				borderRadius: "12px",
-				zIndex: "2",
-			}}
+			className={`individual-container ${
+				subOpen ? "container-open" : "container-close"
+			}`}
 		>
 			<div className="text-center">
 				<i
@@ -28,8 +24,16 @@ function IndividualValues({ setsubOpen, subOpen }) {
 					</span>
 				</div>
 
-				<div className="bottomDiv">
-					<div className="py-2 item-height">
+				{data.map((x) => (
+					<div className="bottomDiv">
+						{x.items.map((item) => (
+							<IndividualItems
+								items={item.items}
+								left={item.individual.left}
+								right={item.individual.right}
+							/>
+						))}
+						{/* <div className="py-2 item-height">
 						<span className="font-weight-bold color-dark">
 							1.4224231
 						</span>
@@ -48,8 +52,9 @@ function IndividualValues({ setsubOpen, subOpen }) {
 					<div className="py-2 item-height">
 						<span className="color-dark">461.90</span>
 						<span className="ml-2 color-grey">$456.90</span>
+					</div> */}
 					</div>
-				</div>
+				))}
 			</div>
 		</div>
 	);

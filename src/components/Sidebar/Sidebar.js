@@ -1,4 +1,5 @@
 import React from "react";
+import IndividualValues from "../IndividualValues/IndividualValues";
 import List from "./List";
 import "./Sidebar.css";
 

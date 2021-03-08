@@ -11,6 +11,7 @@ function List({ data }) {
 						icon={item.icon}
 						title={item.title}
 						items={item.items}
+						idx={idx}
 					/>
 				);
 			})}

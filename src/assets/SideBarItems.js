@@ -18,30 +18,35 @@ const data = [
 	{
 		icon: Exchange,
 		title: "Exchange",
+		show: false,
 		items: [
 			{
 				id: "1",
 				icon: BNB,
 				title: "BNB",
 				description: "Binance Coin",
+				individual: { left: "1.4224231", right: "$62,098.31" },
 				items: [
 					{
 						id: "1.1",
 						icon: L2L,
 						title: "L2L",
 						description: "2local",
+						individual: { left: "1.4224231", right: "$62,098.31" },
 					},
 					{
 						id: "1.2",
 						icon: BUSD,
 						title: "BUSD",
 						description: "Binance USD",
+						individual: { left: "1.4224231", right: "$62,098.31" },
 					},
 					{
 						id: "1.3",
 						icon: ETH,
 						title: "BETH",
 						description: "Binance ETH",
+						individual: { left: "1.4224231", right: "$62,098.31" },
 					},
 				],
 			},
@@ -50,38 +55,45 @@ const data = [
 				icon: BNB,
 				title: "BNB",
 				description: "Corporate Wallet",
+				individual: { left: "1.4224231", right: "$62,098.31" },
+
 				items: [
 					{
 						id: "2.1",
 						icon: L2L,
 						title: "L2L",
 						description: "2local",
-					},
-					{
-						id: "2.2",
-						icon: ETH,
-						title: "ETH",
-						description: "Ethereum",
-					},
-					{
-						id: "2.3",
-						icon: USD,
-						title: "USD",
-						description: "USD",
-					},
-					{
-						id: "2.4",
-						icon: XLM,
-						title: "XLM",
-						description: "Stellars",
-					},
-					{
-						id: "2.5",
-						icon: BTC,
-						title: "BTC",
-						description: "Bitcoin",
+						individual: { left: "1.4224231", right: "$62,098.31" },
 					},
 				],
+			},
+			{
+				id: "2.2",
+				icon: ETH,
+				title: "ETH",
+				description: "Ethereum",
+				individual: { left: "1.4224231", right: "$62,098.31" },
+			},
+			{
+				id: "2.3",
+				icon: USD,
+				title: "USD",
+				description: "USD",
+				individual: { left: "1.4224231", right: "$62,098.31" },
+			},
+			{
+				id: "2.4",
+				icon: XLM,
+				title: "XLM",
+				description: "Stellars",
+				individual: { left: "1.4224231", right: "$62,098.31" },
+			},
+			{
+				id: "2.5",
+				icon: BTC,
+				title: "BTC",
+				description: "Bitcoin",
+				individual: { left: "1.4224231", right: "$62,098.31" },
 			},
 		],
 	},
@@ -89,22 +101,45 @@ const data = [
 		id: "3",
 		icon: LaunchPool,
 		title: "Launch Pool",
+		show: true,
+
 		items: [
-			{ id: "3.1", icon: BNBL2L, title: "BNB", description: "L2L" },
-			{ id: "3.2", icon: BETHL2L, title: "BETH", description: "L2L" },
-			{ id: "3.3", icon: BUSDL2L, title: "BUSD", description: "L2L" },
+			{
+				id: "3.1",
+				icon: BNBL2L,
+				title: "BNB",
+				description: "L2L",
+				individual: { left: "1.4224231", right: "$62,098.31" },
+			},
+			{
+				id: "3.2",
+				icon: BETHL2L,
+				title: "BETH",
+				description: "L2L",
+				individual: { left: "1.4224231", right: "$62,098.31" },
+			},
+			{
+				id: "3.3",
+				icon: BUSDL2L,
+				title: "BUSD",
+				description: "L2L",
+				individual: { left: "1.4224231", right: "$62,098.31" },
+			},
 		],
 	},
 	{
 		id: "4",
 		icon: YieldFarming,
 		title: "Yield Farming",
+		show: true,
+
 		items: [
 			{
 				id: "4.1",
 				icon: BNBL2L,
 				title: "BNB",
 				description: "L2L",
+				individual: { left: "1.4224231", right: "$62,098.31" },
 			},
 		],
 	},
@@ -112,8 +147,16 @@ const data = [
 		id: "5",
 		icon: AirDrop,
 		title: "Airdrop",
+		show: true,
+
 		items: [
-			{ id: "5.1", icon: L2L2Local, title: "L2L", description: "2local" },
+			{
+				id: "5.1",
+				icon: L2L2Local,
+				title: "L2L",
+				description: "2local",
+				individual: { left: "1.4224231", right: "$62,098.31" },
+			},
 		],
 	},
 ];

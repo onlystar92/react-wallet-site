@@ -8,6 +8,7 @@ export const slice = createSlice({
 		icon: "",
 		tab: "",
 		sidebarActive: "",
+		listHeadCollapse: "",
 	},
 	reducers: {
 		setTitle: (state, action) => {
@@ -25,6 +26,9 @@ export const slice = createSlice({
 		setSidebarActive: (state, action) => {
 			state.sidebarActive = action.payload;
 		},
+		setListHeadCollapse: (state, action) => {
+			state.listHeadCollapse = action.payload;
+		},
 	},
 });
 
@@ -33,6 +37,7 @@ export const selectDesc = (state) => state.slice.desc;
 export const selectIcon = (state) => state.slice.icon;
 export const selectTab = (state) => state.slice.tab;
 export const selectSidebar = (state) => state.slice.sidebarActive;
+export const selectListHeadCollapse = (state) => state.slice.listHeadCollapse;
 
 export const {
 	setTitle,
@@ -40,6 +45,7 @@ export const {
 	setIcon,
 	setTab,
 	setSidebarActive,
+	setListHeadCollapse,
 } = slice.actions;
 
 export default slice.reducer;

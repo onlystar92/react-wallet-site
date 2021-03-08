@@ -37,6 +37,7 @@ function App() {
 						/>
 
 						<IndividualValues
+							data={data}
 							subOpen={subOpen}
 							setsubOpen={setsubOpen}
 						/>
