@@ -34,7 +34,6 @@ function SubList({ items }) {
 							item,
 						)}`}
 						onClick={() => {
-							localStorage.setItem("id", item.id);
 							dispatch(setSidebarActive(item.id));
 							dispatch(setTitle(item.title));
 							dispatch(setDesc(item.description));
