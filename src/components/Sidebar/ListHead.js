@@ -19,15 +19,13 @@ function ListHead({ icon, title, items, idx }) {
 	// 	}
 	// }, [isOpen]);
 
-	console.log("data", Data);
-
 	return (
 		<>
 			<div
 				className="d-flex align-items-center justify-content-between pl-4 pt-3 pr-4 pb-3 listHeadContainer"
 				onClick={() => {
 					setisOpen(!isOpen);
-					Data[idx].show = false;
+					Data[idx].show = !isOpen;
 				}}
 			>
 				<div>

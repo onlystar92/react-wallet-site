@@ -17,6 +17,8 @@ function SubList({ items }) {
 		}),
 	);
 
+	console.log("active arr", isOpen);
+
 	const dispatch = useDispatch();
 
 	const getActive = (item) => {

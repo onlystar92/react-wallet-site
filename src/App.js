@@ -9,52 +9,16 @@ import IndividualValues from "./components/IndividualValues/IndividualValues";
 import Card from "./components/Cards/CardContainer";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Layout from "./components/Layout";
 
 function App() {
-	const data = Data;
-	const [isOpen, setisOpen] = useState(true);
-	const [subOpen, setsubOpen] = useState(false);
-
-	console.log("subopen", subOpen);
-
-	useEffect(() => {
-		if (!isOpen) {
-			setsubOpen(false);
-		}
-	}, [isOpen]);
-
 	return (
 		<Router>
 			<div className="App">
-				<Navbar setisOpen={setisOpen} isOpen={isOpen} />
-				<div className="body">
-					<div className="d-flex body-left">
-						<Sidebar
-							data={data}
-							isOpen={isOpen}
-							subOpen={subOpen}
-							setsubOpen={setsubOpen}
-						/>
-
-						<IndividualValues
-							data={data}
-							subOpen={subOpen}
-							setsubOpen={setsubOpen}
-						/>
-
-						<Dashboard
-							subOpen={subOpen}
-							isOpen={isOpen}
-							setsubOpen={setsubOpen}
-						/>
-					</div>
-
-					<TransactionHistory />
-				</div>
-
-				{/* <Footer /> */}
-
 				<Switch>
+					<Route exact path="/">
+						<Layout />
+					</Route>
 					<Route path="/card">
 						<Card />
 					</Route>

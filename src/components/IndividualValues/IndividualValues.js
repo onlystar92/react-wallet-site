@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import IndividualItems from "./IndividualItems";
 import "./IndividualValues.css";
 
 function IndividualValues({ setsubOpen, subOpen, data }) {
+	const [show, setShow] = useState(data.map((a) => a.show));
+
+	useEffect(() => {
+		setShow(1);
+		console.log("show", show);
+
+		console.log("data", data);
+	}, [data]);
+
 	return (
 		<div
 			className={`individual-container ${
@@ -26,13 +35,17 @@ function IndividualValues({ setsubOpen, subOpen, data }) {
 
 				{data.map((x) => (
 					<div className="bottomDiv">
-						{x.items.map((item) => (
-							<IndividualItems
-								items={item.items}
-								left={item.individual.left}
-								right={item.individual.right}
-							/>
-						))}
+						{x.show ? (
+							x.items.map((item) => (
+								<IndividualItems
+									items={item.items}
+									left={item.individual.left}
+									right={item.individual.right}
+								/>
+							))
+						) : (
+							<div className="bottomDiv"></div>
+						)}
 						{/* <div className="py-2 item-height">
 						<span className="font-weight-bold color-dark">
 							1.4224231

@@ -18,7 +18,7 @@ const data = [
 	{
 		icon: Exchange,
 		title: "Exchange",
-		show: false,
+		show: true,
 		items: [
 			{
 				id: "1",

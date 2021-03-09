@@ -3,10 +3,115 @@
 		0% no-repeat padding-box;
 	width: 100vw;
 	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .logo {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+}
+
+.login-card-container {
+	width: 33%;
+	height: 70%;
+	border-radius: 12px;
+	background-color: white;
+	box-shadow: 0px 0px 80px #0000001f;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.login-card-logo {
+	width: 192.77px;
+	align-self: center;
+}
+
+.login-card-heading {
+	text-align: left;
+	font-size: 35px;
+	font-weight: bold;
+	margin-top: 3.5rem;
+}
+
+.login-card-label {
+	font-size: 20px;
+	font-weight: bold;
+	color: #455a64;
+	margin-top: 3rem;
+}
+
+.login-card-input {
+	margin-top: 1rem;
+	border: 2px solid #f3f3f3;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	border-radius: 10px;
+	height: 70px;
+	font-size: 20px;
+	font-weight: bold;
+	outline: none;
+	color: #1d2943;
+}
+
+.login-card-forgot-wallet {
+	margin-top: 1.5rem;
+	color: #1d2943;
+}
+
+.login-card-forgot-wallet > span {
+	margin-left: 1rem;
+	color: #526daa;
+	font-weight: bold;
+}
+
+.login-card-forgot-pass {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1.5rem;
+	color: #455a64;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.login-card-forgot-pass > span {
+	font-weight: normal;
+	font-size: 16px;
+	color: #526daa;
+}
+
+.login-btn {
+	border-radius: 10px;
+	background-color: #5b7ada;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	height: 70px;
+	margin-top: 2rem;
+}
+
+.login-card-signup {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+	color: #526daa;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.login-card-no-wallet {
+	color: white;
+	font-size: 25px;
+	margin-top: 2rem;
+}
+
+.login-card-no-wallet > span {
+	font-weight: bold;
 }

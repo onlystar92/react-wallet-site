@@ -21,6 +21,7 @@
 .bottomDiv {
 	margin-top: 57.416px;
 	font-size: 12px;
+	min-height: 1px;
 }
 
 .item-height {
