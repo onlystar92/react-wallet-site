@@ -4,6 +4,7 @@ import Toggler from "../../assets/Group 7942.svg";
 import Profile from "../../assets/Rectangle 337.png";
 import Caret from "../../assets/caret.svg";
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 function Navbar({ setisOpen, isOpen }) {
 	const [open, setopen] = useState(false);
@@ -34,19 +35,23 @@ function Navbar({ setisOpen, isOpen }) {
 								path === "/" && "active"
 							}`}
 						>
-							<a class="nav-link" href="/">
+							<NavLink className="nav-link" to="/">
 								Exchange
-							</a>
+							</NavLink>
 						</li>
 						<li class="nav-item font-weight-bold mr-3">
 							<a class="nav-link" href="#">
 								Launch Pool
 							</a>
 						</li>
-						<li class="nav-item font-weight-bold mr-3">
-							<a class="nav-link" href="#">
+						<li
+							class={`nav-item font-weight-bold mr-3 ${
+								path === "/yield-farming" && "active"
+							}`}
+						>
+							<NavLink className="nav-link" to="/yield-farming">
 								Yield Farming
-							</a>
+							</NavLink>
 						</li>
 						<li class="nav-item font-weight-bold mr-3">
 							<a class="nav-link" href="#">

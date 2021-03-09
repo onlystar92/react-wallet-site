@@ -5,44 +5,52 @@ import Navbar from "./Navbar/Navbar";
 import Sidebar from "./Sidebar/Sidebar";
 import Data from "../assets/SideBarItems";
 import TransactionHistory from "./TransactionHistory/TransactionHistory";
+import YieldFarming from "./YieldFarming";
 
-function Layout() {
+function Layout({ name = "dashboard" }) {
 	const data = Data;
 	const [isOpen, setisOpen] = useState(true);
 	const [subOpen, setsubOpen] = useState(false);
 
-	console.log("subopen", subOpen);
+	let Component =
+		name === "dashboard" ? (
+			<Dashboard subOpen={subOpen} isOpen={isOpen} />
+		) : name === "yield-farming" ? (
+			<YieldFarming subOpen={subOpen} isOpen={isOpen} />
+		) : null;
 
 	useEffect(() => {
 		if (!isOpen) {
 			setsubOpen(false);
 		}
 	}, [isOpen]);
+
 	return (
 		<div>
 			<Navbar setisOpen={setisOpen} isOpen={isOpen} />
 
 			<div className="body">
-				<div className="d-flex body-left">
+				<div
+					className={`d-flex ${
+						name === "dashboard" ? "body-left" : "w-100"
+					} `}
+				>
 					<Sidebar
+						data={data}
 						isOpen={isOpen}
 						subOpen={subOpen}
 						setsubOpen={setsubOpen}
 					/>
 
 					<IndividualValues
+						data={data}
 						subOpen={subOpen}
 						setsubOpen={setsubOpen}
 					/>
-
-					<Dashboard
-						subOpen={subOpen}
-						isOpen={isOpen}
-						setsubOpen={setsubOpen}
-					/>
+					{Component}
 				</div>
 
-				<TransactionHistory />
+				{name === "dashboard" && <TransactionHistory />}
 			</div>
 		</div>
 	);
