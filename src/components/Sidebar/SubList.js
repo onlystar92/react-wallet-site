@@ -5,17 +5,19 @@ import {
 	setTitle,
 	selectSidebar,
 	setSidebarActive,
+	setSubListShow,
 } from "../../slices/slice";
 import { useDispatch, useSelector } from "react-redux";
 import "./List.css";
 
-function SubList({ items }) {
+function SubList({ items, idx1 }) {
 	const sidebarActive = useSelector(selectSidebar);
-	const [isOpen, setisOpen] = useState(
-		Array.apply(null, Array(items.length)).map(function (x, i) {
-			return true;
-		}),
-	);
+	// const [isOpen, setisOpen] = useState(
+	// 	Array.apply(null, Array(items.length)).map(function (x, i) {
+	// 		return true;
+	// 	}),
+	// );
+	const [isOpen, setisOpen] = useState(true);
 
 	console.log("active arr", isOpen);
 
@@ -39,11 +41,20 @@ function SubList({ items }) {
 							dispatch(setSidebarActive(item.id));
 							dispatch(setTitle(item.title));
 							dispatch(setDesc(item.description));
-							setisOpen(
-								isOpen.map((item, i) =>
-									i === idx ? !item : item,
-								),
+							setisOpen(!isOpen);
+
+							dispatch(
+								setSubListShow({
+									idx1: idx1,
+									idx2: idx,
+									flag: !isOpen,
+								}),
 							);
+							// setisOpen(
+							// 	isOpen.map((item, i) =>
+							// 		i === idx ? !item : item,
+							// 	),
+							// );
 						}}
 					>
 						<div>
@@ -75,7 +86,7 @@ function SubList({ items }) {
 						)}
 					</button>
 
-					{isOpen[idx] && <List items={item.items} />}
+					{item.show && <List items={item.items} />}
 				</>
 			))}
 		</>

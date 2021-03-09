@@ -26,6 +26,8 @@ const data = [
 				title: "BNB",
 				description: "Binance Coin",
 				individual: { left: "1.4224231", right: "$62,098.31" },
+				show: true,
+
 				items: [
 					{
 						id: "1.1",
@@ -56,6 +58,7 @@ const data = [
 				title: "BNB",
 				description: "Corporate Wallet",
 				individual: { left: "1.4224231", right: "$62,098.31" },
+				show: true,
 
 				items: [
 					{

@@ -25,14 +25,12 @@ function Layout() {
 			<div className="body">
 				<div className="d-flex body-left">
 					<Sidebar
-						data={data}
 						isOpen={isOpen}
 						subOpen={subOpen}
 						setsubOpen={setsubOpen}
 					/>
 
 					<IndividualValues
-						data={data}
 						subOpen={subOpen}
 						setsubOpen={setsubOpen}
 					/>

@@ -2,7 +2,7 @@ import React from "react";
 import "./IndividualValues.css";
 import IndivudalSubItem from "./IndividualSubItem";
 
-function IndividualItems({ left, right, items }) {
+function IndividualItems({ left, right, items, show }) {
 	console.log("items", items);
 	return (
 		<>
@@ -13,6 +13,7 @@ function IndividualItems({ left, right, items }) {
 				</span>
 			</div>
 			{items &&
+				show &&
 				items.map((item) => (
 					<IndivudalSubItem
 						left={item.individual.left}

@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import IndividualItems from "./IndividualItems";
 import "./IndividualValues.css";
+import { selectData } from "../../slices/slice";
+import { useDispatch, useSelector } from "react-redux";
 
-function IndividualValues({ setsubOpen, subOpen, data }) {
-	const [show, setShow] = useState(data.map((a) => a.show));
-
-	useEffect(() => {
-		setShow(1);
-		console.log("show", show);
-
-		console.log("data", data);
-	}, [data]);
-
+function IndividualValues({ setsubOpen, subOpen }) {
+	const data = useSelector(selectData);
 	return (
 		<div
 			className={`individual-container ${
@@ -38,6 +32,7 @@ function IndividualValues({ setsubOpen, subOpen, data }) {
 						{x.show ? (
 							x.items.map((item) => (
 								<IndividualItems
+									show={item.show}
 									items={item.items}
 									left={item.individual.left}
 									right={item.individual.right}
@@ -46,26 +41,6 @@ function IndividualValues({ setsubOpen, subOpen, data }) {
 						) : (
 							<div className="bottomDiv"></div>
 						)}
-						{/* <div className="py-2 item-height">
-						<span className="font-weight-bold color-dark">
-							1.4224231
-						</span>
-						<span className="font-weight-bold ml-2 color-grey">
-							$62,098.31
-						</span>
-					</div>
-					<div className="py-2 item-height">
-						<span className="color-dark">2000000</span>
-						<span className="ml-2 color-grey">$4000.00</span>
-					</div>
-					<div className="py-2 item-height">
-						<span className="color-dark">2300</span>
-						<span className="ml-2 color-grey">$1400.00</span>
-					</div>
-					<div className="py-2 item-height">
-						<span className="color-dark">461.90</span>
-						<span className="ml-2 color-grey">$456.90</span>
-					</div> */}
 					</div>
 				))}
 			</div>

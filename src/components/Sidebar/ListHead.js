@@ -1,23 +1,18 @@
 import React, { useEffect, useState } from "react";
 import SubList from "./SubList";
 import "./List.css";
-import { useDispatch } from "react-redux";
-import { setListHeadCollapse } from "../../slices/slice";
-import Data from "../../assets/SideBarItems";
+import { useDispatch, useSelector } from "react-redux";
+import { setData, selectData, setListHeadShow } from "../../slices/slice";
 
 function ListHead({ icon, title, items, idx }) {
 	const [isOpen, setisOpen] = useState(true);
+	const data = useSelector(selectData);
+
 	const caretStyle = {
 		transform: isOpen ? "rotate(180deg)" : "",
 		color: "white",
 	};
-	//const dispatch = useDispatch();
-
-	// useEffect(() => {
-	// 	if (!isOpen) {
-	// 		dispatch(setListHeadCollapse(idx));
-	// 	}
-	// }, [isOpen]);
+	const dispatch = useDispatch();
 
 	return (
 		<>
@@ -25,7 +20,7 @@ function ListHead({ icon, title, items, idx }) {
 				className="d-flex align-items-center justify-content-between pl-4 pt-3 pr-4 pb-3 listHeadContainer"
 				onClick={() => {
 					setisOpen(!isOpen);
-					Data[idx].show = !isOpen;
+					dispatch(setListHeadShow({ idx: idx, flag: !isOpen }));
 				}}
 			>
 				<div>
@@ -38,7 +33,7 @@ function ListHead({ icon, title, items, idx }) {
 				<i style={caretStyle} class="fas fa-caret-down"></i>
 			</div>
 
-			{isOpen && <SubList items={items} />}
+			{data[idx].show && <SubList items={items} idx1={idx} />}
 		</>
 	);
 }

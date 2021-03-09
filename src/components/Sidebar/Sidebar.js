@@ -1,9 +1,11 @@
 import React from "react";
-import IndividualValues from "../IndividualValues/IndividualValues";
+import { selectData } from "../../slices/slice";
+import { useSelector } from "react-redux";
 import List from "./List";
 import "./Sidebar.css";
 
-function Sidebar({ data, isOpen, setsubOpen, subOpen }) {
+function Sidebar({ isOpen, setsubOpen, subOpen }) {
+	const data = useSelector(selectData);
 	return (
 		<>
 			<div
