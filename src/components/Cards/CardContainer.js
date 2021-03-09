@@ -3,6 +3,7 @@ import "./Card.css";
 import Logo from "../../assets/2local logo.svg";
 import LoginCard from "./LoginCard";
 import NewWalletcard from "./NewWalletcard";
+import WalletExchange from "./WalletExchange";
 
 function CardContainer({ name }) {
 	return (
@@ -12,6 +13,8 @@ function CardContainer({ name }) {
 				<LoginCard />
 			) : name === "new-wallet" ? (
 				<NewWalletcard />
+			) : name === "wallet-exchange" ? (
+				<WalletExchange />
 			) : (
 				""
 			)}

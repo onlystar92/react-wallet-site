@@ -25,6 +25,9 @@ function App() {
 					<Route path="/new-wallet">
 						<Card name="new-wallet" />
 					</Route>
+					<Route path="/wallet-exchange">
+						<Card name="wallet-exchange" />
+					</Route>
 				</Switch>
 			</div>
 		</Router>
