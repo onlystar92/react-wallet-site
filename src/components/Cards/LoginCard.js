@@ -8,6 +8,8 @@ function LoginCard() {
 			<div className="login-card-container">
 				<img className="login-card-logo" src={Logo} alt="" />
 				<h1 className="login-card-heading">Welcome Back!</h1>
+				<div className="line"></div>
+
 				<label className="login-card-label" htmlFor="">
 					Wallet ID
 				</label>

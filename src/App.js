@@ -19,8 +19,11 @@ function App() {
 					<Route exact path="/">
 						<Layout />
 					</Route>
-					<Route path="/card">
-						<Card />
+					<Route path="/login">
+						<Card name="login" />
+					</Route>
+					<Route path="/new-wallet">
+						<Card name="new-wallet" />
 					</Route>
 				</Switch>
 			</div>

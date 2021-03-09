@@ -9,6 +9,19 @@
 	flex-direction: column;
 }
 
+.line {
+	border-bottom: 2px solid #f3f3f3;
+	margin-top: 2rem;
+	width: 100%;
+	height: 1px;
+}
+
+.checkbox {
+	color: #5b7ada;
+	border: 2px solid #5b7ada;
+	margin-right: 0.5rem;
+}
+
 .logo {
 	position: absolute;
 	bottom: 0;
@@ -18,6 +31,18 @@
 .login-card-container {
 	width: 33%;
 	height: 70%;
+	border-radius: 12px;
+	background-color: white;
+	box-shadow: 0px 0px 80px #0000001f;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.new-wallet-card-container {
+	width: 34%;
+	height: 90%;
 	border-radius: 12px;
 	background-color: white;
 	box-shadow: 0px 0px 80px #0000001f;
@@ -43,11 +68,11 @@
 	font-size: 20px;
 	font-weight: bold;
 	color: #455a64;
-	margin-top: 3rem;
+	margin-top: 2rem;
 }
 
 .login-card-input {
-	margin-top: 1rem;
+	margin-top: 0.6rem;
 	border: 2px solid #f3f3f3;
 	padding-left: 2rem;
 	padding-right: 2rem;
@@ -65,7 +90,19 @@
 }
 
 .login-card-forgot-wallet > span {
-	margin-left: 1rem;
+	margin-left: 0.3rem;
+	color: #526daa;
+	font-weight: bold;
+}
+
+.agree-to-terms {
+	margin-top: 1.5rem;
+	font-size: 14px;
+	color: #1d2943;
+}
+
+.agree-to-terms > span {
+	margin-left: 0.3rem;
 	color: #526daa;
 	font-weight: bold;
 }
