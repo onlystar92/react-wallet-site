@@ -1,3 +1,66 @@
-.yield-farming-table .table-body tr:nth-child(even) {
-	background-color: rgba(0, 0, 0, 0.075);
+/* component container */
+.yield-farming-container {
+	padding-top: 2rem;
+	flex-grow: 100;
+	width: calc(100% - 350px);
+}
+
+/* header cell */
+/* body cell */
+.yield-farming-table .table-row .table-body-cell,
+.yield-farming-table .table-header .table-header-cell {
+	margin: 0px 10px;
+}
+
+.yield-farming-table .table-body .table-row:nth-child(even) {
+	background-color: rgba(240, 242, 248, 0.5);
+	border-radius: 4px;
+}
+
+/* breadcrums */
+.yield-farming-container .breadcrums-container .breadcrum {
+	color: #526daa;
+	font-size: 18px;
+	border-radius: 4px;
+	background-color: rgba(82, 109, 170, 0.09);
+}
+
+.yield-farming-container .breadcrums-container .breadcrum .to-bottom-icon {
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #526daa;
+	margin-left: 6px;
+}
+
+/* total value cell */
+/* apy cell */
+.table-body-cell .apy-cell,
+.table-body-cell .totalValue-cell {
+	width: fit-content;
+}
+
+.table-body-cell .apy-cell span,
+.table-body-cell .totalValue-cell span {
+	font-size: 12px;
+	color: #949494;
+}
+
+/* reward type cell */
+/* loss cell */
+.table-body-cell .loss-cell,
+.table-body-cell .rewardType-cell {
+	width: fit-content;
+	border-radius: 4px;
+	padding: 0.25rem 0.5rem;
+	background-color: #eff2f7;
+	font-size: 14px;
+	transform: translateY(-0.5rem);
+}
+
+/* logo styles */
+.table-body-cell .cell-logo {
+	transform: scale(0.85);
+	margin-right: 4px;
 }

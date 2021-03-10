@@ -44,9 +44,9 @@ function Navbar({ setisOpen, isOpen }) {
 								path === "/launch-pool" && "active"
 							}`}
 						>
-							<a class="nav-link" href="/launch-pool">
+							<NavLink className="nav-link" to="/launch-pool">
 								Launch Pool
-							</a>
+							</NavLink>
 						</li>
 						<li
 							class={`nav-item font-weight-bold mr-3 ${

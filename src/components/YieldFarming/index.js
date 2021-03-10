@@ -1,24 +1,24 @@
 import React from "react";
-import { getClass } from "../helper";
 import "./styles.css";
 import data from "./data.json";
 import { ReactComponent as BitcoinLogo } from "../../assets/btc.svg";
+import logo from "../../assets/196.png";
 
 const headersData = [
 	{
 		title: "#",
 		key: "id",
-		width: 100,
+		width: 40,
 	},
 	{
 		title: "Pool",
 		key: "pool",
-		width: 250,
+		width: 200,
 	},
 	{
 		title: "Pair",
 		key: "pair",
-		width: 200,
+		width: 150,
 	},
 	{
 		title: "Total Value Locked",
@@ -38,29 +38,20 @@ const headersData = [
 	{
 		title: "APY",
 		key: "apy",
-		width: 200,
+		width: 150,
 	},
 ];
 
-const btcLogoStyles = {
-	marginRight: 4,
-	transform: "scale(0.9)",
+const Logo = () => {
+	return <img className="cell-logo" src={logo} alt="Logo" />;
 };
 
-const TableBodyCell = ({ data, id, width, className }) => {
+const TableBodyCell = ({ data, id }) => {
 	if (id === "totalValue") {
 		return (
-			<div
-				style={{ width, margin: "0px 10px" }}
-				className={`table-header-cell ${className}`}
-			>
-				<p className="text-center m-0">
-					${data[id].value.toLocaleString()}
-				</p>
-				<span
-					className="text-right d-block"
-					style={{ fontSize: 12, color: "grey" }}
-				>
+			<div className="totalValue-cell">
+				<p className="m-0">${data[id].value.toLocaleString()}</p>
+				<span className="text-right d-block">
 					{data[id].percentage}% out of total
 				</span>
 			</div>
@@ -68,82 +59,42 @@ const TableBodyCell = ({ data, id, width, className }) => {
 	} else if (id === "rewardType") {
 		return (
 			<div
-				style={{ width, margin: "0px 10px" }}
-				className={`table-header-cell d-flex flex-wrap justify-content-center ${className}`}
+				className={`d-flex align-items-center flex-wrap rewardType-cell`}
 			>
 				{data[id].map((d) => (
-					<p
-						className="m-0 p-1 pl-3 pr-3"
-						style={{
-							backgroundColor: "rgba(0,0,0,0.15)",
-							width: "fit-content",
-							fontSize: 14,
-							borderRadius: 4,
-							height: "fit-content",
-						}}
-					>
-						<BitcoinLogo style={btcLogoStyles} /> {d}
+					<p className="m-0 d-flex align-items-center">
+						<Logo /> {d}
 					</p>
 				))}
 			</div>
 		);
 	} else if (id === "apy") {
 		return (
-			<div
-				style={{ width, margin: "0px 10px" }}
-				className={`table-header-cell ${className}`}
-			>
+			<div className="apy-cell">
 				<p className="text-center m-0">{data[id].yearly}% Yearly</p>
-				<span
-					className="text-left d-block"
-					style={{ fontSize: 12, color: "grey" }}
-				>
+				<span className="text-left d-block">
 					{data[id].daily}% Daily
 				</span>
 			</div>
 		);
 	} else if (id === "loss") {
 		return (
-			<div
-				style={{ width, margin: "0px 10px" }}
-				className={`table-header-cell d-flex flex-wrap justify-content-center ${className}`}
-			>
-				<p
-					className="m-0 p-1 pl-3 pr-3"
-					style={{
-						backgroundColor: "rgba(0,0,0,0.15)",
-						width: "fit-content",
-						fontSize: 14,
-						borderRadius: 4,
-						height: "fit-content",
-					}}
-				>
-					{data[id]}
-				</p>
+			<div className={`d-flex flex-wrap loss-cell`}>
+				<p className="m-0">{data[id]}</p>
 			</div>
 		);
 	} else if (id === "pool") {
 		return (
-			<p
-				style={{
-					width,
-					margin: "0px 10px",
-					color: id === "pair" ? "blue" : "initial",
-				}}
-				className={`text-center table-header-cell ${className}`}
-			>
-				<BitcoinLogo style={btcLogoStyles} /> {data[id]}
+			<p className="d-flex align-items-center">
+				<Logo /> {data[id]}
 			</p>
 		);
 	}
 	return (
 		<p
 			style={{
-				width,
-				margin: "0px 10px",
-				color: id === "pair" ? "blue" : "initial",
+				color: id === "pair" ? "#5B7ADA" : "initial",
 			}}
-			className={`text-center table-header-cell ${className}`}
 		>
 			{data[id]}
 		</p>
@@ -152,24 +103,31 @@ const TableBodyCell = ({ data, id, width, className }) => {
 
 const YieldFarmingTable = () => {
 	return (
-		<table className="yield-farming-table">
-			<tr className="w-100 d-flex justify-content-between p-3 table-header">
+		<table className="w-100 yield-farming-table">
+			<tr className="w-100 d-flex p-3 table-header">
 				{headersData.map((h) => (
 					<th
 						key={h.key}
-						style={{ width: h.width, margin: "0px 10px" }}
-						className={`text-center table-header-cell ${h.className}`}
+						style={{
+							width: h.width,
+						}}
+						className={`table-header-cell text-left ${h.className}`}
 					>
 						{h.title}
 					</th>
 				))}
 			</tr>
-			<div className="table-body">
+			<div className="mr-3 table-body">
 				{data.data.map((d) => (
-					<tr className="w-100 d-flex justify-content-between align-items-center p-3 table-row">
+					<tr className="w-100 d-flex align-items-center p-3 table-row">
 						{headersData.map((h) => {
 							return (
-								<td>
+								<td
+									style={{
+										width: h.width,
+									}}
+									className={`text-left table-body-cell ${h.className}`}
+								>
 									<TableBodyCell
 										key={h.key}
 										data={d}
@@ -186,26 +144,26 @@ const YieldFarmingTable = () => {
 	);
 };
 
+const BreadCrums = () => {
+	return (
+		<div className="mt-4 mb-3 d-flex align-items-center breadcrums-container">
+			<h5 className="p-2 pl-4 pr-4 mr-3 breadcrum">New Projects</h5>
+			<h5 className="p-2 pl-4 pr-4 mr-3 breadcrum">Highest APY's</h5>
+			<h5 className="p-2 pl-4 pr-4 d-flex align-items-center breadcrum">
+				Implement Loss Calculator <span className="to-bottom-icon" />
+			</h5>
+		</div>
+	);
+};
+
 function YieldFarming({ isOpen, subOpen }) {
 	return (
-		<div
-			className={`mt-4`}
-			style={{
-				height: "fit-content",
-				padding: "2rem",
-				width: "calc(100% - 350px)",
-			}}
-		>
+		<div className={`ml-3 yield-farming-container`}>
 			<h1 className="text-left font-weight-bold heading">
 				Yield Farming
 			</h1>
-			<div
-				style={{
-					overflow: "auto",
-					backgroundColor: "#fff",
-					padding: "1rem",
-				}}
-			>
+			<BreadCrums />
+			<div className="overflow-auto bg-white p-4">
 				<YieldFarmingTable />
 			</div>
 		</div>
