@@ -11,19 +11,19 @@ function LaunchPoolContainer() {
 				<BlueCard />
 				<WhiteCard />
 				<WhiteCard />
-				{/* <WhiteCard /> */}
+				<WhiteCard />
 			</div>
 			<div className="d-flex cards-wrapper">
 				<BlueCard />
 				<WhiteCard />
 				<WhiteCard />
-				{/* <WhiteCard /> */}
+				<WhiteCard />
 			</div>
 			<div className="d-flex cards-wrapper">
 				<BlueCard />
 				<WhiteCard />
 				<WhiteCard />
-				{/* <WhiteCard /> */}
+				<WhiteCard />
 			</div>
 		</div>
 	);
