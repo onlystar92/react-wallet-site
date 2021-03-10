@@ -5,6 +5,11 @@
 	padding-right: 2rem;
 }
 
+.addressBookContainer {
+	border-radius: 12px;
+	box-shadow: 0px 5px 12px #f0f2f77c;
+}
+
 /* header cell */
 /* body cell */
 .address-book-table .table-row .table-body-cell,

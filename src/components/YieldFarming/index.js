@@ -164,7 +164,7 @@ function YieldFarming() {
 				Yield Farming
 			</h1>
 			<BreadCrums />
-			<div className="overflow-auto bg-white p-4 w-100">
+			<div className="overflow-auto bg-white p-4 w-100 yieldFarmingContainer">
 				<YieldFarmingTable />
 			</div>
 		</div>

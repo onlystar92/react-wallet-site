@@ -4,6 +4,11 @@
 	padding-right: 2rem;
 }
 
+.yieldFarmingContainer {
+	border-radius: 12px;
+	box-shadow: 0px 5px 12px #f0f2f77c;
+}
+
 /* header cell */
 /* body cell */
 .yield-farming-table .table-row .table-body-cell,

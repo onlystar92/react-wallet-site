@@ -131,7 +131,7 @@ function AddressBook() {
 	return (
 		<div className={`ml-3 overflow-auto w-100 address-book-container`}>
 			<h1 className="text-left font-weight-bold heading">Address Book</h1>
-			<div className="overflow-auto bg-white p-4 w-100">
+			<div className="overflow-auto bg-white p-4 w-100 addressBookContainer">
 				<AddressBookTable />
 			</div>
 		</div>
