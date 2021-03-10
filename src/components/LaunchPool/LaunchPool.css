@@ -1,7 +1,9 @@
 .launch-pool-container {
 	padding-left: 2rem;
 	padding-top: 2rem;
+	padding-right: 1rem;
 	flex-grow: 100;
+	width: 90%;
 	overflow: hidden;
 	background-color: #fafbfe;
 }
@@ -98,28 +100,33 @@
 .launch-pool-bluecard {
 	background: #e4edff;
 	border-radius: 12px;
-	padding: 2rem;
-	width: 367px;
-	height: 371px;
+	padding: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	width: 25%;
+	/* height: 371px; */
 	box-shadow: 0px 5px 12px #f0f2f77c;
 }
 
 .launch-pool-whitecard {
 	background: white;
 	border-radius: 12px;
-	padding: 2rem;
-	width: 367px;
-	height: 371px;
+	padding: 1rem;
+	width: 25%;
+	/* height: 371px; */
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 	text-align: center;
 	box-shadow: 0px 5px 12px #f0f2f77c;
 
-	margin-left: 1.7rem;
+	margin-left: 1.5rem;
 }
 
 .launch-pool-bluecard > p {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	line-height: 32px;
+	font-size: 12px;
+	line-height: 30px;
 	color: #636e85;
 }
 
@@ -130,19 +137,19 @@
 }
 
 .bluecard-head-title {
-	font-size: 25px;
+	font-size: 18px;
 	font-weight: bold;
 }
 
 .blue-card-status {
 	border-radius: 11px;
 	background: #ffffff73;
-	width: 134px;
-	height: 47px;
+	width: 120px;
+	height: 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	color: #a8c33b;
 }
@@ -152,6 +159,7 @@
 	justify-content: space-between;
 	font-weight: bold;
 	margin-bottom: 0.7rem;
+	font-size: 14px;
 }
 
 .blue-card-middle > span {
@@ -161,6 +169,7 @@
 .end-date {
 	color: #455a64;
 	margin-right: 1rem;
+	font-size: 14px;
 }
 
 .white-card-logo {
@@ -172,8 +181,8 @@
 	justify-content: space-between;
 	align-items: center;
 	font-weight: bold;
-	font-size: 25px;
-	width: 55%;
+	font-size: 18px;
+	width: 49%;
 	margin: auto;
 	margin-top: 1rem;
 }
@@ -190,6 +199,7 @@
 	justify-content: space-between;
 	font-weight: bold;
 	margin-top: 1rem;
+	font-size: 14px;
 }
 
 .white-card-bottom > span {
@@ -197,5 +207,5 @@
 }
 
 .bottom-wrapper {
-	margin-top: 2.6rem;
+	margin-top: 1.7rem;
 }

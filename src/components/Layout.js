@@ -7,6 +7,7 @@ import Data from "../assets/SideBarItems";
 import TransactionHistory from "./TransactionHistory/TransactionHistory";
 import YieldFarming from "./YieldFarming";
 import LaunchPool from "./LaunchPool/LaunchPoolContainer";
+import AddressBook from "./AddressBook";
 
 function Layout({ name = "dashboard" }) {
 	const data = Data;
@@ -17,12 +18,12 @@ function Layout({ name = "dashboard" }) {
 		name === "dashboard" ? (
 			<Dashboard isOpen={isOpen} />
 		) : name === "yield-farming" ? (
-			<YieldFarming subOpen={subOpen} isOpen={isOpen} />
-		) : (
-			name === "launch-pool" && (
-				<LaunchPool subOpen={subOpen} isOpen={isOpen} />
-			)
-		);
+			<YieldFarming />
+		) : name === "launch-pool" ? (
+			<LaunchPool subOpen={subOpen} isOpen={isOpen} />
+		) : name === "address-book" ? (
+			<AddressBook />
+		) : null;
 
 	useEffect(() => {
 		if (!isOpen) {

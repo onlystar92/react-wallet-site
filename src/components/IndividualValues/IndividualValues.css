@@ -1,8 +1,9 @@
 .individual-container {
-	margin-top: 4rem;
+	margin-top: 3rem;
 	width: 144px;
 	/* margin-left: 1rem; */
 	border-radius: 12px;
+	background-color: white;
 	z-index: 5;
 }
 
@@ -45,6 +46,7 @@
 .container-open {
 	/* position: absolute; */
 	animation-name: container-open;
+	padding: 1rem;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 	z-index: 1;
@@ -54,6 +56,7 @@
 	/* position: absolute; */
 	animation-name: container-close;
 	animation-duration: 1s;
+	padding: 1rem;
 	animation-fill-mode: forwards;
 	z-index: 1;
 }
@@ -68,7 +71,7 @@
 		opacity: 1;
 
 		transform: translateX(0px);
-		width: 144px;
+		width: 170px;
 	}
 }
 
@@ -76,7 +79,7 @@
 	from {
 		opacity: 1;
 		transform: translateX(0px);
-		width: 144px;
+		width: 170px;
 	}
 	to {
 		opacity: 0;

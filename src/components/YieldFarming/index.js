@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css";
 import data from "./data.json";
-import { ReactComponent as BitcoinLogo } from "../../assets/btc.svg";
 import logo from "../../assets/196.png";
 
+//can also add custom className
 const headersData = [
 	{
 		title: "#",
@@ -85,13 +85,14 @@ const TableBodyCell = ({ data, id }) => {
 		);
 	} else if (id === "pool") {
 		return (
-			<p className="d-flex align-items-center">
+			<p className="d-flex align-items-center m-0">
 				<Logo /> {data[id]}
 			</p>
 		);
 	}
 	return (
 		<p
+			className="m-0"
 			style={{
 				color: id === "pair" ? "#5B7ADA" : "initial",
 			}}
@@ -119,7 +120,7 @@ const YieldFarmingTable = () => {
 			</tr>
 			<div className="mr-3 table-body">
 				{data.data.map((d) => (
-					<tr className="w-100 d-flex align-items-center p-3 table-row">
+					<tr className="w-100 d-flex p-3 table-row">
 						{headersData.map((h) => {
 							return (
 								<td
@@ -156,20 +157,18 @@ const BreadCrums = () => {
 	);
 };
 
-function YieldFarming({ isOpen, subOpen }) {
+function YieldFarming() {
 	return (
-		<div className={`ml-3 yield-farming-container`}>
+		<div className={`ml-3 overflow-auto w-100 yield-farming-container`}>
 			<h1 className="text-left font-weight-bold heading">
 				Yield Farming
 			</h1>
 			<BreadCrums />
-			<div className="overflow-auto bg-white p-4">
+			<div className="overflow-auto bg-white p-4 w-100">
 				<YieldFarmingTable />
 			</div>
 		</div>
 	);
 }
-
-// ${getClass({ isOpen, subOpen })}
 
 export default YieldFarming;

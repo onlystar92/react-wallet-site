@@ -62,10 +62,14 @@ function Navbar({ setisOpen, isOpen }) {
 								Airdrops
 							</a>
 						</li>
-						<li class="nav-item font-weight-bold mr-3">
-							<a class="nav-link" href="#">
+						<li
+							class={`nav-item font-weight-bold mr-3 ${
+								path === "/address-book" && "active"
+							}`}
+						>
+							<NavLink className="nav-link" to="/address-book">
 								Address Book
-							</a>
+							</NavLink>
 						</li>
 					</ul>
 				</div>

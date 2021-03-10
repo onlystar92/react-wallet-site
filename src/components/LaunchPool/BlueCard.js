@@ -23,7 +23,7 @@ function BlueCard({ status, icon, title, desc, rewards, period, endDate }) {
 				<span>Farming Period:</span>
 				14 day/s
 			</div>
-			<hr className="mt-5 mb-4" />
+			<hr className="mt-4 mb-4" />
 			<div className="font-weight-bold">
 				<span className="end-date"> Session end date:</span> 2021-03-05
 			</div>

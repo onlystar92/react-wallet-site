@@ -34,6 +34,9 @@ function App() {
 					<Route path="/launch-pool">
 						<Layout name="launch-pool" />
 					</Route>
+					<Route path="/address-book">
+						<Layout name="address-book" />
+					</Route>
 				</Switch>
 			</div>
 		</Router>

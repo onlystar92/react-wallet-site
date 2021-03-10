@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "asset": "BTC",
+      "nickname": "BTC Cold Storage",
+      "address": "fh5uTiDDekgGhBslmp23ahDYumH5h6Ua4o",
+      "date": "30h 26m"
+    },
+    {
+      "id": "2",
+      "asset": "LTC",
+      "nickname": "LTC Exchange Wallet",
+      "address": "aafi4hf89spofmDTfqmFfhsdFJID5ShduTY56",
+      "date": "Oct 19, 2019"
+    },
+    {
+      "id": "3",
+      "asset": "BCH",
+      "nickname": "BCH Cold Storage",
+      "address": "aafi4hf89spofmDTfqmFfhsdFJID5ShduTY56",
+      "date": "Jan 4, 2019"
+    },
+    {
+      "id": "4",
+      "asset": "ETH",
+      "nickname": "ETH Cold Storage",
+      "address": "fh5uTiDDekgGhBslmp23ahDYumH5h6Ua4o",
+      "date": "Sept 10, 2020"
+    }
+  ]
+}
