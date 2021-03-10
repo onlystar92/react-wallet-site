@@ -4,15 +4,14 @@ import { useSelector } from "react-redux";
 import { selectDesc, selectTitle, selectIcon } from "../../slices/slice";
 import Graph from "../Graph/Graph";
 import DashboardTab from "./DashboardTab";
-import { getClass } from "../helper";
 
-function Dashboard({ isOpen, subOpen }) {
+function Dashboard({ isOpen }) {
 	var title = useSelector(selectTitle);
 	var desc = useSelector(selectDesc);
 	var icon = useSelector(selectIcon);
 
 	return (
-		<div className={` text-left  mt-4 ${getClass({ isOpen, subOpen })} `}>
+		<div className={`text-left dashboard ${!isOpen && "w-100"}`}>
 			<h1 className="font-weight-bold heading">{desc}</h1>
 			<div className="d-flex justify-content-between">
 				<div>

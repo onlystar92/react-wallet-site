@@ -72,7 +72,7 @@ function SubList({ items, idx1 }) {
 						{item.items && (
 							<i
 								style={
-									isOpen[idx]
+									item.show
 										? {
 												transform: "rotate(180deg)",
 												color: "#526DAA",

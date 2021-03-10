@@ -34,7 +34,7 @@
 	color: #56e19f;
 }
 
-@keyframes dashboard-open {
+/* @keyframes dashboard-open {
 	from {
 		transform: translateX(0px);
 		width: 100%;
@@ -76,9 +76,18 @@
 		transform: translateX(0);
 		width: 72%;
 	}
+} */
+
+.dashboard {
+	padding-left: 2rem;
+	padding-top: 2rem;
+	font-size: 14px;
+	flex-grow: 100;
+	width: 100%;
+	overflow: hidden;
 }
 
-.dashboard-open {
+/* .dashboard-open {
 	padding-left: 2rem;
 	padding-top: 2rem;
 	font-size: 14px;
@@ -116,7 +125,7 @@
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 	overflow: hidden;
-}
+} */
 
 .top-section {
 	text-align: left;

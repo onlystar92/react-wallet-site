@@ -39,8 +39,12 @@ function Navbar({ setisOpen, isOpen }) {
 								Exchange
 							</NavLink>
 						</li>
-						<li class="nav-item font-weight-bold mr-3">
-							<a class="nav-link" href="#">
+						<li
+							class={`nav-item font-weight-bold mr-3 ${
+								path === "/launch-pool" && "active"
+							}`}
+						>
+							<a class="nav-link" href="/launch-pool">
 								Launch Pool
 							</a>
 						</li>

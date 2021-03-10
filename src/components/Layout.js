@@ -6,6 +6,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import Data from "../assets/SideBarItems";
 import TransactionHistory from "./TransactionHistory/TransactionHistory";
 import YieldFarming from "./YieldFarming";
+import LaunchPool from "./LaunchPool/LaunchPoolContainer";
 
 function Layout({ name = "dashboard" }) {
 	const data = Data;
@@ -14,10 +15,14 @@ function Layout({ name = "dashboard" }) {
 
 	let Component =
 		name === "dashboard" ? (
-			<Dashboard subOpen={subOpen} isOpen={isOpen} />
+			<Dashboard isOpen={isOpen} />
 		) : name === "yield-farming" ? (
 			<YieldFarming subOpen={subOpen} isOpen={isOpen} />
-		) : null;
+		) : (
+			name === "launch-pool" && (
+				<LaunchPool subOpen={subOpen} isOpen={isOpen} />
+			)
+		);
 
 	useEffect(() => {
 		if (!isOpen) {

@@ -31,6 +31,9 @@ function App() {
 					<Route path="/yield-farming">
 						<Layout name="yield-farming" />
 					</Route>
+					<Route path="/launch-pool">
+						<Layout name="launch-pool" />
+					</Route>
 				</Switch>
 			</div>
 		</Router>

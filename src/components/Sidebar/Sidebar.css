@@ -46,6 +46,7 @@
 		transform: translateX(-500px);
 		width: 0px;
 		height: 0;
+		min-width: 0;
 	}
 }
 
@@ -53,6 +54,7 @@
 	from {
 		transform: translateX(-500px);
 		width: 0px;
+		min-width: 0;
 	}
 	to {
 		transform: translateX(0);
@@ -63,6 +65,8 @@
 .sidebar-open {
 	animation-name: open-sidebar;
 	animation-duration: 1s;
+
+	min-width: 300px;
 	animation-fill-mode: forwards;
 	overflow: hidden;
 }
@@ -70,6 +74,8 @@
 .sidebar-close {
 	animation-name: close-sidebar;
 	animation-duration: 1s;
+
+	min-width: 300px;
 	animation-fill-mode: forwards;
 	overflow: hidden;
 }
