@@ -7,17 +7,17 @@ function NewWalletcard() {
 		<>
 			<div className="new-wallet-card-container">
 				<img className="login-card-logo" src={Logo} alt="" />
-				<h1 className="login-card-heading">Create New Wallet</h1>
+				<h1 className="newwallet-card-heading">Create New Wallet</h1>
 				<div className="line"></div>
-				<label className="login-card-label" htmlFor="">
+				<label className="newwallet-card-label" htmlFor="">
 					Your Email
 				</label>
 				<input className="login-card-input" type="text" />
-				<label className="login-card-label" htmlFor="">
+				<label className="newwallet-card-label" htmlFor="">
 					Password
 				</label>
 				<input className="login-card-input" type="password" />
-				<label className="login-card-label" htmlFor="">
+				<label className="newwallet-card-label" htmlFor="">
 					Repeat Password
 				</label>
 				<input className="login-card-input" type="password" />
@@ -29,9 +29,10 @@ function NewWalletcard() {
 					<span> Secret Private Key Recovery Phrase</span> to access
 					my funds.
 				</div>
-				<div className="login-card-forgot-wallet">
-					By creating an account, you agree to 2local’s
-					<span>Terms of Service</span> & <span>Privacy Policy</span>.
+				<div className="newwallet-forgot-pass">
+					By creating an account, you agree to 2local’s{" "}
+					<span>Terms of Service</span> & <span> Privacy Policy</span>
+					.
 				</div>
 				<button className="login-btn">Create Wallet</button>
 			</div>
