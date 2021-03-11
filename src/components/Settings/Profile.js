@@ -38,6 +38,7 @@ function CountryDropdown() {
 				aria-expanded="false"
 			>
 				California, USA
+				<i class="fas fa-caret-down caret-dropdown"></i>
 			</button>
 			<div
 				class="profile-dropdown-select dropdown-menu"

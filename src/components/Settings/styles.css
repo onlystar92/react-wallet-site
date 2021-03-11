@@ -54,10 +54,22 @@
 	width: 55%;
 }
 
+.preferences-container-left {
+	width: 70%;
+}
+
 .general-container-right {
 	width: 40%;
 	text-align: right;
 	color: #1d2943;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.preferences-container-right {
+	width: 25%;
+	text-align: right;
+	color: #5b7ada;
 	font-weight: bold;
 	font-size: 18px;
 }
@@ -197,4 +209,17 @@
 
 .calendar-icon {
 	color: #526daa;
+}
+
+.dropdown-toggle::after {
+	display: none;
+}
+
+.caret-dropdown {
+	color: #526daa;
+}
+
+.checboxes-container {
+	color: #1d2943;
+	font-weight: normal;
 }
