@@ -4,6 +4,7 @@ import "./styles.css";
 import { setSettingsTab, selectSettingsTab } from "../../slices/slice";
 import { useDispatch, useSelector } from "react-redux";
 import Password from "./Password";
+import Profile from "./Profile";
 
 function Navigator() {
 	const dispatch = useDispatch();
@@ -79,6 +80,8 @@ function SettingsContainer() {
 					<General />
 				) : tab === "Password" ? (
 					<Password />
+				) : tab === "Profile" ? (
+					<Profile />
 				) : (
 					""
 				)}

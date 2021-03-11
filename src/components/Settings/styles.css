@@ -123,3 +123,46 @@
 	border: none;
 	margin-left: 12.1rem;
 }
+
+.profile-container {
+	padding-top: 5rem;
+	padding-right: 2rem;
+}
+
+.profile-img {
+	width: 15%;
+}
+
+.profile-head {
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile-left {
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.profile-name {
+	font-size: 35px;
+	font-weight: bold;
+	color: #1d2943;
+}
+
+.update-picture {
+	font-size: 20px;
+	color: #5b7ada;
+}
+
+.save-changes {
+	height: 63px;
+	background: #526daa 0% 0% no-repeat padding-box;
+	border-radius: 12px;
+	color: wheat;
+	font-weight: bold;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	border: none;
+	outline: none;
+}
