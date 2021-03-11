@@ -3,6 +3,7 @@ import General from "./General";
 import "./styles.css";
 import { setSettingsTab, selectSettingsTab } from "../../slices/slice";
 import { useDispatch, useSelector } from "react-redux";
+import Password from "./Password";
 
 function Navigator() {
 	const dispatch = useDispatch();
@@ -61,18 +62,26 @@ function Navigator() {
 				</div>
 			</div>
 
-			<hr className="mt-4" />
+			<hr className="mt-4 settings-line" />
 		</>
 	);
 }
 
 function SettingsContainer() {
+	const tab = useSelector(selectSettingsTab);
+
 	return (
 		<div className="text-left settings-container">
 			<h1 className="settings-head">Settings</h1>
-			<div className="settings-bottom pb-5">
+			<div className="settings-bottom mt-4 pb-5">
 				<Navigator />
-				<General />
+				{tab === "General" ? (
+					<General />
+				) : tab === "Password" ? (
+					<Password />
+				) : (
+					""
+				)}
 			</div>
 		</div>
 	);
