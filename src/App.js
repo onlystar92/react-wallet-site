@@ -40,6 +40,9 @@ function App() {
 					<Route path="/settings">
 						<Layout name="settings" />
 					</Route>
+					<Route path="/launch-pool-individual">
+						<Layout name="launch-pool-individual" />
+					</Route>
 				</Switch>
 			</div>
 		</Router>

@@ -9,6 +9,7 @@ import YieldFarming from "./YieldFarming";
 import LaunchPool from "./LaunchPool/LaunchPoolContainer";
 import AddressBook from "./AddressBook";
 import SettingsContainer from "./Settings";
+import IndividualLaunchPool from "./LaunchPool/IndividualLaunchPool";
 
 function Layout({ name = "dashboard" }) {
 	const data = Data;
@@ -26,6 +27,8 @@ function Layout({ name = "dashboard" }) {
 			<AddressBook />
 		) : name === "settings" ? (
 			<SettingsContainer />
+		) : name === "launch-pool-individual" ? (
+			<IndividualLaunchPool />
 		) : (
 			""
 		);
@@ -43,7 +46,9 @@ function Layout({ name = "dashboard" }) {
 			<div className="body">
 				<div
 					className={`d-flex ${
-						name === "dashboard" ? "body-left" : "w-100"
+						name === "dashboard"
+							? "body-left"
+							: "body-left-notdashboard"
 					} `}
 				>
 					<Sidebar

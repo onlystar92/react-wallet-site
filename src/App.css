@@ -77,6 +77,10 @@
 	width: 74%;
 }
 
+.body-left-notdashboard {
+	width: 98%;
+}
+
 @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);
