@@ -37,6 +37,9 @@ function App() {
 					<Route path="/address-book">
 						<Layout name="address-book" />
 					</Route>
+					<Route path="/settings">
+						<Layout name="settings" />
+					</Route>
 				</Switch>
 			</div>
 		</Router>

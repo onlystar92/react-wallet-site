@@ -1,0 +1,77 @@
+.settings-container {
+	padding-top: 2rem;
+	padding-left: 2rem;
+	padding-right: 1rem;
+}
+
+.settings-bottom {
+	padding-top: 2rem;
+	border-radius: 12px;
+	box-shadow: 0px 5px 12px #f0f2f77c;
+	background: white;
+	padding-left: 3rem;
+}
+
+.settings-head {
+	color: #1d2943;
+	font-weight: bold;
+	font-size: 35px;
+}
+
+.settings-tab {
+	color: #9ea3ae;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.settings-tab > div {
+	margin-right: 2.5rem;
+}
+
+.settings-tab-active {
+	border-bottom: 5px solid #df642b;
+	margin-bottom: -1.5rem;
+	color: #1d2943;
+}
+
+.general-container {
+	padding-top: 1rem;
+	padding-right: 2rem;
+}
+
+.general-container-left {
+	width: 55%;
+}
+
+.general-container-right {
+	width: 40%;
+	text-align: right;
+	color: #1d2943;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.left-head {
+	font-size: 20px;
+	font-weight: bold;
+	color: #1d2943;
+	margin-bottom: 1rem;
+}
+
+.left-desc {
+	color: #1d2943;
+	line-height: 32px;
+}
+
+.left-desc > span {
+	color: #df642b;
+	font-weight: bold;
+}
+
+.external-icon {
+	color: #5b7ada;
+	background-color: #edf0f6;
+	padding: 1rem;
+	border-radius: 9px;
+}

@@ -8,6 +8,7 @@ import TransactionHistory from "./TransactionHistory/TransactionHistory";
 import YieldFarming from "./YieldFarming";
 import LaunchPool from "./LaunchPool/LaunchPoolContainer";
 import AddressBook from "./AddressBook";
+import SettingsContainer from "./Settings";
 
 function Layout({ name = "dashboard" }) {
 	const data = Data;
@@ -23,7 +24,11 @@ function Layout({ name = "dashboard" }) {
 			<LaunchPool subOpen={subOpen} isOpen={isOpen} />
 		) : name === "address-book" ? (
 			<AddressBook />
-		) : null;
+		) : name === "settings" ? (
+			<SettingsContainer />
+		) : (
+			""
+		);
 
 	useEffect(() => {
 		if (!isOpen) {

@@ -22,6 +22,7 @@ export const slice = createSlice({
 		desc: "",
 		icon: "",
 		tab: "",
+		settingsTab: "",
 		sidebarActive: "",
 		data: [
 			{
@@ -197,6 +198,9 @@ export const slice = createSlice({
 		setTab: (state, action) => {
 			state.tab = action.payload;
 		},
+		setSettingsTab: (state, action) => {
+			state.settingsTab = action.payload;
+		},
 		setSidebarActive: (state, action) => {
 			state.sidebarActive = action.payload;
 		},
@@ -221,6 +225,7 @@ export const selectTitle = (state) => state.slice.title;
 export const selectDesc = (state) => state.slice.desc;
 export const selectIcon = (state) => state.slice.icon;
 export const selectTab = (state) => state.slice.tab;
+export const selectSettingsTab = (state) => state.slice.settingsTab;
 export const selectSidebar = (state) => state.slice.sidebarActive;
 export const selectData = (state) => state.slice.data;
 
@@ -229,6 +234,7 @@ export const {
 	setDesc,
 	setIcon,
 	setTab,
+	setSettingsTab,
 	setSidebarActive,
 	setListHeadShow,
 	setSubListShow,
