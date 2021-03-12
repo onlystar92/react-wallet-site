@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Password from "./Password";
 import Profile from "./Profile";
 import Preferences from "./Preferences";
+import KYC from "./KYC";
 
 function Navigator() {
 	const dispatch = useDispatch();
@@ -85,6 +86,8 @@ function SettingsContainer() {
 					<Profile />
 				) : tab === "Preferences" ? (
 					<Preferences />
+				) : tab === "KYC" ? (
+					<KYC />
 				) : (
 					""
 				)}
