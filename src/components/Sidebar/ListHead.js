@@ -3,8 +3,9 @@ import SubList from "./SubList";
 import "./List.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setData, selectData, setListHeadShow } from "../../slices/slice";
+import { NavLink } from "react-router-dom";
 
-function ListHead({ icon, title, items, idx }) {
+function ListHead({ icon, title, items, idx, url }) {
 	const [isOpen, setisOpen] = useState(true);
 	const data = useSelector(selectData);
 
@@ -16,21 +17,24 @@ function ListHead({ icon, title, items, idx }) {
 
 	return (
 		<>
-			<div
-				className="d-flex align-items-center justify-content-between pl-4 pt-3 pr-4 pb-3 listHeadContainer"
-				onClick={() => {
-					setisOpen(!isOpen);
-					dispatch(setListHeadShow({ idx: idx, flag: !isOpen }));
-				}}
-			>
-				<div>
-					<img src={icon} alt="" />
-					<span className="font-weight-bold ml-3 listHeadTitleStyle">
-						{title}
-					</span>
-				</div>
+			<div className="d-flex align-items-center justify-content-between pl-4 pt-3 pr-4 pb-3 listHeadContainer">
+				<NavLink className="nav-link" to={url}>
+					<div>
+						<img src={icon} alt="" />
+						<span className="font-weight-bold ml-3 listHeadTitleStyle">
+							{title}
+						</span>
+					</div>
+				</NavLink>
 
-				<i style={caretStyle} class="fas fa-caret-down"></i>
+				<i
+					onClick={() => {
+						setisOpen(!isOpen);
+						dispatch(setListHeadShow({ idx: idx, flag: !isOpen }));
+					}}
+					style={caretStyle}
+					class="fas fa-caret-down"
+				></i>
 			</div>
 
 			{data[idx].show && <SubList items={items} idx1={idx} />}

@@ -1,9 +1,17 @@
 import React from "react";
 import Logo from "../../assets/dodo.svg";
 
+import { useHistory } from "react-router-dom";
+
 function BlueCard({ status, icon, title, desc, rewards, period, endDate }) {
+	const history = useHistory();
 	return (
-		<div className="launch-pool-bluecard">
+		<div
+			onClick={() => {
+				history.push("/launch-pool-individual");
+			}}
+			className="launch-pool-bluecard"
+		>
 			<div className="bluecard-head">
 				<div className="d-flex align-items-center ">
 					<img className="mr-3" src={Logo} alt="" />
@@ -12,7 +20,7 @@ function BlueCard({ status, icon, title, desc, rewards, period, endDate }) {
 
 				<span className="blue-card-status">COMPLETED</span>
 			</div>
-			<p>
+			<p className="launchpool-bluecard-desc">
 				An open, accessible, capital-efficient decentralized exchange
 				platform
 			</p>

@@ -26,6 +26,7 @@ export const slice = createSlice({
 		sidebarActive: "",
 		data: [
 			{
+				url: "/",
 				icon: Exchange,
 				title: "Exchange",
 				show: true,
@@ -122,6 +123,7 @@ export const slice = createSlice({
 				],
 			},
 			{
+				url: "/launch-pool",
 				id: "3",
 				icon: LaunchPool,
 				title: "Launch Pool",
@@ -152,6 +154,8 @@ export const slice = createSlice({
 				],
 			},
 			{
+				url: "/yield-farming",
+
 				id: "4",
 				icon: YieldFarming,
 				title: "Yield Farming",
@@ -168,6 +172,8 @@ export const slice = createSlice({
 				],
 			},
 			{
+				url: "/air-drop",
+
 				id: "5",
 				icon: AirDrop,
 				title: "Airdrop",

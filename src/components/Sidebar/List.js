@@ -12,6 +12,7 @@ function List({ data }) {
 						title={item.title}
 						items={item.items}
 						idx={idx}
+						url={item.url}
 					/>
 				);
 			})}
