@@ -75,10 +75,10 @@ function SubList({ items, idx1 }) {
 									item.show
 										? {
 												transform: "rotate(180deg)",
-												color: "#526DAA",
+												color: "#53A8F0",
 										  }
 										: {
-												color: "#526DAA",
+												color: "#53A8F0",
 										  }
 								}
 								class="fas fa-caret-down"

@@ -12,7 +12,13 @@ function Dashboard({ isOpen }) {
 
 	return (
 		<div className={`text-left dashboard ${!isOpen && "w-100"}`}>
-			<h1 className="font-weight-bold heading">{desc}</h1>
+			<div className="d-flex justify-content-start align-items-center">
+				<span className="font-weight-bold heading">{desc}</span>
+				<span>
+					<i class="ml-3 fas fa-pencil-alt pencil"></i>
+				</span>
+			</div>
+
 			<div className="d-flex justify-content-between">
 				<div>
 					<span className="font-weight-bold">

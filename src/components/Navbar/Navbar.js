@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Logo from "../../assets/2local logo wht.svg";
 import Toggler from "../../assets/Group 7942.svg";
-import Profile from "../../assets/Rectangle 337.png";
-import Caret from "../../assets/caret.svg";
+import Profile from "../../assets/Rectangle 337.svg";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import Dropdown from "./Dropdown";
 
 function Navbar({ setisOpen, isOpen }) {
 	const [open, setopen] = useState(false);
@@ -14,7 +14,7 @@ function Navbar({ setisOpen, isOpen }) {
 
 	return (
 		<>
-			<nav class="navbar navbar-expand-lg navbar-light d-flex pt-4 pb-4 navbar-container">
+			<nav class="navbar navbar-expand-lg navbar-light d-flex pt-3 pb-3 navbar-container">
 				<div className="inner-nav">
 					<img
 						onClick={() => setisOpen(!isOpen)}
@@ -75,16 +75,29 @@ function Navbar({ setisOpen, isOpen }) {
 				</div>
 
 				<div className="d-flex align-items-center nav-right">
-					<img src={Profile} alt="" />
 					<div className="text-left mx-3">
-						<p className="m-0 mb-1 font-weight-bold">
+						<button className="mr-3 connect-wallet-btn">
+							Connect Wallet
+						</button>
+						<img className="mr-3" src={Profile} alt="" />
+						<span className="m-0 mb-1 font-weight-bold">
 							Adam Sydanus{" "}
-							<img className="ml-2" src={Caret} alt="" />
-						</p>
-						<p className="m-0 ">0x7…b78707</p>
+						</span>
+						<i
+							onClick={() => {
+								setopen(!open);
+							}}
+							style={{
+								transform: open
+									? "scale(1.5) rotate(180deg)"
+									: "",
+							}}
+							class="ml-2 fas fa-caret-down caret-color"
+						></i>
 					</div>
 				</div>
 			</nav>
+			{open && <Dropdown />}
 		</>
 	);
 }

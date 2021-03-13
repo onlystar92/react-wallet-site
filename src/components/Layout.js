@@ -10,6 +10,7 @@ import LaunchPool from "./LaunchPool/LaunchPoolContainer";
 import AddressBook from "./AddressBook";
 import SettingsContainer from "./Settings";
 import IndividualLaunchPool from "./LaunchPool/IndividualLaunchPool";
+import Help from "./Help/Help";
 
 function Layout({ name = "dashboard" }) {
 	const data = Data;
@@ -29,6 +30,8 @@ function Layout({ name = "dashboard" }) {
 			<SettingsContainer />
 		) : name === "launch-pool-individual" ? (
 			<IndividualLaunchPool />
+		) : name === "help" ? (
+			<Help />
 		) : (
 			""
 		);
@@ -47,7 +50,7 @@ function Layout({ name = "dashboard" }) {
 				<div
 					className={`d-flex ${
 						name === "dashboard"
-							? "body-left"
+							? "body-left-notdashboard"
 							: "body-left-notdashboard"
 					} `}
 				>
@@ -66,7 +69,7 @@ function Layout({ name = "dashboard" }) {
 					{Component}
 				</div>
 
-				{name === "dashboard" && <TransactionHistory />}
+				{/* {name === "dashboard" && <TransactionHistory />} */}
 			</div>
 		</div>
 	);

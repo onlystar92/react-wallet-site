@@ -25,7 +25,7 @@ function Sidebar({ isOpen, setsubOpen, subOpen }) {
 								setsubOpen(!subOpen);
 							}}
 							style={{
-								color: "#526DAA",
+								color: "#53A8F0",
 								transform: subOpen ? "rotate(180deg)" : "",
 							}}
 							class="fas fa-caret-right"

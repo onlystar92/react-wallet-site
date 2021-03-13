@@ -43,6 +43,9 @@ function App() {
 					<Route path="/launch-pool-individual">
 						<Layout name="launch-pool-individual" />
 					</Route>
+					<Route path="/help">
+						<Layout name="help" />
+					</Route>
 				</Switch>
 			</div>
 		</Router>

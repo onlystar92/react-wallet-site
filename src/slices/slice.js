@@ -23,6 +23,7 @@ export const slice = createSlice({
 		icon: "",
 		tab: "",
 		settingsTab: "",
+		helpTab: "",
 		sidebarActive: "",
 		data: [
 			{
@@ -207,6 +208,9 @@ export const slice = createSlice({
 		setSettingsTab: (state, action) => {
 			state.settingsTab = action.payload;
 		},
+		setHelpTab: (state, action) => {
+			state.helpTab = action.payload;
+		},
 		setSidebarActive: (state, action) => {
 			state.sidebarActive = action.payload;
 		},
@@ -232,6 +236,7 @@ export const selectDesc = (state) => state.slice.desc;
 export const selectIcon = (state) => state.slice.icon;
 export const selectTab = (state) => state.slice.tab;
 export const selectSettingsTab = (state) => state.slice.settingsTab;
+export const selectHelpTab = (state) => state.slice.helpTab;
 export const selectSidebar = (state) => state.slice.sidebarActive;
 export const selectData = (state) => state.slice.data;
 
@@ -245,6 +250,7 @@ export const {
 	setListHeadShow,
 	setSubListShow,
 	setData,
+	setHelpTab,
 } = slice.actions;
 
 export default slice.reducer;

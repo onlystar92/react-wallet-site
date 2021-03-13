@@ -1,6 +1,6 @@
 .listHeadContainer {
 	cursor: pointer;
-	background-color: #526daa;
+	background-color: #53a8f0;
 }
 
 .listHeadTitleStyle {
@@ -84,7 +84,7 @@
 	background-color: #f0f2f8;
 	outline: none;
 	box-sizing: border-box;
-	border-left: 5px solid #526daa;
+	border-left: 5px solid #53a8f0;
 	padding-left: -5px;
 }
 

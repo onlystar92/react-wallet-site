@@ -24,7 +24,7 @@
 }
 
 .wallet {
-	background-color: #eff2f7;
+	background-color: #eff7fe;
 }
 
 .addWallet {
@@ -33,14 +33,15 @@
 }
 
 .addSquare {
-	color: #526daa;
+	color: #53a8f0;
+	border-radius: 50px;
 	transform: scale(1.7);
 }
 
 @keyframes close-sidebar {
 	from {
 		transform: translateX(0);
-		width: 300px;
+		width: 270px;
 	}
 	to {
 		transform: translateX(-500px);
@@ -58,7 +59,7 @@
 	}
 	to {
 		transform: translateX(0);
-		width: 300px;
+		width: 270px;
 	}
 }
 
@@ -66,7 +67,7 @@
 	animation-name: open-sidebar;
 	animation-duration: 1s;
 
-	min-width: 300px;
+	min-width: 270px;
 	animation-fill-mode: forwards;
 	overflow: hidden;
 }
@@ -75,7 +76,7 @@
 	animation-name: close-sidebar;
 	animation-duration: 1s;
 
-	min-width: 300px;
+	min-width: 270px;
 	animation-fill-mode: forwards;
 	overflow: hidden;
 }
