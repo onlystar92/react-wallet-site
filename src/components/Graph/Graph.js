@@ -116,8 +116,15 @@ function Graph() {
 							/>
 						</linearGradient>
 					</defs>
-					<XAxis axisLine={false} tickLine={false} dataKey="name" />
+					<XAxis
+						fontSize="12px"
+						padding={{ left: 30 }}
+						axisLine={false}
+						tickLine={false}
+						dataKey="name"
+					/>
 					<YAxis
+						fontSize="12px"
 						tickFormatter={DataFormater}
 						axisLine={false}
 						tickLine={false}

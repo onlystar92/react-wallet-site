@@ -1,5 +1,12 @@
 import React from "react";
 import "./Airdrops.css";
+import Swissborg from "../../assets/swissborg.png";
+import Allohash from "../../assets/Allohash.png";
+import CereFinance from "../../assets/Cere Finance.png";
+import Goldario from "../../assets/Goldario.png";
+import Payshares from "../../assets/Payshares.png";
+import Swaprol from "../../assets/Swaprol.png";
+import Ultron from "../../assets/Utron.png";
 
 function AirdropCard({
 	icon,
@@ -16,7 +23,7 @@ function AirdropCard({
 	return (
 		<div className="col airdrop-card-container">
 			<div className="d-flex justify-content-between align-items-center">
-				<img src={icon} alt="" />
+				<img width="30px" src={icon} alt="" />
 				<div className="d-flex align-items-center ">
 					<div
 						style={{
@@ -66,7 +73,7 @@ function Airdrops() {
 			<h1 className="airdrop-head">Airdrops</h1>
 			<div className="row  mt-3">
 				<AirdropCard
-					icon=""
+					icon={Swissborg}
 					status="Active"
 					head="SwissBorg"
 					desc="The community is one of the key values of SwissBorg. We were growing rapidly and constantly and that’s all thanks to your support."
@@ -78,7 +85,7 @@ function Airdrops() {
 					color="#A8C33B"
 				/>
 				<AirdropCard
-					icon=""
+					icon={Allohash}
 					status="Active"
 					head="SwissBorg"
 					desc="The community is one of the key values of SwissBorg. We were growing rapidly and constantly and that’s all thanks to your support."
@@ -90,7 +97,7 @@ function Airdrops() {
 					color="#A8C33B"
 				/>
 				<AirdropCard
-					icon=""
+					icon={CereFinance}
 					status="Active"
 					head="SwissBorg"
 					desc="The community is one of the key values of SwissBorg. We were growing rapidly and constantly and that’s all thanks to your support."
@@ -102,7 +109,7 @@ function Airdrops() {
 					color="#A8C33B"
 				/>
 				<AirdropCard
-					icon=""
+					icon={Goldario}
 					status="Active"
 					head="SwissBorg"
 					desc="The community is one of the key values of SwissBorg. We were growing rapidly and constantly and that’s all thanks to your support."
@@ -116,7 +123,7 @@ function Airdrops() {
 			</div>
 			<div className="row mt-3">
 				<AirdropCard
-					icon=""
+					icon={Payshares}
 					status="Active"
 					head="SwissBorg"
 					desc="The community is one of the key values of SwissBorg. We were growing rapidly and constantly and that’s all thanks to your support."
@@ -128,7 +135,7 @@ function Airdrops() {
 					color="#A8C33B"
 				/>
 				<AirdropCard
-					icon=""
+					icon={Swaprol}
 					status="Active"
 					head="SwissBorg"
 					desc="The community is one of the key values of SwissBorg. We were growing rapidly and constantly and that’s all thanks to your support."
@@ -140,7 +147,7 @@ function Airdrops() {
 					color="#A8C33B"
 				/>
 				<AirdropCard
-					icon=""
+					icon={Ultron}
 					status="Active"
 					head="SwissBorg"
 					desc="The community is one of the key values of SwissBorg. We were growing rapidly and constantly and that’s all thanks to your support."
