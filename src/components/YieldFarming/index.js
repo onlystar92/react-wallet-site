@@ -159,7 +159,9 @@ const BreadCrums = () => {
 
 function YieldFarming() {
 	return (
-		<div className={`ml-3 overflow-auto w-100 yield-farming-container`}>
+		<div
+			className={`ml-4 pt-4 overflow-auto w-100 yield-farming-container`}
+		>
 			<h1 className="text-left font-weight-bold heading">
 				Yield Farming
 			</h1>

@@ -23,7 +23,7 @@ function WhiteCard({ title, icon, sub, apy, participants, stacked }) {
 				</div>
 				<div className="white-card-bottom">
 					<span>Total Stacked:</span>
-					8,361,393.9477 BNB
+					8,361,393 BNB
 				</div>
 			</div>
 		</div>

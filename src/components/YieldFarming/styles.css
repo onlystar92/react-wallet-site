@@ -1,7 +1,7 @@
 /* component container */
 .yield-farming-container {
-	padding-top: 2rem;
 	padding-right: 2rem;
+	font-size: 13px;
 }
 
 .yieldFarmingContainer {
@@ -24,7 +24,7 @@
 /* breadcrums */
 .yield-farming-container .breadcrums-container .breadcrum {
 	color: #526daa;
-	font-size: 18px;
+	font-size: 14px;
 	border-radius: 4px;
 	background-color: rgba(82, 109, 170, 0.09);
 }

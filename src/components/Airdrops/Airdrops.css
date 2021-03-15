@@ -36,10 +36,10 @@
 	background: #ffffff 0% 0% no-repeat padding-box;
 	box-shadow: 0px 5px 12px #f0f2f77c;
 	border-radius: 12px;
-	width: 285px;
+	width: 25%;
 	padding-top: 2rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	padding-bottom: 1.5rem;
 	display: flex;
 	flex-direction: column;

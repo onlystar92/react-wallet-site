@@ -14,7 +14,7 @@ function AirdropCard({
 	color,
 }) {
 	return (
-		<div className=" airdrop-card-container">
+		<div className="col airdrop-card-container">
 			<div className="d-flex justify-content-between align-items-center">
 				<img src={icon} alt="" />
 				<div className="d-flex align-items-center ">
@@ -62,9 +62,9 @@ function AirdropCard({
 
 function Airdrops() {
 	return (
-		<div className="pt-4 airdrop-container">
+		<div className="pl-4 pt-4 airdrop-container">
 			<h1 className="airdrop-head">Airdrops</h1>
-			<div className="d-flex  mt-3">
+			<div className="row  mt-3">
 				<AirdropCard
 					icon=""
 					status="Active"
@@ -114,7 +114,7 @@ function Airdrops() {
 					color="#A8C33B"
 				/>
 			</div>
-			<div className="d-flex  mt-3">
+			<div className="row mt-3">
 				<AirdropCard
 					icon=""
 					status="Active"
@@ -151,6 +151,7 @@ function Airdrops() {
 					telegram
 					color="#A8C33B"
 				/>
+				<div className="col"></div>
 			</div>
 		</div>
 	);

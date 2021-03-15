@@ -130,7 +130,7 @@ const AddressBookTable = () => {
 
 function AddressBook() {
 	return (
-		<div className={`ml-3 pt-4 overflow-auto w-100 address-book-container`}>
+		<div className={`ml-4 pt-4 overflow-auto w-100 address-book-container`}>
 			<h1 className="text-left font-weight-bold heading">Address Book</h1>
 			<div className="mt-4 overflow-auto bg-white p-3 w-100 addressBookContainer">
 				<AddressBookTable />

@@ -126,8 +126,8 @@
 .launchpool-bluecard-desc {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	font-size: 12px;
-	line-height: 30px;
+	font-size: 10px;
+	line-height: 25px;
 	color: #636e85;
 }
 
@@ -184,7 +184,7 @@
 	align-items: center;
 	font-weight: bold;
 	font-size: 16px;
-	width: 49%;
+	width: 57%;
 	margin: auto;
 	margin-top: 1rem;
 }
