@@ -1,12 +1,11 @@
 .airdrop-container {
-	padding-top: 2rem;
 	flex-grow: 100;
 	text-align: left;
 }
 
 .airdrop-head {
 	color: #1d2943;
-	font-size: 35px;
+	font-size: 28px;
 	font-weight: bold;
 }
 
@@ -18,7 +17,7 @@
 
 .airdrop-card-para {
 	color: #1d2943;
-	font-size: 11px;
+	font-size: 12px;
 }
 
 .airdrop-card-bottom {

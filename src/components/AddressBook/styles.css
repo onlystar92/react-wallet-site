@@ -1,8 +1,7 @@
 /* component container */
 .address-book-container {
 	flex-grow: 100;
-	padding-top: 2rem;
-	padding-right: 2rem;
+	font-size: 14px;
 }
 
 .addressBookContainer {

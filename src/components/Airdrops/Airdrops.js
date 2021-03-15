@@ -14,7 +14,7 @@ function AirdropCard({
 	color,
 }) {
 	return (
-		<div className="airdrop-card-container">
+		<div className=" airdrop-card-container">
 			<div className="d-flex justify-content-between align-items-center">
 				<img src={icon} alt="" />
 				<div className="d-flex align-items-center ">
@@ -27,7 +27,10 @@ function AirdropCard({
 							backgroundColor: color,
 						}}
 					></div>
-					<span className="font-weight-bold" style={{ color: color }}>
+					<span
+						className="font-weight-bold"
+						style={{ color: color, fontSize: "14px" }}
+					>
 						{status}
 					</span>
 				</div>
@@ -59,7 +62,7 @@ function AirdropCard({
 
 function Airdrops() {
 	return (
-		<div className="airdrop-container">
+		<div className="pt-4 airdrop-container">
 			<h1 className="airdrop-head">Airdrops</h1>
 			<div className="d-flex  mt-3">
 				<AirdropCard

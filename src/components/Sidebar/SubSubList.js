@@ -24,7 +24,7 @@ function SubSubList({ items }) {
 			{items &&
 				items.map((item, idx) => (
 					<button
-						className={`d-flex justify-content-between align-items-center pl-5 pt-2 pr-4 pb-2 sub-active pointer ${getActive(
+						className={`d-flex justify-content-between align-items-center pl-5 pt-1 pr-4 pb-1 sub-active pointer ${getActive(
 							item,
 						)}`}
 						onClick={() => {
