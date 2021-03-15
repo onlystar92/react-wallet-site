@@ -1,7 +1,7 @@
 .navbar-container {
 	box-shadow: 0px 5px 12px #f0f2f77c;
 	position: relative;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 .inner-nav {
@@ -27,7 +27,7 @@
 .navbar-links {
 	color: white;
 	text-decoration: none;
-	margin-right: 2rem;
+	margin-right: 1rem;
 	margin-left: 0.3rem;
 }
 

@@ -71,7 +71,7 @@ function Graph() {
 	return (
 		<div className="mt-3 graphContainer">
 			<div className="price">Price (USD)</div>
-			<ResponsiveContainer width="99%" aspect={5}>
+			<ResponsiveContainer width="100%" aspect={9}>
 				<AreaChart
 					width={730}
 					height={150}

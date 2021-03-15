@@ -12,7 +12,7 @@ function Dashboard({ isOpen }) {
 	const tab = useSelector(selectTab);
 
 	return (
-		<div className={`pt-3 text-left dashboard ${!isOpen && "w-100"}`}>
+		<div className={`pt-4 pl-4  text-left dashboard ${!isOpen && "w-100"}`}>
 			<div className=" d-flex justify-content-start align-items-center">
 				<span className="font-weight-bold heading">{desc}</span>
 				<span>

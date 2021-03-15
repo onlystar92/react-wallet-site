@@ -32,7 +32,7 @@ function Navbar({ setisOpen, isOpen }) {
 				<div id="navbarText">
 					<ul class="navbar-nav mr-auto ">
 						<li
-							class={`nav-item font-weight-bold mr-3 ${
+							class={`nav-item font-weight-bold mr-2 ${
 								path === "/" && "active"
 							}`}
 						>
@@ -41,7 +41,7 @@ function Navbar({ setisOpen, isOpen }) {
 							</NavLink>
 						</li>
 						<li
-							class={`nav-item font-weight-bold mr-3 ${
+							class={`nav-item font-weight-bold mr-2 ${
 								path === "/launch-pool" && "active"
 							}`}
 						>
@@ -50,7 +50,7 @@ function Navbar({ setisOpen, isOpen }) {
 							</NavLink>
 						</li>
 						<li
-							class={`nav-item font-weight-bold mr-3 ${
+							class={`nav-item font-weight-bold mr-2 ${
 								path === "/yield-farming" && "active"
 							}`}
 						>
@@ -58,13 +58,13 @@ function Navbar({ setisOpen, isOpen }) {
 								Yield Farming
 							</NavLink>
 						</li>
-						<li class="nav-item font-weight-bold mr-3">
+						<li class="nav-item font-weight-bold mr-2">
 							<NavLink className="nav-link" to="/airdrops">
 								Airdrops
 							</NavLink>
 						</li>
 						<li
-							class={`nav-item font-weight-bold mr-3 ${
+							class={`nav-item font-weight-bold mr-2 ${
 								path === "/address-book" && "active"
 							}`}
 						>

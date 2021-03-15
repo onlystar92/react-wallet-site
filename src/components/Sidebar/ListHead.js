@@ -17,7 +17,7 @@ function ListHead({ icon, title, items, idx, url }) {
 
 	return (
 		<>
-			<div className="d-flex align-items-center justify-content-between pl-2 pt-1 pr-4 pb-1 listHeadContainer">
+			<div className="d-flex align-items-center justify-content-between pl-2  pr-4  listHeadContainer">
 				<NavLink className="nav-link" to={url}>
 					<div>
 						<img className="headIcon" src={icon} alt="" />

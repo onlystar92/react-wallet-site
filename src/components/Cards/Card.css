@@ -63,40 +63,40 @@
 
 .login-card-heading {
 	text-align: left;
-	font-size: 30px;
+	font-size: 28px;
 	font-weight: bold;
-	margin-top: 3rem;
+	margin-top: 1.5rem;
 }
 
 .newwallet-card-heading {
 	text-align: left;
 	font-size: 26px;
 	font-weight: bold;
-	margin-top: 2rem;
+	margin-top: 1.5rem;
 }
 
 .login-card-label {
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: bold;
 	color: #455a64;
-	margin-top: 1.7rem;
+	margin-top: 0.7rem;
 }
 
 .newwallet-card-label {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
 	color: #455a64;
 	margin-top: 1rem;
 }
 
 .login-card-input {
-	margin-top: 0.4rem;
+	/* margin-top: 0.4rem; */
 	border: 2px solid #f3f3f3;
 	padding-left: 2rem;
 	padding-right: 2rem;
 	border-radius: 10px;
 	height: 70px;
-	font-size: 20px;
+	font-size: 14px;
 	font-weight: bold;
 	outline: none;
 	color: #1d2943;
@@ -104,6 +104,7 @@
 
 .login-card-forgot-wallet {
 	margin-top: 1rem;
+	font-size: 14px;
 	color: #1d2943;
 }
 
@@ -115,7 +116,7 @@
 
 .agree-to-terms {
 	margin-top: 1rem;
-	font-size: 12px;
+	font-size: 10px;
 	color: #1d2943;
 }
 
@@ -128,10 +129,10 @@
 .login-card-forgot-pass {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 1.5rem;
+	margin-top: 1rem;
 	color: #455a64;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .newwallet-forgot-pass {
@@ -140,7 +141,7 @@
 	margin-top: 1rem;
 	color: #455a64;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 10px;
 }
 
 .newwallet-forgot-pass > span {
@@ -161,7 +162,7 @@
 	border-radius: 10px;
 	background-color: #53a8f0;
 	color: white;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: bold;
 	outline: none;
 	border: none;
@@ -186,16 +187,16 @@
 .login-card-signup {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 2rem;
+	margin-top: 1rem;
 	color: #526daa;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
 }
 
 .login-card-no-wallet {
 	color: white;
-	font-size: 25px;
-	margin-top: 2rem;
+	font-size: 20px;
+	margin-top: 1.5rem;
 }
 
 .login-card-no-wallet > span {
