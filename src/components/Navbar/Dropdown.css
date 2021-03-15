@@ -10,11 +10,11 @@
 	padding-bottom: 1rem;
 	padding-left: 2rem;
 	width: 192px;
-	height: 207px;
+	height: 180px;
 	border-radius: 12px;
 	box-shadow: 0px 5px 15px #dde8ff75;
-	font-weight: normal;
 	font-weight: bold;
+	font-size: 14px;
 }
 
 .dropdown-link {
@@ -36,5 +36,5 @@
 }
 
 .dropdown-container > div {
-	margin-bottom: 3px;
+	margin-bottom: 2px;
 }

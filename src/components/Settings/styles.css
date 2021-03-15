@@ -1,6 +1,4 @@
 .settings-container {
-	padding-top: 2rem;
-	padding-left: 2rem;
 	padding-right: 1rem;
 	flex-grow: 100;
 }
@@ -25,13 +23,13 @@
 .settings-head {
 	color: #1d2943;
 	font-weight: bold;
-	font-size: 35px;
+	font-size: 28px;
 }
 
 .settings-tab {
 	color: #9ea3ae;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 15px;
 	cursor: pointer;
 }
 
@@ -63,7 +61,7 @@
 	text-align: right;
 	color: #1d2943;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 .preferences-container-right {
@@ -75,7 +73,7 @@
 }
 
 .left-head {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: bold;
 	color: #1d2943;
 	margin-bottom: 1rem;
@@ -83,7 +81,8 @@
 
 .left-desc {
 	color: #1d2943;
-	line-height: 32px;
+	line-height: 28px;
+	font-size: 14px;
 }
 
 .left-desc > span {
@@ -103,12 +102,12 @@
 	display: flex;
 	justify-content: space-between;
 	margin: auto;
-	margin-top: 3rem;
+	margin-top: 2rem;
 }
 
 .password-row-label {
 	color: #959aaa;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: bold;
 	margin-right: 1rem;
 	text-align: right;
@@ -116,7 +115,7 @@
 
 .password-row-input {
 	width: 703px;
-	height: 70px;
+	height: 65px;
 	background: #ffffff 0% 0% no-repeat padding-box;
 	border: 2px solid #f3f3f3;
 	border-radius: 10px;
@@ -130,8 +129,10 @@
 	background: #53a8f0;
 	color: white;
 	font-weight: bold;
-	width: 197px;
-	height: 63px;
+	/* width: 197px; */
+	padding-left: 3rem;
+	padding-right: 3rem;
+	height: 55px;
 	border: none;
 	margin-left: 12.1rem;
 }
@@ -157,18 +158,18 @@
 }
 
 .profile-name {
-	font-size: 35px;
+	font-size: 28px;
 	font-weight: bold;
 	color: #1d2943;
 }
 
 .update-picture {
-	font-size: 20px;
+	font-size: 18px;
 	color: #5b7ada;
 }
 
 .save-changes {
-	height: 63px;
+	height: 55px;
 	background: #53a8f0 0% 0% no-repeat padding-box;
 	border-radius: 12px;
 	color: wheat;
@@ -182,7 +183,7 @@
 .profile-label {
 	color: #959aaa;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .profile-input {
@@ -190,7 +191,7 @@
 	border: 2px solid #f3f3f3;
 	border-radius: 10px;
 	height: 70px;
-	padding-left: 2rem;
+	padding-left: 1rem;
 	width: 100%;
 	outline: none;
 	font-weight: bold;
@@ -231,18 +232,18 @@
 
 .panel-head {
 	color: #1d2943;
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: bold;
 }
 
 .panel-desc {
 	color: #9d9d9d;
 	font-size: 14px;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 }
 
 .panel-radio-label {
-	font-size: 18px;
+	font-size: 16px;
 	color: #1d2943;
 }
 

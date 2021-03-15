@@ -74,7 +74,7 @@ function SettingsContainer() {
 	const tab = useSelector(selectSettingsTab);
 
 	return (
-		<div className="text-left settings-container">
+		<div className="pt-4 pl-4 text-left settings-container">
 			<h1 className="settings-head">Settings</h1>
 			<div className="settings-bottom mt-4 pb-5">
 				<Navigator />

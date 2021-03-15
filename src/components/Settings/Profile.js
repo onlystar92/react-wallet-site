@@ -82,10 +82,10 @@ function Profile() {
 			<ProfileTop />
 			<div className="mt-5 row">
 				<Inputs label="Full Name" />
-				<Inputs label="Adress" />
+				<Inputs label="Address" />
 			</div>
 			<div className="mt-5 row">
-				<Inputs label="Email Adress" />
+				<Inputs label="Email Address" />
 				<Inputs label="Mobile Number" />
 			</div>
 			<div className="mt-5 row">
