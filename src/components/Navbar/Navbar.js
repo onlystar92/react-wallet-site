@@ -15,17 +15,18 @@ function Navbar({ setisOpen, isOpen }) {
 	return (
 		<>
 			<nav class="navbar navbar-expand-lg navbar-light d-flex pt-3 pb-3 navbar-container">
-				<div className="inner-nav">
+				<div className="inner-nav d-flex align-items-center">
 					<img
 						onClick={() => setisOpen(!isOpen)}
-						className="mr-4 brand"
+						className="mr-2 brand"
 						src={Toggler}
+						width="50px"
 						alt=""
 					/>
 
-					<a class="navbar-brand" href="#">
-						<img src={Logo} alt="" />
-					</a>
+					<NavLink className="nav-link" to="/">
+						<img src={Logo} alt="" width="90px" />
+					</NavLink>
 				</div>
 
 				<div id="navbarText">
@@ -76,11 +77,11 @@ function Navbar({ setisOpen, isOpen }) {
 
 				<div className="d-flex align-items-center nav-right">
 					<div className="text-left mx-3">
-						<button className="mr-3 connect-wallet-btn">
+						<button className="mr-4 connect-wallet-btn">
 							Connect Wallet
 						</button>
-						<img className="mr-3" src={Profile} alt="" />
-						<span className="m-0 mb-1 font-weight-bold">
+						<img className="mr-4" src={Profile} alt="" />
+						<span className="m-0 mb-1 font-weight-bold profile-name">
 							Adam Sydanus{" "}
 						</span>
 						<i
