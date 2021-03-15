@@ -1,6 +1,10 @@
 .graphContainer {
 	background-color: white;
 	border-radius: 12px;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
 }
 
 .price {

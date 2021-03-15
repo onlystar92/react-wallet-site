@@ -1,5 +1,6 @@
 import React from "react";
 import "./Dropdown.css";
+import { Link } from "react-router-dom";
 
 function Dropdown() {
 	return (
@@ -12,9 +13,11 @@ function Dropdown() {
 				<div>
 					<i class="mr-2 fas fa-question-circle"></i> Help
 				</div>
-				<div>
-					<i class="mr-2 fas fa-cog"></i> Settings
-				</div>
+				<Link to="/settings" className="dropdown-link">
+					<div>
+						<i class="mr-2 fas fa-cog"></i> Settings
+					</div>
+				</Link>
 			</div>
 			<div className="dropdown-bottom">
 				<i class="mr-2 fas fa-file-export"></i> Logout

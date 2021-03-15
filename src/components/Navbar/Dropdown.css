@@ -17,6 +17,16 @@
 	font-weight: bold;
 }
 
+.dropdown-link {
+	text-decoration: none;
+	color: #1d2943;
+}
+
+.dropdown-link:hover {
+	text-decoration: none;
+	color: #1d2943;
+}
+
 .dropdown-top {
 	height: 70%;
 }

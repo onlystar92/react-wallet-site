@@ -127,7 +127,7 @@
 
 .password-btn {
 	border-radius: 12px;
-	background: #526daa;
+	background: #53a8f0;
 	color: white;
 	font-weight: bold;
 	width: 197px;
@@ -169,7 +169,7 @@
 
 .save-changes {
 	height: 63px;
-	background: #526daa 0% 0% no-repeat padding-box;
+	background: #53a8f0 0% 0% no-repeat padding-box;
 	border-radius: 12px;
 	color: wheat;
 	font-weight: bold;
@@ -286,7 +286,7 @@
 	padding-right: 2rem;
 	background: #dee6f9 0% 0% no-repeat padding-box;
 	border-radius: 7px;
-	color: #5b7ada;
+	color: #53a8f0;
 	font-size: 14px;
 }
 
