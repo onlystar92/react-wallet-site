@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
 import "./Dashboard.css";
 import { useSelector } from "react-redux";
-import { selectDesc, selectTitle, selectIcon } from "../../slices/slice";
+import { selectDesc, selectTitle, selectTab } from "../../slices/slice";
 import Graph from "../Graph/Graph";
 import DashboardTab from "./DashboardTab";
+import TransactionHistoryTable from "./TransactionHistory/TransactionHistory";
 
 function Dashboard({ isOpen }) {
 	var title = useSelector(selectTitle);
 	var desc = useSelector(selectDesc);
-	var icon = useSelector(selectIcon);
+	const tab = useSelector(selectTab);
 
 	return (
 		<div className={`text-left dashboard ${!isOpen && "w-100"}`}>
@@ -30,8 +31,13 @@ function Dashboard({ isOpen }) {
 				<div className="code">02d5d94756cdc38e0fc712e629b9fb</div>
 			</div>
 			<Graph isOpen={isOpen} />
-			<DashboardTab />
-			<hr className="mt-4" />
+
+			<div className="dashboard-bottom">
+				<DashboardTab />
+
+				<hr className="mt-4" />
+				{tab === "Transaction History" && <TransactionHistoryTable />}
+			</div>
 		</div>
 	);
 }

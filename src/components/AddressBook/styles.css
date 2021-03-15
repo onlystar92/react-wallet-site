@@ -17,7 +17,7 @@
 	margin: 0px 10px;
 }
 
-.address-book-table .table-body .table-row:nth-child(even) {
+.address-book-table .table-body .table-row:nth-child(odd) {
 	background-color: rgba(240, 242, 248, 0.5);
 	border-radius: 4px;
 }
