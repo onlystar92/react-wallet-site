@@ -24,7 +24,7 @@ function AirdropCard({
 							borderRadius: "50%",
 							height: "5px",
 							width: "5px",
-							backgroundColor: { color },
+							backgroundColor: color,
 						}}
 					></div>
 					<span className="font-weight-bold" style={{ color: color }}>

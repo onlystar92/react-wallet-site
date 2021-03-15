@@ -1,14 +1,14 @@
 .graphContainer {
 	background-color: white;
 	border-radius: 12px;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 	padding-right: 1rem;
-	padding-left: 1rem;
+	padding-left: 0.6rem;
 }
 
 .price {
 	font-size: 12px;
 	margin-bottom: 2rem;
-	margin-left: 1rem;
+	margin-left: 0.6rem;
 }

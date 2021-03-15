@@ -61,6 +61,14 @@ function DashboardTab() {
 			>
 				Stalking
 			</div>
+			<div
+				className={getActive("Transaction History")}
+				onClick={() => {
+					dispatch(setTab("Transaction History"));
+				}}
+			>
+				Transaction History
+			</div>
 		</div>
 	);
 }

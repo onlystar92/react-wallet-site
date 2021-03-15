@@ -69,12 +69,12 @@ function Graph() {
 		}
 	};
 	return (
-		<div className="mt-5 graphContainer">
+		<div className="mt-3 graphContainer">
 			<div className="price">Price (USD)</div>
-			<ResponsiveContainer width="99%" aspect={3}>
+			<ResponsiveContainer width="99%" aspect={5}>
 				<AreaChart
 					width={730}
-					height={250}
+					height={150}
 					data={data}
 					margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
 				>
