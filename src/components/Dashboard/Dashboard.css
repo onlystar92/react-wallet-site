@@ -26,7 +26,7 @@
 }
 
 .heading {
-	font-size: 35px;
+	font-size: 28px;
 	color: #1d2943;
 }
 
@@ -88,7 +88,7 @@
 
 .pencil {
 	color: white;
-	transform: scale(1.3);
+	transform: scale(1);
 	background-color: #df642b;
 	padding: 0.3rem;
 	border-radius: 50%;

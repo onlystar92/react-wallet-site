@@ -16,7 +16,7 @@ function BreadCrumb({ title }) {
 
 function BlueTop() {
 	return (
-		<div className="d-flex flex-column justify-content-center align-items-center blue-top">
+		<div className="d-flex mt-4 flex-column justify-content-center align-items-center blue-top">
 			<div className="d-flex align-items-center">
 				<img src={Icon} alt="" />
 				<span className="blue-top-head">DODO (DODO)</span>

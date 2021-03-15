@@ -1,11 +1,11 @@
 .launch-pool-container {
 	padding-left: 2rem;
-	padding-top: 2rem;
 	padding-right: 1rem;
 	flex-grow: 100;
 	width: 90%;
 	overflow: hidden;
 	background-color: #fafbfe;
+	font-size: 14px;
 }
 
 /* @keyframes launch-pool-container-open {
@@ -101,11 +101,11 @@
 	background: #e4edff;
 	border-radius: 12px;
 	padding: 1rem;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 	width: 25%;
 	cursor: pointer;
-	/* height: 371px; */
+	height: 320px;
 	box-shadow: 0px 5px 12px #f0f2f77c;
 }
 
@@ -114,9 +114,9 @@
 	border-radius: 12px;
 	padding: 1rem;
 	width: 25%;
-	/* height: 371px; */
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	height: 320px;
+	padding-top: 2.3rem;
+	padding-bottom: 1.5rem;
 	text-align: center;
 	box-shadow: 0px 5px 12px #f0f2f77c;
 
@@ -138,19 +138,20 @@
 }
 
 .bluecard-head-title {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
 }
 
 .blue-card-status {
 	border-radius: 11px;
 	background: #ffffff73;
-	width: 120px;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	height: 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bold;
 	color: #a8c33b;
 }
@@ -160,7 +161,7 @@
 	justify-content: space-between;
 	font-weight: bold;
 	margin-bottom: 0.7rem;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .blue-card-middle > span {
@@ -170,7 +171,7 @@
 .end-date {
 	color: #455a64;
 	margin-right: 1rem;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .white-card-logo {
@@ -182,7 +183,7 @@
 	justify-content: space-between;
 	align-items: center;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16px;
 	width: 49%;
 	margin: auto;
 	margin-top: 1rem;
@@ -192,15 +193,15 @@
 	margin-bottom: 0.5rem;
 	color: #6c7485;
 	font-weight: normal;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .white-card-bottom {
 	display: flex;
 	justify-content: space-between;
 	font-weight: bold;
-	margin-top: 1rem;
-	font-size: 14px;
+	margin-top: 0.7rem;
+	font-size: 12px;
 }
 
 .white-card-bottom > span {
@@ -208,13 +209,12 @@
 }
 
 .bottom-wrapper {
-	margin-top: 1.7rem;
+	margin-top: 2.5rem;
 }
 
 .individual {
 	flex-grow: 100;
-	margin-top: 2rem;
-	margin-left: 2rem;
+	margin-left: 1rem;
 }
 
 .blue-top {
@@ -230,20 +230,23 @@
 	top: 2rem;
 	right: 2rem;
 	font-weight: bold;
+	font-size: 14px;
 }
 
 .blue-top-enddate > div {
 	color: #455a64;
+	margin-bottom: 0.5rem;
 }
 
 .blue-top > p {
 	margin-top: 1.5rem;
 	color: #1d2943;
+	font-size: 14px;
 }
 
 .blue-top-head {
 	color: #1d2943;
-	font-size: 25px;
+	font-size: 22px;
 	font-weight: bold;
 	margin-left: 1rem;
 	margin-right: 1rem;
@@ -251,11 +254,13 @@
 
 .blue-top-status {
 	height: 47px;
-	width: 134px;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	background: #ffffff73 0% 0% no-repeat padding-box;
 	border-radius: 11px;
 	color: #a8c33b;
 	font-weight: bold;
+	font-size: 14px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -269,6 +274,7 @@
 	background: #e7edfa 0% 0% no-repeat padding-box;
 	border-radius: 11px;
 	display: flex;
+	font-size: 14px;
 	justify-content: center;
 	align-items: center;
 	color: #1d2943;
@@ -289,17 +295,19 @@
 .grey-bottom-topcard-head {
 	color: #455a64;
 	font-weight: bold;
+	font-size: 14px;
 	margin-bottom: 0.5rem;
 }
 
 .grey-bottom-topcard-value {
-	font-size: 35px;
+	font-size: 28px;
 	font-weight: bold;
 	margin-right: 0.6rem;
 }
 
 .grey-bottom-topcard-span {
 	color: black;
+	font-size: 14px;
 }
 
 .bottom-card {
@@ -321,12 +329,13 @@
 .bottom-card > span {
 	color: #9e9e9e;
 	margin-top: 2rem;
+	font-size: 13px;
 }
 
 .bottom-card-head {
 	color: #1d2943;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 14px;
 	margin-top: 1rem;
 }
 
@@ -336,7 +345,7 @@
 }
 
 .bottom-card-value {
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: bold;
 }
 

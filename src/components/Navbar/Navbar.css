@@ -56,7 +56,7 @@
 }
 .navbar-light .navbar-nav .active a::after {
 	border-bottom: 5px solid #df642b;
-	bottom: -25px;
+	bottom: -28px;
 	content: " ";
 	left: 0;
 	position: absolute;
