@@ -81,7 +81,7 @@ function Navbar({ setisOpen, isOpen }) {
 							Connect Wallet
 						</button>
 						<img className="mr-4" src={Profile} alt="" />
-						<span className="m-0 mb-1 font-weight-bold profile-name">
+						<span className="m-0 mb-1 font-weight-bold profile">
 							Adam Sydanus{" "}
 						</span>
 						<i

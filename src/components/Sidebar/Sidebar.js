@@ -9,7 +9,7 @@ function Sidebar({ isOpen, setsubOpen, subOpen }) {
 	return (
 		<>
 			<div
-				className={`sidebar-container d-flex mt-4  ml-3 text-left pt-4 ${
+				className={`sidebar-container d-flex   ml-3 text-left pt-4 ${
 					!isOpen ? "sidebar-close" : "sidebar-open"
 				}`}
 			>

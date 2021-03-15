@@ -5,21 +5,26 @@
 
 .listHeadTitleStyle {
 	color: white;
-	font-size: 16px;
+	font-size: 14px;
 }
 
-.icon {
+.headIcon {
 	width: 20px;
 	height: 20px;
 }
 
+.icon {
+	width: 17px;
+	height: 17px;
+}
+
 .title {
-	font-size: 12px;
+	font-size: 11px;
 	color: #4c566c;
 }
 
 .desc {
-	font-size: 12px;
+	font-size: 11px;
 	color: #a7abb6;
 }
 

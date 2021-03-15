@@ -8,7 +8,7 @@ function IndividualValues({ setsubOpen, subOpen }) {
 	const data = useSelector(selectData);
 	return (
 		<div
-			className={`individual-container ${
+			className={`mt-4 individual-container ${
 				subOpen ? "container-open" : "container-close"
 			}`}
 		>
@@ -19,7 +19,7 @@ function IndividualValues({ setsubOpen, subOpen }) {
 				></i>
 			</div>
 
-			<div className="text-left mt-4">
+			<div className="text-left mt-3">
 				<div className="d-flex align-items-center">
 					<div className="wrapper"></div>
 					<span className=" font-weight-bold ml-2 text">

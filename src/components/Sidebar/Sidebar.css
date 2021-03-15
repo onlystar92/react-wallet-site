@@ -4,11 +4,11 @@
 
 .balanceStyle {
 	color: #8e94a1;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .balanceAmount {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .innerContainer {
@@ -29,7 +29,7 @@
 
 .addWallet {
 	color: #526daa;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 .addSquare {
@@ -67,7 +67,7 @@
 	animation-name: open-sidebar;
 	animation-duration: 1s;
 
-	min-width: 270px;
+	min-width: 260px;
 	animation-fill-mode: forwards;
 	overflow: hidden;
 }
@@ -76,14 +76,14 @@
 	animation-name: close-sidebar;
 	animation-duration: 1s;
 
-	min-width: 270px;
+	min-width: 260px;
 	animation-fill-mode: forwards;
 	overflow: hidden;
 }
 
 .balance {
 	color: #6e6e6e;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .balance-details {
