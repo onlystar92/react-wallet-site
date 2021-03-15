@@ -11,6 +11,7 @@ import AddressBook from "./AddressBook";
 import SettingsContainer from "./Settings";
 import IndividualLaunchPool from "./LaunchPool/IndividualLaunchPool";
 import Help from "./Help/Help";
+import Airdrops from "./Airdrops/Airdrops";
 
 function Layout({ name = "dashboard" }) {
 	const data = Data;
@@ -32,6 +33,8 @@ function Layout({ name = "dashboard" }) {
 			<IndividualLaunchPool />
 		) : name === "help" ? (
 			<Help />
+		) : name === "airdrops" ? (
+			<Airdrops />
 		) : (
 			""
 		);

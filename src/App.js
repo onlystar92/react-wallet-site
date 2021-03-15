@@ -46,6 +46,9 @@ function App() {
 					<Route path="/help">
 						<Layout name="help" />
 					</Route>
+					<Route path="/airdrops">
+						<Layout name="airdrops" />
+					</Route>
 				</Switch>
 			</div>
 		</Router>

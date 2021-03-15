@@ -58,9 +58,9 @@ function Navbar({ setisOpen, isOpen }) {
 							</NavLink>
 						</li>
 						<li class="nav-item font-weight-bold mr-3">
-							<a class="nav-link" href="#">
+							<NavLink className="nav-link" to="/airdrops">
 								Airdrops
-							</a>
+							</NavLink>
 						</li>
 						<li
 							class={`nav-item font-weight-bold mr-3 ${
