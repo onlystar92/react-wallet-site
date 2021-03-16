@@ -1,0 +1,133 @@
+.slider-cards-container-active {
+	height: 70px;
+	width: 160px;
+
+	background: #dde8ff 0% 0% no-repeat padding-box;
+	border-radius: 8px;
+	padding-top: 1rem;
+	padding-left: 0.5rem;
+	font-size: 14px;
+	/* margin-right: 1rem; */
+}
+
+.slider-cards-container {
+	height: 70px;
+	width: 160px;
+	background: white 0% 0% no-repeat padding-box;
+	border-radius: 8px;
+	padding-top: 1rem;
+	padding-left: 0.5rem;
+	font-size: 14px;
+	/* margin-right: 1rem; */
+}
+
+.slider-cards-span {
+	color: #1d2943;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.slider-card-value {
+	color: #4c566c;
+	font-weight: bold;
+	font-size: 12px;
+	margin-top: 0.1rem;
+	margin-left: 1.8rem;
+}
+
+.custom-swiper-button {
+	line-height: 0;
+	box-shadow: 0px 4px 8px rgba(#1c84ff, 0.25);
+	cursor: pointer;
+	min-width: 45px;
+	height: 45px;
+	font-size: calc(var(--paragraph-font) * 1.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 0.5rem;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	border: 2px solid #f3f3f3;
+	border-radius: 10px;
+}
+
+.custom-swiper-button > i {
+	color: #5b7ada;
+	transform: scale(1.5);
+}
+
+.skewed {
+	transform: rotate(-180deg);
+}
+
+.navigation-btns {
+	position: absolute;
+	top: 0.8rem;
+	left: -0.7rem;
+	z-index: 4;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.buy-sell-container {
+	position: relative;
+}
+
+.swiper-container {
+	width: 94%;
+}
+
+.buy-sell-btn {
+	height: 50px;
+	background: #53a8f0 0% 0% no-repeat padding-box;
+	border-radius: 12px;
+	font-size: 14px;
+	border: none;
+	color: white;
+	width: 347px;
+	margin-top: 1.5rem;
+}
+
+.buy-sell-span {
+	font-size: 45px;
+	outline: none;
+	border: none;
+}
+
+.buy-sell-input {
+	font-size: 45px;
+	width: 20%;
+	outline: none;
+	border: none;
+}
+
+.buy-sell-box {
+	height: 70px;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	width: 320px;
+	font-weight: bold;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	border: 1px solid #53a8f0;
+	border-radius: 13px;
+}
+
+.buy-sell-caret {
+	color: #53a8f0;
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+	transform: scale(1.5);
+}
+
+.bottom-value {
+	color: #4c566c;
+	font-size: 14px;
+}
+
+.buy-sell-sub {
+	color: #4c566c;
+	font-size: 12px;
+	margin-top: 0;
+	margin-bottom: -0.1rem;
+}

@@ -5,6 +5,7 @@ import { selectDesc, selectTitle, selectTab } from "../../slices/slice";
 import Graph from "../Graph/Graph";
 import DashboardTab from "./DashboardTab";
 import TransactionHistoryTable from "./TransactionHistory/TransactionHistory";
+import BuySell from "./BuySell/BuySell";
 
 function Dashboard({ isOpen }) {
 	var title = useSelector(selectTitle);
@@ -36,7 +37,15 @@ function Dashboard({ isOpen }) {
 				<DashboardTab />
 
 				<hr className="mt-4" />
-				{tab === "Transaction History" && <TransactionHistoryTable />}
+				{tab === "Transaction History" ? (
+					<TransactionHistoryTable />
+				) : tab === "Sell" ? (
+					<BuySell tab="Sell" />
+				) : tab === "Buy" ? (
+					<BuySell tab="Buy" />
+				) : (
+					""
+				)}
 			</div>
 		</div>
 	);
