@@ -60,7 +60,7 @@ const AssetCell = ({ text }) => {
 const StatusCell = ({ text }) => {
 	var style = {
 		borderRadius: "11px",
-		height: "47px",
+		height: "38px",
 		color:
 			text === "IN PROGRESS"
 				? "#B33BC3"

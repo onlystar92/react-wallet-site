@@ -173,7 +173,7 @@ export const slice = createSlice({
 				],
 			},
 			{
-				url: "/air-drop",
+				url: "/airdrops",
 
 				id: "5",
 				icon: AirDrop,

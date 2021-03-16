@@ -58,7 +58,11 @@ function Navbar({ setisOpen, isOpen }) {
 								Yield Farming
 							</NavLink>
 						</li>
-						<li class="nav-item font-weight-bold mr-2">
+						<li
+							class={`nav-item font-weight-bold mr-2 ${
+								path === "/airdrops" && "active"
+							}`}
+						>
 							<NavLink className="nav-link" to="/airdrops">
 								Airdrops
 							</NavLink>
