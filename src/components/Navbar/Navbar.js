@@ -101,7 +101,7 @@ function Navbar({ setisOpen, isOpen, open, setopen }) {
 					</div>
 				</div>
 			</nav>
-			{open && <Dropdown />}
+			{open && <Dropdown setopen={setopen} />}
 		</>
 	);
 }

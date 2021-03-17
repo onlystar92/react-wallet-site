@@ -55,7 +55,7 @@ function Layout({ name = "dashboard" }) {
 				setopen={setopen}
 			/>
 
-			<div className="body" onClick={() => setopen(!open)}>
+			<div className="body" onClick={() => setopen(false)}>
 				<div
 					className={`d-flex ${
 						name === "dashboard"
