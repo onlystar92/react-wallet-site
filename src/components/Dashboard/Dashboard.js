@@ -6,6 +6,7 @@ import Graph from "../Graph/Graph";
 import DashboardTab from "./DashboardTab";
 import TransactionHistoryTable from "./TransactionHistory/TransactionHistory";
 import BuySell from "./BuySell/BuySell";
+import Send from "./Send/Send";
 
 function Dashboard({ isOpen }) {
 	var title = useSelector(selectTitle);
@@ -43,6 +44,8 @@ function Dashboard({ isOpen }) {
 					<BuySell tab="Sell" />
 				) : tab === "Buy" ? (
 					<BuySell tab="Buy" />
+				) : tab === "Send" ? (
+					<Send />
 				) : (
 					""
 				)}

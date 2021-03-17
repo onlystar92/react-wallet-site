@@ -1,0 +1,72 @@
+.send-container {
+	width: 80%;
+	margin: auto;
+}
+
+.send-input {
+	height: 55px;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	border: 2px solid #f3f3f3;
+	border-radius: 10px;
+	padding-left: 1rem;
+	width: 100%;
+
+	outline: none;
+	font-weight: bold;
+	font-size: 14px;
+	padding-right: 60px;
+}
+
+.send-dropdown-container {
+	width: 100%;
+}
+
+.send-dropdown {
+	background: #ffffff 0% 0% no-repeat padding-box;
+	border: 2px solid #f3f3f3;
+	border-radius: 10px;
+	height: 55px;
+	padding-left: 1rem;
+	width: 100%;
+	outline: none;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.send-dropdown-label {
+	color: #1d2943;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.send-dropdown-select {
+	margin-top: 0.4rem;
+	font-size: 14px;
+	width: 100%;
+}
+
+.send-input-container {
+	position: relative;
+	width: 100%;
+}
+
+.send-input-container > span {
+	position: absolute;
+	top: 47px;
+	font-weight: bold;
+	font-size: 14px;
+	right: 15px;
+}
+
+.send-textarea {
+	height: 152px;
+	width: 100%;
+	outline: none;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 1rem;
+	padding-top: 1rem;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	border: 2px solid #f3f3f3;
+	border-radius: 10px;
+}
