@@ -6,8 +6,7 @@ import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import Dropdown from "./Dropdown";
 
-function Navbar({ setisOpen, isOpen }) {
-	const [open, setopen] = useState(false);
+function Navbar({ setisOpen, isOpen, open, setopen }) {
 	const path = typeof window !== undefined && window.location.pathname;
 
 	console.log("history", window.location.pathname);

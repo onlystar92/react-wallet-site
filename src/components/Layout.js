@@ -17,6 +17,7 @@ function Layout({ name = "dashboard" }) {
 	const data = Data;
 	const [isOpen, setisOpen] = useState(true);
 	const [subOpen, setsubOpen] = useState(false);
+	const [open, setopen] = useState(false);
 
 	let Component =
 		name === "dashboard" ? (
@@ -47,9 +48,14 @@ function Layout({ name = "dashboard" }) {
 
 	return (
 		<div>
-			<Navbar setisOpen={setisOpen} isOpen={isOpen} />
+			<Navbar
+				setisOpen={setisOpen}
+				isOpen={isOpen}
+				open={open}
+				setopen={setopen}
+			/>
 
-			<div className="body">
+			<div className="body" onClick={() => setopen(!open)}>
 				<div
 					className={`d-flex ${
 						name === "dashboard"
