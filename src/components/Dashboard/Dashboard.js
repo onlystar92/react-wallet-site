@@ -7,6 +7,7 @@ import DashboardTab from "./DashboardTab";
 import TransactionHistoryTable from "./TransactionHistory/TransactionHistory";
 import BuySell from "./BuySell/BuySell";
 import Send from "./Send/Send";
+import Receive from "./Receive/Receive";
 
 function Dashboard({ isOpen }) {
 	var title = useSelector(selectTitle);
@@ -46,6 +47,8 @@ function Dashboard({ isOpen }) {
 					<BuySell tab="Buy" />
 				) : tab === "Send" ? (
 					<Send />
+				) : tab === "Receive" ? (
+					<Receive />
 				) : (
 					""
 				)}
