@@ -8,6 +8,7 @@ import TransactionHistoryTable from "./TransactionHistory/TransactionHistory";
 import BuySell from "./BuySell/BuySell";
 import Send from "./Send/Send";
 import Receive from "./Receive/Receive";
+import Staking from "./Staking/Staking";
 
 function Dashboard({ isOpen }) {
 	var title = useSelector(selectTitle);
@@ -49,6 +50,8 @@ function Dashboard({ isOpen }) {
 					<Send />
 				) : tab === "Receive" ? (
 					<Receive />
+				) : tab === "Staking" ? (
+					<Staking />
 				) : (
 					""
 				)}

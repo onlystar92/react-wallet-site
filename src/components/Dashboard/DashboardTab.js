@@ -54,12 +54,12 @@ function DashboardTab() {
 				Swap
 			</div>
 			<div
-				className={getActive("Stalking")}
+				className={getActive("Staking")}
 				onClick={() => {
-					dispatch(setTab("Stalking"));
+					dispatch(setTab("Staking"));
 				}}
 			>
-				Stalking
+				Staking
 			</div>
 			<div
 				className={getActive("Transaction History")}
