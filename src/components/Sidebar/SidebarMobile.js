@@ -84,11 +84,15 @@ function SidebarMobile({ isOpen, setsubOpen, subOpen, setisOpen }) {
 					</div>
 				</div>
 			</div>
-			{isOpen && (
-				<div className="close-box" onClick={() => setisOpen(false)}>
-					<i class="fas fa-times"></i>
-				</div>
-			)}
+
+			<div
+				className={`close-box ${
+					isOpen ? "close-box-open" : "close-box-close"
+				}`}
+				onClick={() => setisOpen(false)}
+			>
+				<i class="fas fa-times"></i>
+			</div>
 		</>
 	);
 }

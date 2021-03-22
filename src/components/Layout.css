@@ -2,6 +2,10 @@
 	position: relative;
 }
 
+.sidebar-desktop {
+	z-index: 2;
+}
+
 .sidebar-mobile {
 	display: none;
 }
@@ -13,5 +17,6 @@
 
 	.sidebar-mobile {
 		display: block;
+		z-index: 2;
 	}
 }

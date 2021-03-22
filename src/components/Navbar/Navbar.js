@@ -5,6 +5,7 @@ import Profile from "../../assets/Rectangle 337.svg";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import Dropdown from "./Dropdown";
+import NavigatorMobile from "./NavigatorMobile";
 
 function Navbar({ setisOpen, isOpen, open, setopen }) {
 	const path = typeof window !== undefined && window.location.pathname;
@@ -12,8 +13,8 @@ function Navbar({ setisOpen, isOpen, open, setopen }) {
 	console.log("history", window.location.pathname);
 
 	return (
-		<>
-			<nav class="navbar navbar-expand-lg navbar-light d-flex pt-3 pb-3 navbar-container">
+		<div className="navbar-container">
+			<nav class="navbar navbar-expand-lg navbar-light d-flex pt-3 pb-3 ">
 				<div className="inner-nav d-flex align-items-center">
 					<img
 						onClick={() => setisOpen(!isOpen)}
@@ -108,8 +109,11 @@ function Navbar({ setisOpen, isOpen, open, setopen }) {
 					</div>
 				</div>
 			</nav>
+			<div className="topbar-navigator-mobile ">
+				<NavigatorMobile />
+			</div>
 			{open && <Dropdown setopen={setopen} />}
-		</>
+		</div>
 	);
 }
 

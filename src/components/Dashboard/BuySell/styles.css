@@ -64,7 +64,7 @@
 	position: absolute;
 	top: 0.8rem;
 	left: -0.7rem;
-	z-index: 4;
+	z-index: 1;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
