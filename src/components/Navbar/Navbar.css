@@ -50,6 +50,36 @@
 	font-weight: bold;
 }
 
+@media (max-width: 768px) {
+	.inner-nav {
+		width: 20%;
+	}
+
+	.navbarText {
+		display: none !important;
+	}
+
+	.brand {
+		width: 40px;
+	}
+
+	.brand-logo {
+		width: 68px;
+	}
+
+	.profile-right {
+		display: none;
+	}
+
+	.connect-wallet-btn {
+		max-height: 50px;
+
+		/* padding-left: 1rem;
+		padding-right: 1rem; */
+		font-size: 10px;
+	}
+}
+
 .navbar-nav > li {
 	float: left;
 	position: relative;

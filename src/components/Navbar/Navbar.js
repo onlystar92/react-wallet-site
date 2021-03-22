@@ -24,11 +24,16 @@ function Navbar({ setisOpen, isOpen, open, setopen }) {
 					/>
 
 					<NavLink className="nav-link" to="/">
-						<img src={Logo} alt="" width="90px" />
+						<img
+							className="brand-logo"
+							src={Logo}
+							alt=""
+							width="90px"
+						/>
 					</NavLink>
 				</div>
 
-				<div id="navbarText">
+				<div className="navbarText">
 					<ul class="navbar-nav mr-auto ">
 						<li
 							class={`nav-item font-weight-bold mr-2 ${
@@ -79,25 +84,27 @@ function Navbar({ setisOpen, isOpen, open, setopen }) {
 				</div>
 
 				<div className="d-flex align-items-center nav-right">
-					<div className="text-left mx-3">
+					<div className="text-left mx-xs-3 d-flex">
 						<button className="mr-4 connect-wallet-btn">
 							Connect Wallet
 						</button>
-						<img className="mr-4" src={Profile} alt="" />
-						<span className="m-0 mb-1 font-weight-bold profile">
-							Adam Sydanus{" "}
-						</span>
-						<i
-							onClick={() => {
-								setopen(!open);
-							}}
-							style={{
-								transform: open
-									? "scale(1.5) rotate(180deg)"
-									: "",
-							}}
-							class="ml-2 fas fa-caret-down caret-color"
-						></i>
+						<div className=" profile-right">
+							<img className="mr-4 " src={Profile} alt="" />
+							<span className="m-0 mb-1 font-weight-bold profile">
+								Adam Sydanus{" "}
+							</span>
+							<i
+								onClick={() => {
+									setopen(!open);
+								}}
+								style={{
+									transform: open
+										? "scale(1.5) rotate(180deg)"
+										: "",
+								}}
+								class="ml-2 fas fa-caret-down caret-color"
+							></i>
+						</div>
 					</div>
 				</div>
 			</nav>
