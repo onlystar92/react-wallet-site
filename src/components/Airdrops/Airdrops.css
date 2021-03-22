@@ -54,3 +54,16 @@
 .card-bottom-requirements > i {
 	margin-right: 0.6rem;
 }
+
+@media (max-width: 768px) {
+	.airdrop-container {
+		width: 95%;
+	}
+	.airdrop-card-container {
+		margin: auto;
+		margin-bottom: 1rem;
+	}
+	.airdrop-head {
+		display: none;
+	}
+}

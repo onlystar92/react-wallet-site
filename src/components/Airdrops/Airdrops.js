@@ -21,7 +21,7 @@ function AirdropCard({
 	color,
 }) {
 	return (
-		<div className="col airdrop-card-container">
+		<div className="col col-11 col-md airdrop-card-container">
 			<div className="d-flex justify-content-between align-items-center">
 				<img width="30px" src={icon} alt="" />
 				<div className="d-flex align-items-center ">
@@ -69,9 +69,9 @@ function AirdropCard({
 
 function Airdrops() {
 	return (
-		<div className="pl-4 pt-4 airdrop-container">
+		<div className="pl-md-4 pt-md-4 airdrop-container">
 			<h1 className="airdrop-head">Airdrops</h1>
-			<div className="row  mt-3">
+			<div className="row  mt-4">
 				<AirdropCard
 					icon={Swissborg}
 					status="Active"
