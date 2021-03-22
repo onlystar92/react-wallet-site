@@ -85,7 +85,7 @@ function Navbar({ setisOpen, isOpen, open, setopen }) {
 
 				<div className="d-flex align-items-center nav-right">
 					<div className="text-left mx-xs-3 d-flex">
-						<button className="mr-4 connect-wallet-btn">
+						<button className="mr-sm-4 connect-wallet-btn">
 							Connect Wallet
 						</button>
 						<div className=" profile-right">
