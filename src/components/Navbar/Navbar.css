@@ -2,7 +2,7 @@
 	box-shadow: 0px 5px 12px #f0f2f77c;
 	position: relative;
 	font-size: 15px;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .inner-nav {

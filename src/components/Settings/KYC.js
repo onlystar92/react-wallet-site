@@ -19,7 +19,7 @@ function DropLocation({ head }) {
 
 function DragArea({ head }) {
 	return (
-		<div className="panel-drag-area d-flex justify-content-between align-items-center mb-5">
+		<div className="panel-drag-area mb-sm-5 mb-4">
 			{head === "ID Document" ? (
 				<>
 					<DropLocation head="ID Document" />
@@ -34,7 +34,7 @@ function DragArea({ head }) {
 
 function RadioSelection({ label }) {
 	return (
-		<div className="mb-4">
+		<div className="mb-sm-4 mb-3">
 			<input className="panel-radio" type="radio" name="" id="" />
 			<label className="panel-radio-label ml-3" htmlFor="">
 				{label}
@@ -47,7 +47,7 @@ function Panel({ head, desc }) {
 	return (
 		<div className="panel-wrapper">
 			<div className="panel-head">{head}</div>
-			<div className="panel-desc">{desc}</div>
+			<div className="panel-desc mt-3">{desc}</div>
 			{head === "ID Document" ? (
 				<>
 					<RadioSelection label="National ID Card" />
@@ -68,7 +68,7 @@ function Panel({ head, desc }) {
 
 function KYC() {
 	return (
-		<div className="kyc-container d-flex justify-content-between align-items-start">
+		<div className="kyc-container">
 			<Panel
 				head="ID Document"
 				desc="Please choose a valid government issued picture identification document."
