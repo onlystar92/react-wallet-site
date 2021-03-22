@@ -58,6 +58,15 @@ function Layout({ name = "dashboard" }) {
 			/>
 
 			<div className="body" onClick={() => setopen(false)}>
+				<div className="sidebar-mobile">
+					<SidebarMobile
+						data={data}
+						isOpen={isOpen}
+						subOpen={subOpen}
+						setsubOpen={setsubOpen}
+						setisOpen={setisOpen}
+					/>
+				</div>
 				<div
 					className={`d-flex ${
 						name === "dashboard"
@@ -71,16 +80,6 @@ function Layout({ name = "dashboard" }) {
 							isOpen={isOpen}
 							subOpen={subOpen}
 							setsubOpen={setsubOpen}
-						/>
-					</div>
-
-					<div className="sidebar-mobile">
-						<SidebarMobile
-							data={data}
-							isOpen={isOpen}
-							subOpen={subOpen}
-							setsubOpen={setsubOpen}
-							setisOpen={setisOpen}
 						/>
 					</div>
 

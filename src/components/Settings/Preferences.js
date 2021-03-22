@@ -8,7 +8,7 @@ function CheckBoxes() {
 				<input type="checkbox" name="" id="" />
 				<span className="ml-2">Email</span>
 			</span>
-			<span className="ml-5 checboxes-container">
+			<span className="ml-md-5 checboxes-container">
 				<input type="checkbox" name="" id="" />
 				<span className="ml-2">SMS</span>
 			</span>
@@ -51,17 +51,29 @@ function Dropdown({ title }) {
 function GeneralRow({ head, desc, span, right }) {
 	return (
 		<>
-			<div className="d-flex justify-content-between mt-5 mb-1">
+			<div className="d-flex justify-content-between mt-sm-5 mb-1">
 				<div className="preferences-container-left">
 					<div className="left-head">{head}</div>
+					{head === "Mobile Number" && (
+						<div className="general-container-right-mobile mb-3">
+							{right}
+						</div>
+					)}
 					<div className="left-desc">
 						{desc}
 						<span>{span}</span>
 					</div>
 				</div>
-				<div className="preferences-container-right">{right}</div>
-			</div>
-			<hr className="mt-5 " />
+
+				{head === "Mobile Number" && right ? (
+					<div className="preferences-container-right-top ">
+						{right}
+					</div>
+				) : (
+					<div className="preferences-container-right">{right}</div>
+				)}
+			</div>{" "}
+			<hr className="mt-sm-5 " />
 		</>
 	);
 }

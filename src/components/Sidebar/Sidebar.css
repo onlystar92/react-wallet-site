@@ -118,7 +118,7 @@
 
 @keyframes close-sidebar-mobile {
 	from {
-		transform: translateX(0);
+		transform: translateX(0px);
 		width: 85vw;
 	}
 	to {
@@ -136,7 +136,7 @@
 		min-width: 0;
 	}
 	to {
-		transform: translateX(0);
+		transform: translateX(0px);
 		width: 85vw;
 	}
 }

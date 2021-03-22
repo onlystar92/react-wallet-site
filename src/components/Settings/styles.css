@@ -360,6 +360,10 @@
 		display: none;
 	}
 
+	.preferences-container-right-top {
+		display: none;
+	}
+
 	.general-container-right-mobile {
 		display: block;
 		color: #1d2943;
@@ -454,5 +458,17 @@
 		width: 100%;
 		margin-left: 0;
 		font-size: 13px;
+	}
+
+	.preferences-container-right {
+		width: 70%;
+		text-align: right;
+		color: #5b7ada;
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+	.preferences-container-left {
+		width: 100%;
 	}
 }
