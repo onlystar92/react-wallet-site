@@ -97,7 +97,6 @@
 .dashboard {
 	flex-grow: 100%;
 	/* padding-left: 2rem; */
-
 	font-size: 14px;
 	flex-grow: 100;
 	width: 100%;
@@ -203,4 +202,20 @@
 
 .load-transaction {
 	margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+	.heading {
+		font-size: 25px;
+	}
+
+	.pencil {
+		transform: scale(0.6);
+
+		padding: 0.5rem;
+	}
+
+	.code {
+		display: none;
+	}
 }

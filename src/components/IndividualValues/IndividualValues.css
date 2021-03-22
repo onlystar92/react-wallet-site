@@ -86,3 +86,9 @@
 		width: 0px;
 	}
 }
+
+@media (max-width: 768px) {
+	.individual-container {
+		display: none;
+	}
+}

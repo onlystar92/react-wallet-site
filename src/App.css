@@ -81,6 +81,13 @@
 	width: 98%;
 }
 
+@media (max-width: 768px) {
+	.body-left-notdashboard {
+		width: 90%;
+		margin: auto;
+	}
+}
+
 @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);

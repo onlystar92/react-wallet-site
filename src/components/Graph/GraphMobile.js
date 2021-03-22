@@ -67,9 +67,9 @@ function Graph() {
 		}
 	};
 	return (
-		<div className="mt-3 graphContainer">
+		<div className="mt-3 graphContainerMobile">
 			<div className="price">Price (USD)</div>
-			<ResponsiveContainer width="100%" aspect={9}>
+			<ResponsiveContainer width="100%" aspect={1.7}>
 				<AreaChart
 					width={730}
 					height={150}
@@ -115,14 +115,13 @@ function Graph() {
 						</linearGradient>
 					</defs>
 					<XAxis
-						fontSize="12px"
-						padding={{ left: 30 }}
+						fontSize="10px"
 						axisLine={false}
 						tickLine={false}
 						dataKey="name"
 					/>
 					<YAxis
-						fontSize="12px"
+						fontSize="10px"
 						tickFormatter={DataFormater}
 						axisLine={false}
 						tickLine={false}

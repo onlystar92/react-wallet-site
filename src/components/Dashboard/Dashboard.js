@@ -3,6 +3,7 @@ import "./Dashboard.css";
 import { useSelector } from "react-redux";
 import { selectDesc, selectTitle, selectTab } from "../../slices/slice";
 import Graph from "../Graph/Graph";
+import GraphMobile from "../Graph/GraphMobile";
 import DashboardTab from "./DashboardTab";
 import TransactionHistoryTable from "./TransactionHistory/TransactionHistory";
 import BuySell from "./BuySell/BuySell";
@@ -16,7 +17,9 @@ function Dashboard({ isOpen }) {
 	const tab = useSelector(selectTab);
 
 	return (
-		<div className={`pt-4 pl-4  text-left dashboard ${!isOpen && "w-100"}`}>
+		<div
+			className={`pt-4 pl-md-4 text-left dashboard ${!isOpen && "w-100"}`}
+		>
 			<div className=" d-flex justify-content-start align-items-center">
 				<span className="font-weight-bold heading">{desc}</span>
 				<span>
@@ -34,7 +37,9 @@ function Dashboard({ isOpen }) {
 				</div>
 				<div className="code">02d5d94756cdc38e0fc712e629b9fb</div>
 			</div>
+
 			<Graph isOpen={isOpen} />
+			<GraphMobile isOpen={isOpen} />
 
 			<div className="dashboard-bottom">
 				<DashboardTab />
