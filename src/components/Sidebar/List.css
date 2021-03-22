@@ -96,3 +96,17 @@
 .pointer {
 	cursor: pointer;
 }
+
+@media (max-width: 768px) {
+	.listHeadTitleStyle {
+		font-size: 10px;
+	}
+
+	.title {
+		font-size: 10px;
+	}
+
+	.desc {
+		font-size: 10px;
+	}
+}

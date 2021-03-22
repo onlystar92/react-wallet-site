@@ -1,5 +1,5 @@
 .sidebar-container {
-	z-index: 3;
+	z-index: 5;
 }
 
 .balanceStyle {
@@ -100,4 +100,92 @@
 .eye {
 	color: #df642b;
 	width: 20px;
+}
+
+@media (max-width: 768px) {
+	.innerContainer {
+		border-radius: 0px;
+		padding-left: 1.5rem;
+		padding-right: 2rem;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	.addWallet {
+		font-size: 10px;
+	}
+
+	.addSquare {
+		transform: scale(1.2);
+	}
+}
+
+@keyframes close-sidebar-mobile {
+	from {
+		transform: translateX(0);
+		width: 85vw;
+	}
+	to {
+		transform: translateX(-500px);
+		width: 0px;
+		height: 0;
+		min-width: 0;
+	}
+}
+
+@keyframes open-sidebar-mobile {
+	from {
+		transform: translateX(-500px);
+		width: 0px;
+		min-width: 0;
+	}
+	to {
+		transform: translateX(0);
+		width: 85vw;
+	}
+}
+
+.sidebar-open-mobile {
+	animation-name: open-sidebar-mobile;
+	animation-duration: 1s;
+
+	animation-fill-mode: forwards;
+	overflow: hidden;
+	position: absolute;
+	top: -82px;
+}
+
+.sidebar-close-mobile {
+	position: absolute;
+	top: -82px;
+
+	animation-name: close-sidebar-mobile;
+	animation-duration: 1s;
+
+	animation-fill-mode: forwards;
+	overflow: hidden;
+}
+
+.sidebar-profile-name {
+	color: #1d2943;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.sidebar-myaccount {
+	color: #53a8f0;
+	font-size: 10px;
+}
+
+.close-box {
+	z-index: 9;
+	top: -25px;
+	right: 10px;
+	position: absolute;
+	background: #f8fafd 0% 0% no-repeat padding-box;
+	border-radius: 5px;
+	width: fit-content;
+	padding: 7px;
+	padding-left: 12px;
+	padding-right: 12px;
 }

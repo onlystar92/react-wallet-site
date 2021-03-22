@@ -1,0 +1,17 @@
+.layout-container {
+	position: relative;
+}
+
+.sidebar-mobile {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.sidebar-desktop {
+		display: none;
+	}
+
+	.sidebar-mobile {
+		display: block;
+	}
+}

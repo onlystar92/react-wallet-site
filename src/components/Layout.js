@@ -12,6 +12,8 @@ import SettingsContainer from "./Settings";
 import IndividualLaunchPool from "./LaunchPool/IndividualLaunchPool";
 import Help from "./Help/Help";
 import Airdrops from "./Airdrops/Airdrops";
+import "./Layout.css";
+import SidebarMobile from "./Sidebar/SidebarMobile";
 
 function Layout({ name = "dashboard" }) {
 	const data = Data;
@@ -47,7 +49,7 @@ function Layout({ name = "dashboard" }) {
 	}, [isOpen]);
 
 	return (
-		<div>
+		<div className="layout-container">
 			<Navbar
 				setisOpen={setisOpen}
 				isOpen={isOpen}
@@ -63,12 +65,24 @@ function Layout({ name = "dashboard" }) {
 							: "body-left-notdashboard"
 					} `}
 				>
-					<Sidebar
-						data={data}
-						isOpen={isOpen}
-						subOpen={subOpen}
-						setsubOpen={setsubOpen}
-					/>
+					<div className="sidebar-desktop">
+						<Sidebar
+							data={data}
+							isOpen={isOpen}
+							subOpen={subOpen}
+							setsubOpen={setsubOpen}
+						/>
+					</div>
+
+					<div className="sidebar-mobile">
+						<SidebarMobile
+							data={data}
+							isOpen={isOpen}
+							subOpen={subOpen}
+							setsubOpen={setsubOpen}
+							setisOpen={setisOpen}
+						/>
+					</div>
 
 					<IndividualValues
 						data={data}

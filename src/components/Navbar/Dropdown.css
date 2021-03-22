@@ -38,3 +38,14 @@
 .dropdown-container > div {
 	margin-bottom: 2px;
 }
+
+@media (max-width: 768px) {
+	.dropdown-link,
+	.dropdown-bottom {
+		font-size: 12px;
+	}
+
+	.dropdown-link > div {
+		margin-bottom: 0.7rem;
+	}
+}

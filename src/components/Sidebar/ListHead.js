@@ -33,7 +33,7 @@ function ListHead({ icon, title, items, idx, url }) {
 						dispatch(setListHeadShow({ idx: idx, flag: !isOpen }));
 					}}
 					style={caretStyle}
-					class="fas fa-caret-down"
+					class="fas fa-caret-down "
 				></i>
 			</div>
 
