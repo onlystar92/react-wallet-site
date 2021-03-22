@@ -135,6 +135,7 @@
 
 .individual {
 	flex-grow: 100;
+	width: 100%;
 	margin-left: 1rem;
 }
 
@@ -144,6 +145,11 @@
 	border: 1px solid #dde8ff;
 	border-radius: 12px;
 	position: relative;
+}
+
+.blue-top-head-container {
+	display: flex;
+	align-items: center;
 }
 
 .blue-top-enddate {
@@ -276,6 +282,15 @@
 	color: black;
 }
 
+.mobile-end-date {
+	display: none;
+}
+
+.breadcrumbs-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
 	.cards-wrapper {
 		flex-direction: column;
@@ -311,5 +326,89 @@
 
 	.white-card-head {
 		width: 40%;
+	}
+
+	.individual {
+		margin-left: 0;
+	}
+
+	.blue-top {
+		height: fit-content;
+		width: 100%;
+		padding-top: 1.5rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.blue-top-head,
+	.blue-top-status {
+		margin-top: 1rem;
+	}
+
+	.blue-top-head-container {
+		flex-direction: column;
+	}
+
+	.blue-top-enddate {
+		display: none;
+	}
+
+	.mobile-end-date {
+		display: block;
+		color: #455a64;
+		font-weight: bold;
+		font-size: 13px;
+	}
+
+	.mobile-end-date > span {
+		color: #000000;
+	}
+
+	.breadcrumb-wrapper {
+		flex: 40%;
+	}
+
+	.bluetop-breadcrumb {
+		margin: auto;
+		margin-bottom: 1rem;
+
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		white-space: nowrap;
+		width: fit-content;
+		background: #e7edfa 0% 0% no-repeat padding-box;
+		border-radius: 11px;
+		display: flex;
+		font-size: 12px;
+		justify-content: center;
+		align-items: center;
+		color: #1d2943;
+	}
+
+	.grey-bottom {
+		width: 100%;
+	}
+
+	.bottom-card {
+		width: 99%;
+		margin: auto;
+		height: fit-content;
+		padding-top: 2rem;
+		margin-right: 0;
+		margin-left: 0;
+		margin-bottom: 1rem;
+		padding-bottom: 2rem;
+	}
+
+	.grey-bottom-topcard-head {
+		font-size: 13px;
+		margin-bottom: 0.5rem;
+	}
+
+	.grey-bottom-topcard-value {
+		font-size: 20px;
+	}
+
+	.grey-bottom-topcard-span {
+		font-size: 11px;
 	}
 }

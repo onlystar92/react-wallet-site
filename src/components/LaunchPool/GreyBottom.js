@@ -5,12 +5,15 @@ import DODO from "../../assets/dodo.svg";
 
 function TopCard({ head, value, span, icon }) {
 	return (
-		<div class="col-sm">
+		<div class="col-sm mb-3">
 			<div className="grey-bottom-topcard-head">{head}</div>
 			<div>
-				<img className="mb-3 mr-1" src={icon} alt="" />
+				{icon && <img className="mb-3 mr-1" src={icon} alt="" />}
+
 				<span className="grey-bottom-topcard-value">{value}</span>
-				<span className="grey-bottom-topcard-span">{span}</span>
+				{span && (
+					<span className="grey-bottom-topcard-span">{span}</span>
+				)}
 			</div>
 		</div>
 	);
@@ -42,15 +45,10 @@ function GreyBottom() {
 						value="641,710.8000"
 						span="DODO"
 					/>
-					<TopCard
-						head="Staking Token"
-						value="BNB"
-						span=""
-						icon={BNBGrey}
-					/>
+					<TopCard head="Staking Token" value="BNB" icon={BNBGrey} />
 					<TopCard head="Farming Period" value="14" span="Days" />
 				</div>
-				<div class="row mt-5">
+				<div class="row mt-0 mt-mb-5">
 					<TopCard
 						head="Today’s DODO Pool Rewards"
 						value="34,554.0000"
@@ -68,7 +66,7 @@ function GreyBottom() {
 					/>
 				</div>
 			</div>
-			<div className="mt-5 row">
+			<div className="mt-3 mt-mb-5 row">
 				<BottomCard
 					icon={BNBGrey}
 					head="My Funds"

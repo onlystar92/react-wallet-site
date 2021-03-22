@@ -11,28 +11,35 @@ function EndDate() {
 }
 
 function BreadCrumb({ title }) {
-	return <div className="bluetop-breadcrumb">{title}</div>;
+	return (
+		<div className="breadcrumb-wrapper ">
+			<div className="bluetop-breadcrumb">{title}</div>
+		</div>
+	);
 }
 
 function BlueTop() {
 	return (
 		<div className="d-flex mt-4 flex-column justify-content-center align-items-center blue-top">
-			<div className="d-flex align-items-center">
+			<div className="blue-top-head-container">
 				<img src={Icon} alt="" />
-				<span className="blue-top-head">DODO (DODO)</span>
-				<div className="blue-top-status">COMPLETED</div>
+				<span className=" blue-top-head">DODO (DODO)</span>
+				<div className=" blue-top-status">COMPLETED</div>
 			</div>
 			<p>
 				An open, accessible, capital-efficient decentralized exchange
 				platform
 			</p>
-			<div className="mt-4 d-flex">
+			<div className="mobile-end-date">
+				End date : <span>2021-02-28</span>{" "}
+			</div>
+			<div className="mt-4 breadcrumbs-container">
 				<BreadCrumb title="Website" />
 				<BreadCrumb title="Whitepaper" />
 				<BreadCrumb title="DODO Research Report" />
 				<BreadCrumb title="Detailed Rules" />
 			</div>
-			<EndDate />
+			{/* <EndDate /> */}
 		</div>
 	);
 }
