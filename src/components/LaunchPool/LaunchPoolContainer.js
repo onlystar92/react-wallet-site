@@ -5,21 +5,23 @@ import WhiteCard from "./WhiteCard";
 
 function LaunchPoolContainer() {
 	return (
-		<div className="text-left pl-4 pt-4 launch-pool-container">
-			<h1 className="font-weight-bold heading">Launch Pool</h1>
-			<div className="d-flex cards-wrapper">
+		<div className="text-left pl-md-4 pt-md-4 launch-pool-container">
+			<h1 className="font-weight-bold launch-pool-heading">
+				Launch Pool
+			</h1>
+			<div className=" cards-wrapper">
 				<BlueCard />
 				<WhiteCard />
 				<WhiteCard />
 				<WhiteCard />
 			</div>
-			<div className="d-flex cards-wrapper">
+			<div className=" cards-wrapper">
 				<BlueCard />
 				<WhiteCard />
 				<WhiteCard />
 				<WhiteCard />
 			</div>
-			<div className="d-flex cards-wrapper">
+			<div className=" cards-wrapper">
 				<BlueCard />
 				<WhiteCard />
 				<WhiteCard />

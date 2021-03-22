@@ -8,91 +8,12 @@
 	font-size: 14px;
 }
 
-/* @keyframes launch-pool-container-open {
-	from {
-		transform: translateX(0px);
-		width: 100%;
-	}
-	to {
-		transform: translateX(0px);
-		width: 60%;
-	}
+.launch-pool-heading {
+	font-size: 25px;
 }
-
-@keyframes launch-pool-container-close {
-	from {
-		transform: translateX(0px);
-		width: 60%;
-	}
-	to {
-		transform: translateX(0);
-		width: 100%;
-	}
-}
-
-@keyframes dashboard-open2 {
-	from {
-		transform: translateX(0px);
-		width: 72%;
-	}
-	to {
-		transform: translateX(0px);
-		width: 76%;
-	}
-}
-
-@keyframes dashboard-close2 {
-	from {
-		transform: translateX(0px);
-		width: 60%;
-	}
-	to {
-		transform: translateX(0);
-		width: 83%;
-	}
-}
-
-.launch-pool-container-open {
-	padding-left: 2rem;
-	padding-top: 2rem;
-	font-size: 14px;
-	animation-name: dashboard-open;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	overflow: hidden;
-}
-
-.launch-pool-container-close {
-	padding-left: 2rem;
-	padding-top: 2rem;
-	font-size: 14px;
-	animation-name: dashboard-close;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	overflow: hidden;
-}
-
-.launch-pool-container-open2 {
-	padding-left: 2rem;
-	padding-top: 2rem;
-	font-size: 14px;
-	animation-name: dashboard-open2;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	overflow: hidden;
-}
-
-.launch-pool-container-close2 {
-	padding-left: 2rem;
-	padding-top: 2rem;
-	font-size: 14px;
-	animation-name: dashboard-close2;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	overflow: hidden;
-} */
 
 .cards-wrapper {
+	display: flex;
 	margin-top: 1.8rem;
 	background-color: #fafbfe;
 }
@@ -105,7 +26,7 @@
 	padding-bottom: 1.5rem;
 	width: 25%;
 	cursor: pointer;
-	height: 320px;
+	/* height: 320px; */
 	box-shadow: 0px 5px 12px #f0f2f77c;
 }
 
@@ -353,4 +274,42 @@
 	font-size: 12px;
 	margin-left: 0.6rem;
 	color: black;
+}
+
+@media (max-width: 768px) {
+	.cards-wrapper {
+		flex-direction: column;
+	}
+
+	.launch-pool-container {
+		width: 100%;
+		padding-right: 0;
+	}
+
+	.launch-pool-heading {
+		display: none;
+	}
+
+	.launch-pool-bluecard {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	.launch-pool-whitecard {
+		width: 100%;
+		margin-bottom: 1rem;
+
+		margin-left: 0;
+	}
+
+	.launchpool-bluecard-desc {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+	.white-card-head {
+		width: 40%;
+	}
 }
