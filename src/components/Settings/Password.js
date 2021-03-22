@@ -3,7 +3,7 @@ import "./styles.css";
 
 function PasswordRow({ label }) {
 	return (
-		<div className="mb-5 password-row-wrapper">
+		<div className=" password-row-wrapper">
 			<label className="password-row-label" htmlFor="">
 				{label}
 			</label>{" "}
@@ -14,12 +14,12 @@ function PasswordRow({ label }) {
 
 function Password() {
 	return (
-		<div className="d-flex flex-column align-items-center">
-			<div className="mt-5">
+		<div className="d-flex flex-column align-items-center ">
+			<div className="mt-3 mt-sm-5 password-container">
 				<PasswordRow label="Current Password" />
 				<PasswordRow label="New Password" />
 				<PasswordRow label="Confirm Password" />
-				<button className=" password-btn">Change</button>
+				<button className="mt-5 password-btn">Change</button>
 			</div>
 		</div>
 	);

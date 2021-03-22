@@ -18,7 +18,7 @@
 	background: white;
 	padding-left: 3rem;
 
-	min-height: 820.5px;
+	/* min-height: 820.5px; */
 }
 
 .settings-head {
@@ -137,7 +137,7 @@
 	padding-right: 3rem;
 	height: 55px;
 	border: none;
-	margin-left: 12.1rem;
+	margin-left: 10rem;
 }
 
 .profile-container {
@@ -328,7 +328,7 @@
 	}
 
 	.settings-tab > div {
-		margin-right: 0.8rem;
+		margin-right: 0.9rem;
 	}
 
 	.settings-head {
@@ -422,6 +422,37 @@
 		color: white;
 		font-weight: bold;
 		border: none;
+		font-size: 13px;
+	}
+
+	.password-container {
+		width: 90%;
+		margin: auto;
+	}
+
+	.password-row-wrapper {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		margin-top: 2rem;
+	}
+
+	.password-row-input {
+		width: 100%;
+		height: 46px;
+		padding-left: 1rem;
+		font-size: 11px;
+	}
+
+	.password-row-label {
+		font-size: 11px;
+	}
+
+	.password-btn {
+		height: 46px;
+		width: 100%;
+		margin-left: 0;
 		font-size: 13px;
 	}
 }
