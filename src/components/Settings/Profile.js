@@ -60,7 +60,7 @@ function CountryDropdown() {
 
 function Inputs({ label }) {
 	return (
-		<div className="col-sm">
+		<div className="col-sm mt-3 ">
 			<label className="profile-label" htmlFor="">
 				{label}
 			</label>
@@ -80,18 +80,19 @@ function Profile() {
 	return (
 		<div className="profile-container">
 			<ProfileTop />
-			<div className="mt-5 row">
+			<div className=" mt-sm-5 row">
 				<Inputs label="Full Name" />
 				<Inputs label="Address" />
 			</div>
-			<div className="mt-5 row">
+			<div className=" mt-sm-5 row">
 				<Inputs label="Email Address" />
 				<Inputs label="Mobile Number" />
 			</div>
-			<div className="mt-5 row">
+			<div className=" mt-sm-5 row">
 				<Inputs label="Country" />
 				<Inputs label="Date of birth" />
 			</div>
+			<button className="save-changes-mobile mt-4">Save changes</button>
 		</div>
 	);
 }

@@ -1,6 +1,7 @@
 .settings-container {
 	padding-right: 1rem;
 	flex-grow: 100;
+	width: 100%;
 }
 
 .settings-line {
@@ -31,6 +32,7 @@
 	font-weight: bold;
 	font-size: 15px;
 	cursor: pointer;
+	/* width: 100%; */
 }
 
 .settings-tab > div {
@@ -44,6 +46,7 @@
 }
 
 .general-container {
+	width: 100%;
 	padding-top: 3rem;
 	padding-right: 2rem;
 }
@@ -297,4 +300,128 @@
 
 .panel-wrapper {
 	width: 48%;
+}
+
+.general-container-right-mobile {
+	display: none;
+}
+
+.save-changes-mobile {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.settings-container {
+		padding-right: 0;
+	}
+
+	.settings-tab {
+		font-size: 12px;
+		width: 90%;
+		margin: auto;
+	}
+
+	.settings-line {
+		position: absolute;
+		margin-left: 0px;
+		width: 100%;
+	}
+
+	.settings-tab > div {
+		margin-right: 0.8rem;
+	}
+
+	.settings-head {
+		font-size: 25px;
+	}
+
+	.settings-bottom {
+		padding: 0;
+		padding-top: 1rem;
+		width: 100%;
+		margin: auto;
+	}
+
+	.general-container {
+		padding-right: 0;
+		width: 90%;
+		margin: auto;
+	}
+
+	.general-container-left {
+		width: 90%;
+	}
+
+	.general-container-right {
+		width: 20%;
+	}
+
+	.general-container-right-top {
+		display: none;
+	}
+
+	.general-container-right-mobile {
+		display: block;
+		color: #1d2943;
+		font-weight: bold;
+		font-size: 12px;
+		white-space: nowrap;
+	}
+
+	.left-head {
+		font-size: 14px;
+	}
+
+	.left-desc {
+		color: #1d2943;
+		line-height: 22px;
+		font-size: 11px;
+	}
+
+	.profile-container {
+		padding-top: 4rem;
+		padding-right: 0;
+		width: 90%;
+		margin: auto;
+	}
+
+	.profile-left {
+		width: 100%;
+	}
+
+	.profile-name {
+		font-size: 18px;
+	}
+
+	.update-picture {
+		font-size: 14px;
+	}
+
+	.profile-img {
+		width: 18%;
+	}
+
+	.save-changes {
+		display: none;
+	}
+
+	.profile-label {
+		font-size: 11px;
+	}
+
+	.profile-input {
+		height: 46px;
+		font-size: 13px;
+	}
+
+	.save-changes-mobile {
+		background: #53a8f0 0% 0% no-repeat padding-box;
+		border-radius: 10px;
+		height: 46px;
+		width: 100%;
+		color: white;
+		font-weight: bold;
+		border: none;
+		font-size: 13px;
+	}
 }

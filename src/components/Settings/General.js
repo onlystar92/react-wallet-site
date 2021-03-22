@@ -6,12 +6,22 @@ function GeneralRow({ head, desc, span, right }) {
 			<div className="d-flex justify-content-between mt-3 mb-1">
 				<div className="general-container-left">
 					<div className="left-head">{head}</div>
+					{head === "Wallet ID" && (
+						<div className="general-container-right-mobile mb-3">
+							{right}
+						</div>
+					)}
+
 					<div className="left-desc">
 						{desc}
 						<span>{span}</span>
 					</div>
 				</div>
-				<div className="general-container-right">{right}</div>
+				{head === "Wallet ID" ? (
+					<div className="general-container-right-top ">{right}</div>
+				) : (
+					<div className="general-container-right">{right}</div>
+				)}
 			</div>
 			<hr className="mt-4" />
 		</>
