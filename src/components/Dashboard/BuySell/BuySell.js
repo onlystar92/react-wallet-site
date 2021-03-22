@@ -29,33 +29,40 @@ function SliderCard({ rate, color }) {
 	);
 }
 
-function Dropdown({ title }) {
+function Dropdown({ icon, data }) {
 	return (
-		<div class="dropdown">
-			<button
-				class="text-left d-flex justify-content-between align-items-center pr-4  profile-input dropdown-toggle"
-				type="button"
-				id="dropdownMenuButton"
-				data-toggle="dropdown"
-				aria-haspopup="true"
-				aria-expanded="false"
-			>
-				Ether Wallet
-				<i class="fas fa-caret-down caret-dropdown"></i>
-			</button>
-			<div
-				class="profile-dropdown-select dropdown-menu"
-				aria-labelledby="dropdownMenuButton"
-			>
-				<a class="dropdown-item" href="#">
-					Action
-				</a>
-				<a class="dropdown-item" href="#">
-					Another action
-				</a>
-				<a class="dropdown-item" href="#">
-					Something else here
-				</a>
+		<div className="send-dropdown-container mr-3">
+			<div class="dropdown">
+				<button
+					class="text-left d-flex justify-content-between align-items-center pr-4  sell-dropdown-container dropdown-toggle"
+					type="button"
+					id="dropdownMenuButton"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+				>
+					<div className="d-flex align-items-center ml-3">
+						{icon && <img className="mr-3" src={icon} alt="" />}
+						{data[0].content}
+					</div>
+
+					<i class="fas fa-caret-down caret-dropdown"></i>
+				</button>
+				<div
+					class="dropdown-menu send-dropdown-select"
+					aria-labelledby="dropdownMenuButton"
+				>
+					{data.map((x) => (
+						<a class="dropdown-item" href="#">
+							<div className="d-flex align-items-center">
+								{x.icon && (
+									<img className="mr-3" src={x.icon} alt="" />
+								)}
+								{x.content}
+							</div>
+						</a>
+					))}
+				</div>
 			</div>
 		</div>
 	);
@@ -115,11 +122,6 @@ function Slider() {
 					}}
 					spaceBetween={25}
 					slidesPerView={6}
-					// navigation
-					// slidesPerColumn={1}
-					// pagination={{ clickable: true }}
-					// scrollbar={{ draggable: true }}
-					// slidesPerColumnFill="row"
 					onSlideChange={() => console.log("slide change")}
 				>
 					<SwiperSlide>
@@ -128,6 +130,15 @@ function Slider() {
 					<SwiperSlide>
 						<SliderCard rate="-1.46%" color="#FF3131" />
 					</SwiperSlide>{" "}
+					<SwiperSlide>
+						<SliderCard rate="+0.30%" color="#31A629" />
+					</SwiperSlide>{" "}
+					<SwiperSlide>
+						<SliderCard rate="+1.16%" color="#31A629" />
+					</SwiperSlide>{" "}
+					<SwiperSlide>
+						<SliderCard rate="-3.48%" color="#FF3131" />
+					</SwiperSlide>
 					<SwiperSlide>
 						<SliderCard rate="+0.30%" color="#31A629" />
 					</SwiperSlide>{" "}
@@ -191,14 +202,13 @@ function BuySell({ tab }) {
 				<div className="mt-4 font-weight-bold">
 					{tab === "Sell" ? "I will receive in" : "Payment methods"}
 				</div>
-				<div className="d-flex mt-4">
+				<div className="d-flex mt-4 buy-sell-bottom">
 					{tab === "Sell" ? (
 						<>
 							<BuySellBox label="Credit or Debit Card" />
-							<BuySellBox
-								label="Ether Wallet"
-								icon={Ether}
-								dropdown
+							<Dropdown
+								icon={BTC}
+								data={[{ icon: BTC, content: "Bitcoin" }]}
 							/>
 						</>
 					) : (

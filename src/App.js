@@ -28,6 +28,9 @@ function App() {
 					<Route path="/wallet-exchange">
 						<Card name="wallet-exchange" />
 					</Route>
+					<Route path="/create-user">
+						<Card name="create-user" />
+					</Route>
 					<Route path="/yield-farming">
 						<Layout name="yield-farming" />
 					</Route>

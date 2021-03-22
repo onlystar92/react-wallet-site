@@ -4,6 +4,7 @@ import Logo from "../../assets/2local logo.svg";
 import LoginCard from "./LoginCard";
 import NewWalletcard from "./NewWalletcard";
 import WalletExchange from "./WalletExchange";
+import CreateUser from "./CreateUser";
 
 function CardContainer({ name }) {
 	return (
@@ -15,6 +16,8 @@ function CardContainer({ name }) {
 				<NewWalletcard />
 			) : name === "wallet-exchange" ? (
 				<WalletExchange />
+			) : name === "create-user" ? (
+				<CreateUser />
 			) : (
 				""
 			)}

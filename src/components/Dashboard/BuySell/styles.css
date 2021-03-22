@@ -106,7 +106,7 @@
 	height: 70px;
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
-	width: 320px;
+	width: 100%;
 	font-weight: bold;
 	background: #ffffff 0% 0% no-repeat padding-box;
 	border: 1px solid #53a8f0;
@@ -130,4 +130,19 @@
 	font-size: 12px;
 	margin-top: 0;
 	margin-bottom: -0.1rem;
+}
+
+.sell-dropdown-container {
+	height: 70px;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	width: 100%;
+	font-weight: bold;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	border: 1px solid #53a8f0;
+	border-radius: 13px;
+}
+
+.buy-sell-bottom {
+	width: 50%;
 }
