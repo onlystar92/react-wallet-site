@@ -117,7 +117,7 @@ function HelpBottom() {
 
 function Help() {
 	return (
-		<div className="help-container">
+		<div className="help-container pt-4 pt-md-0">
 			<h1 className="help-head">Help</h1>
 			<div className="d-flex justify-content-between align-items-center mt-4 mb-3">
 				<div className="input-wrapper">
@@ -129,7 +129,7 @@ function Help() {
 					/>
 				</div>
 
-				<button className="help-search">Search</button>
+				{/* <button className="help-search">Search</button> */}
 			</div>
 
 			<HelpBottom />

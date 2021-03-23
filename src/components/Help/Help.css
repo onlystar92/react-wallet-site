@@ -96,3 +96,26 @@
 	margin-right: 2rem;
 	margin-left: 2rem;
 }
+
+@media (max-width: 768px) {
+	.help-container {
+		padding: 0;
+		width: 100%;
+	}
+
+	.help-head {
+		font-size: 28px;
+	}
+
+	.help-search {
+		display: none;
+	}
+
+	.input-wrapper {
+		width: 100%;
+	}
+
+	.help-input {
+		height: 46px;
+	}
+}
