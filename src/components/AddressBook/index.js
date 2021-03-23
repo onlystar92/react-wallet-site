@@ -7,35 +7,9 @@ import ltcLogo from "../../assets/ltc.svg";
 import bchLogo from "../../assets/bch.svg";
 import { ReactComponent as EditLogo } from "../../assets/edit.svg";
 import { ReactComponent as DeleteLogo } from "../../assets/delete.svg";
+import { useMediaQuery } from "react-responsive";
 
 //can also add custom className
-const headersData = [
-	{
-		title: "Asset",
-		key: "asset",
-		width: 190,
-	},
-	{
-		title: "Nickname",
-		key: "nickname",
-		width: 230,
-	},
-	{
-		title: "Address",
-		key: "address",
-		width: 390,
-	},
-	{
-		title: "Date Added",
-		key: "date",
-		width: 230,
-	},
-	{
-		title: "Actions",
-		key: "actions",
-		width: 100 /*change width in ActionCell as well*/,
-	},
-];
 
 const AssetCell = ({ text }) => {
 	let image = (
@@ -86,6 +60,35 @@ const TableBodyCell = ({ data, id }) => {
 };
 
 const AddressBookTable = () => {
+	const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+	const headersData = [
+		{
+			title: "Asset",
+			key: "asset",
+			width: isMobile ? 60 : 190,
+		},
+		{
+			title: "Nickname",
+			key: "nickname",
+			width: isMobile ? 140 : 230,
+		},
+		{
+			title: "Address",
+			key: "address",
+			width: isMobile ? 290 : 390,
+		},
+		{
+			title: "Date Added",
+			key: "date",
+			width: isMobile ? 120 : 230,
+		},
+		{
+			title: "Actions",
+			key: "actions",
+			width: 100 /*change width in ActionCell as well*/,
+		},
+	];
 	return (
 		<table className="w-100 address-book-table">
 			<tr className="w-100 d-flex p-4 table-header">

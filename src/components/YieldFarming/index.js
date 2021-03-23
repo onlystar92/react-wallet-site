@@ -2,45 +2,7 @@ import React from "react";
 import "./styles.css";
 import data from "./data.json";
 import logo from "../../assets/196.png";
-
-//can also add custom className
-const headersData = [
-	{
-		title: "#",
-		key: "id",
-		width: 40,
-	},
-	{
-		title: "Pool",
-		key: "pool",
-		width: 200,
-	},
-	{
-		title: "Pair",
-		key: "pair",
-		width: 150,
-	},
-	{
-		title: "Total Value Locked",
-		key: "totalValue",
-		width: 200,
-	},
-	{
-		title: "Reward Type",
-		key: "rewardType",
-		width: 200,
-	},
-	{
-		title: "Impermanent Loss",
-		key: "loss",
-		width: 200,
-	},
-	{
-		title: "APY",
-		key: "apy",
-		width: 150,
-	},
-];
+import { useMediaQuery } from "react-responsive";
 
 const Logo = () => {
 	return <img className="cell-logo" src={logo} alt="Logo" />;
@@ -103,6 +65,47 @@ const TableBodyCell = ({ data, id }) => {
 };
 
 const YieldFarmingTable = () => {
+	const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+	//can also add custom className
+	const headersData = [
+		{
+			title: "#",
+			key: "id",
+			width: isMobile ? 10 : 40,
+		},
+		{
+			title: "Pool",
+			key: "pool",
+			width: isMobile ? 180 : 200,
+		},
+		{
+			title: "Pair",
+			key: "pair",
+			width: isMobile ? 120 : 150,
+		},
+		{
+			title: "Total Value Locked",
+			key: "totalValue",
+			width: isMobile ? 160 : 200,
+		},
+		{
+			title: "Reward Type",
+			key: "rewardType",
+			width: isMobile ? 120 : 200,
+		},
+		{
+			title: "Impermanent Loss",
+			key: "loss",
+			width: isMobile ? 150 : 200,
+		},
+		{
+			title: "APY",
+			key: "apy",
+			width: isMobile ? 120 : 150,
+		},
+	];
+
 	return (
 		<table className="w-100 yield-farming-table">
 			<tr className="w-100 d-flex p-3 table-header">
