@@ -148,9 +148,13 @@ const YieldFarmingTable = () => {
 const BreadCrums = () => {
 	return (
 		<div className="mt-4 mb-3 d-flex align-items-center breadcrums-container">
-			<h5 className="p-2 pl-4 pr-4 mr-3 breadcrum">New Projects</h5>
-			<h5 className="p-2 pl-4 pr-4 mr-3 breadcrum">Highest APY's</h5>
-			<h5 className="p-2 pl-4 pr-4 d-flex align-items-center breadcrum">
+			<h5 className="p-1 p-sm-2 pl-sm-4 pr-sm-4 mr-3 breadcrum">
+				New Projects
+			</h5>
+			<h5 className="p-1 p-sm-2 pl-sm-4 pr-sm-4 mr-3 breadcrum">
+				Highest APY's
+			</h5>
+			<h5 className="p-1 p-sm-2 pl-sm-4 pr-sm-4 d-flex align-items-center breadcrum">
 				Implement Loss Calculator <span className="to-bottom-icon" />
 			</h5>
 		</div>
@@ -160,13 +164,13 @@ const BreadCrums = () => {
 function YieldFarming() {
 	return (
 		<div
-			className={`ml-4 pt-4 overflow-auto w-100 yield-farming-container`}
+			className={`ml-sm-4 pt-sm-4 overflow-auto w-100 yield-farming-container`}
 		>
-			<h1 className="text-left font-weight-bold heading">
+			<h1 className="text-left font-weight-bold launch-pool-heading">
 				Yield Farming
 			</h1>
 			<BreadCrums />
-			<div className="overflow-auto bg-white p-4 w-100 yieldFarmingContainer">
+			<div className="overflow-auto bg-white p-sm-4 w-100 yieldFarmingContainer">
 				<YieldFarmingTable />
 			</div>
 		</div>

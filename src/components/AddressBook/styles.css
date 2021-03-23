@@ -23,7 +23,8 @@
 
 /* action cell */
 .address-book-table .table-row .table-body-cell .action-cell .action-logo {
-	width: 2rem;
+	min-width: 30px;
+	min-height: 30px;
 	cursor: pointer;
 	border-radius: 4px;
 	border: 1px solid rgba(0, 0, 0, 0.15);

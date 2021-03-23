@@ -13,27 +13,27 @@ const headersData = [
 	{
 		title: "Asset",
 		key: "asset",
-		width: "10%",
+		width: 190,
 	},
 	{
 		title: "Nickname",
 		key: "nickname",
-		width: "20%",
+		width: 230,
 	},
 	{
-		title: "Adress",
+		title: "Address",
 		key: "address",
-		width: "40%",
+		width: 390,
 	},
 	{
 		title: "Date Added",
 		key: "date",
-		width: "20%",
+		width: 230,
 	},
 	{
 		title: "Actions",
 		key: "actions",
-		width: "10%" /*change width in ActionCell as well*/,
+		width: 100 /*change width in ActionCell as well*/,
 	},
 ];
 
@@ -130,8 +130,12 @@ const AddressBookTable = () => {
 
 function AddressBook() {
 	return (
-		<div className={`ml-4 pt-4 overflow-auto w-100 address-book-container`}>
-			<h1 className="text-left font-weight-bold heading">Address Book</h1>
+		<div
+			className={`ml-sm-4 pt-sm-4 overflow-auto w-100 address-book-container`}
+		>
+			<h1 className="text-left font-weight-bold launch-pool-heading">
+				Address Book
+			</h1>
 			<div className="mt-4 overflow-auto bg-white p-3 w-100 addressBookContainer">
 				<AddressBookTable />
 			</div>
