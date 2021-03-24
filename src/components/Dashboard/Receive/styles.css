@@ -28,3 +28,26 @@
 	padding-left: 6rem;
 	padding-right: 6rem;
 }
+
+@media (max-width: 768px) {
+	.receive-container {
+		width: 100%;
+		margin: auto;
+	}
+
+	.receive-btn {
+		height: 46px;
+		width: 100%;
+	}
+
+	.copy-span {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 0.6rem;
+		padding-bottom: 0.6rem;
+	}
+
+	.copy-span > i {
+		transform: scale(1.2);
+	}
+}

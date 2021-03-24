@@ -5,7 +5,7 @@ import QR from "../../../assets/QR-Code.png";
 
 function Dropdown({ title, icon, data }) {
 	return (
-		<div className="send-dropdown-container mr-3">
+		<div className="send-dropdown-container ml-1 mr-1">
 			<div className="send-dropdown-label mb-2">{title}</div>
 			<div class="dropdown">
 				<button
@@ -45,7 +45,7 @@ function Dropdown({ title, icon, data }) {
 
 function Input({ title, span, placeholder }) {
 	return (
-		<div className="send-input-container mr-3">
+		<div className="send-input-container ml-1 mr-1">
 			<div className="send-dropdown-label mb-2">{title}</div>
 			<input
 				className="send-input"
