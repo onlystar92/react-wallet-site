@@ -259,3 +259,78 @@
 	color: #1d2943;
 	margin-top: 1rem;
 }
+
+@media (max-width: 768px) {
+	.login-card-container {
+		width: 90%;
+		height: 65%;
+		padding: 1rem;
+		padding-top: 1.7rem;
+	}
+
+	.login-card-logo {
+		align-self: center;
+		width: 82px;
+	}
+
+	.login-card-heading {
+		text-align: center;
+		font-size: 20px;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.login-card-label {
+		font-size: 14px;
+		margin-top: 1rem;
+		color: #959aaa;
+	}
+
+	.login-card-input {
+		/* margin-top: 0.4rem; */
+		border: 2px solid #f3f3f3;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		height: 46px;
+		font-size: 13px;
+	}
+
+	.login-card-forgot-wallet {
+		font-size: 9px;
+		text-align: center;
+		width: 80%;
+		margin: auto;
+		margin-top: 1rem;
+	}
+
+	.login-card-forgot-wallet > span {
+		margin-left: 0.1rem;
+	}
+
+	.login-card-forgot-pass {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1rem;
+		color: #959aaa;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	.login-card-forgot-pass > span {
+		font-size: 10px;
+	}
+
+	.login-btn {
+		font-size: 13px;
+		height: 46px;
+	}
+
+	.login-card-signup {
+		margin-top: 1.5rem;
+		font-size: 14px;
+	}
+
+	.login-card-no-wallet {
+		font-size: 13px;
+	}
+}
