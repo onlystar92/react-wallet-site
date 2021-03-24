@@ -2,9 +2,13 @@ import React from "react";
 import "./styles.css";
 import BTC from "../../../assets/btc.svg";
 
-function Dropdown({ title, icon, data }) {
+function Dropdown({ title, icon, data, row }) {
 	return (
-		<div className="send-dropdown-container mr-3">
+		<div
+			className={`send-dropdown-container mb-2 mb-sm-0 mr-0 col-6 ${
+				row === "two" ? "col-sm-6" : "col-sm-3"
+			} `}
+		>
 			<div className="send-dropdown-label mb-2">{title}</div>
 			<div class="dropdown">
 				<button
@@ -42,9 +46,13 @@ function Dropdown({ title, icon, data }) {
 	);
 }
 
-function Input({ title, span, placeholder }) {
+function Input({ title, span, placeholder, row }) {
 	return (
-		<div className="send-input-container mr-3">
+		<div
+			className={`send-input-container mr-0 mb-2 mb-sm-0 col-6 ${
+				row === "two" ? "col-sm-6" : "col-sm-3"
+			}`}
+		>
 			<div className="send-dropdown-label mb-2">{title}</div>
 			<input
 				className="send-input"
@@ -59,7 +67,7 @@ function Input({ title, span, placeholder }) {
 function Send() {
 	return (
 		<div className="send-container d-flex flex-column align-items-center">
-			<div className="mt-4 d-flex w-100 justify-content-between">
+			<div className="mt-4 w-100  row">
 				<Dropdown
 					title="Currency"
 					icon={BTC}
@@ -73,11 +81,21 @@ function Send() {
 				<Dropdown
 					title="From"
 					data={[{ content: "My Bitcoin Wallet" }]}
+					row="two"
 				/>
-				<Input title="To" placeholder="Select a destination" />
+				<div
+					className={`send-input-container mr-0 mb-3 mb-sm-0 col-6 `}
+				>
+					<div className="send-dropdown-label mb-2">To</div>
+					<input
+						className="send-input2"
+						placeholder="Select a destination"
+						type="text"
+					/>
+				</div>
 			</div>
-			<div className="text-start w-100 mt-4">
-				<div className="font-weight-bold mb-3">Description</div>
+			<div className="text-start w-100 mt-4 col">
+				<div className="description-label mb-3">Description</div>
 				<textarea
 					className="send-textarea"
 					placeholder="Write a transaction description (optional)"
@@ -87,6 +105,7 @@ function Send() {
 					rows="10"
 				></textarea>
 			</div>
+			<button className="mt-3 send-btn">Continue</button>
 		</div>
 	);
 }
