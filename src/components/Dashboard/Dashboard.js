@@ -5,6 +5,7 @@ import { selectDesc, selectTitle, selectTab } from "../../slices/slice";
 import Graph from "../Graph/Graph";
 import GraphMobile from "../Graph/GraphMobile";
 import DashboardTab from "./DashboardTab";
+import DashboardTabMobile from "./DashboardTabMobile";
 import TransactionHistoryTable from "./TransactionHistory/TransactionHistory";
 import BuySell from "./BuySell/BuySell";
 import Send from "./Send/Send";
@@ -42,9 +43,14 @@ function Dashboard({ isOpen }) {
 			<GraphMobile isOpen={isOpen} />
 
 			<div className="dashboard-bottom">
-				<DashboardTab />
+				<div className="dashboard-tab">
+					<DashboardTab />
+				</div>
+				<div className="dashboard-tab-mobile">
+					<DashboardTabMobile />
+				</div>
 
-				<hr className="mt-4" />
+				<hr className="mt-0 mt-sm-4 dashboard-tab-line" />
 				{tab === "Transaction History" ? (
 					<TransactionHistoryTable />
 				) : tab === "Sell" ? (
