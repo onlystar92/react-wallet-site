@@ -8,6 +8,7 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 import Ether from "../../../assets/ETH.png";
+import { useMediaQuery } from "react-responsive";
 
 function SliderCard({ rate, color }) {
 	const [x, setx] = useState("slider-cards-container");
@@ -70,7 +71,7 @@ function Dropdown({ icon, data }) {
 
 function BuySellBox({ dropdown, label, icon, sub }) {
 	return (
-		<div className="buy-sell-box d-flex  align-items-center pl-4 pr-4">
+		<div className="mb-3 mb-sm-0 buy-sell-box d-flex  align-items-center pl-4 pr-4">
 			<input type="radio" name="buy-sell-radio" />
 			{icon && <img className="ml-3" src={icon} alt="" />}
 			<div className="d-flex flex-column ml-3">
@@ -84,6 +85,8 @@ function BuySellBox({ dropdown, label, icon, sub }) {
 }
 
 function Slider() {
+	const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
 	const [swiper, setSwiper] = useState(null);
 	const [isEnd, setIsEnd] = useState(true);
 	const [isBeginning, setIsBeginning] = useState(false);
@@ -121,7 +124,7 @@ function Slider() {
 						setIsEnd(s.isEnd);
 					}}
 					spaceBetween={25}
-					slidesPerView={6}
+					slidesPerView={isMobile ? 2 : 5}
 					onSlideChange={() => console.log("slide change")}
 				>
 					<SwiperSlide>
@@ -174,13 +177,15 @@ function Slider() {
 }
 
 function BuySell({ tab }) {
+	const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
 	return (
 		<div className="buy-sell-container">
 			<Slider />
 			<div className="mt-3 d-flex flex-column  align-items-center">
 				<div className="row">
-					<div className="col"></div>
-					<div className="col text-center d-flex align-items-center justify-content-center">
+					<div className="col-12 col-sm-4"></div>
+					<div className="col-12 col-sm-4 text-center d-flex align-items-center justify-content-center">
 						<span className=" buy-sell-span">$</span>
 						<input
 							placeholder="12"
@@ -189,11 +194,22 @@ function BuySell({ tab }) {
 						/>
 					</div>
 
-					<span className="col mt-4">
-						<i class="fas fa-caret-left buy-sell-caret"></i>
-						<i class="fas fa-caret-right buy-sell-caret"></i>
+					<span className="col-12 col-sm-4 mt-4 buy-sell-right">
+						{isMobile ? (
+							<>
+								{" "}
+								<i class="fas fa-caret-up buy-sell-caret"></i>
+								<i class="fas fa-caret-down buy-sell-caret"></i>
+							</>
+						) : (
+							<>
+								{" "}
+								<i class="fas fa-caret-left buy-sell-caret"></i>
+								<i class="fas fa-caret-right buy-sell-caret"></i>
+							</>
+						)}
 
-						<span className="bottom-value ml-3">
+						<span className="mt-2 mt-sm-0 bottom-value ml-sm-3">
 							0.00020206 BTC
 						</span>
 					</span>
@@ -202,7 +218,7 @@ function BuySell({ tab }) {
 				<div className="mt-4 font-weight-bold">
 					{tab === "Sell" ? "I will receive in" : "Payment methods"}
 				</div>
-				<div className="d-flex mt-4 buy-sell-bottom">
+				<div className="mt-4 buy-sell-bottom">
 					{tab === "Sell" ? (
 						<>
 							<BuySellBox label="Credit or Debit Card" />

@@ -145,4 +145,26 @@
 
 .buy-sell-bottom {
 	width: 50%;
+	display: flex;
+}
+
+.buy-sell-right {
+	display: flex;
+	justify-content: ;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.buy-sell-bottom {
+		width: 60%;
+		flex-direction: column;
+	}
+
+	.buy-sell-right {
+		flex-direction: column;
+	}
+
+	.buy-sell-input {
+		text-align: center;
+	}
 }
