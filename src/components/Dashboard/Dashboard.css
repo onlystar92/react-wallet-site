@@ -238,6 +238,7 @@
 		padding-bottom: 1rem;
 		width: fit-content;
 		text-align: center;
+		font-size: 12px;
 	}
 
 	.tab-inactive {
@@ -246,6 +247,7 @@
 
 		margin-bottom: 0;
 		padding-bottom: 1rem;
+		font-size: 12px;
 
 		text-align: center;
 	}
