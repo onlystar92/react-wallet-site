@@ -136,7 +136,6 @@
 }
 
 .newwallet-forgot-pass {
-	display: flex;
 	/* justify-content: space-between; */
 	margin-top: 1rem;
 	color: #455a64;
@@ -332,5 +331,38 @@
 
 	.login-card-no-wallet {
 		font-size: 13px;
+	}
+
+	.new-wallet-card-container {
+		width: 90%;
+		height: 90%;
+		padding: 1rem;
+	}
+
+	.newwallet-card-heading {
+		text-align: center;
+		font-size: 20px;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.newwallet-card-label {
+		font-size: 14px;
+		color: #959aaa;
+		margin-top: 1rem;
+	}
+
+	.agree-to-terms {
+		font-size: 8px;
+	}
+
+	.newwallet-forgot-pass {
+		font-size: 8px;
+	}
+
+	.newwallet-forgot-pass > span {
+		font-size: 8px;
+		margin-left: 0.1rem;
+		margin-right: 0.1rem;
 	}
 }
