@@ -4,35 +4,7 @@ import btcLogo from "../../../assets/btc.svg";
 import ethLogo from "../../../assets/ETH.png";
 import ltcLogo from "../../../assets/ltc.svg";
 import bchLogo from "../../../assets/bch.svg";
-
-//can also add custom className
-const headersData = [
-	{
-		title: "Date",
-		key: "date",
-		width: "15%",
-	},
-	{
-		title: "Asset",
-		key: "asset",
-		width: "15%",
-	},
-	{
-		title: "Adress",
-		key: "address",
-		width: "35%",
-	},
-	{
-		title: "Value",
-		key: "value",
-		width: "20%",
-	},
-	{
-		title: "Status",
-		key: "status",
-		width: "15%" /*change width in ActionCell as well*/,
-	},
-];
+import { useMediaQuery } from "react-responsive";
 
 const AssetCell = ({ text }) => {
 	let image = (
@@ -106,45 +78,80 @@ const TableBodyCell = ({ data, id }) => {
 };
 
 const TransactionHistoryTable = () => {
+	const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+	//can also add custom className
+	const headersData = [
+		{
+			title: "Date",
+			key: "date",
+			width: isMobile ? 120 : "15%",
+		},
+		{
+			title: "Asset",
+			key: "asset",
+			width: isMobile ? 120 : "15%",
+		},
+		{
+			title: "Adress",
+			key: "address",
+			width: isMobile ? 340 : "35%",
+		},
+		{
+			title: "Value",
+			key: "value",
+			width: isMobile ? 140 : "20%",
+		},
+		{
+			title: "Status",
+			key: "status",
+			width: "15%" /*change width in ActionCell as well*/,
+		},
+	];
+
 	return (
-		<table className="w-100 address-book-table">
-			<tr className="w-100 d-flex p-4 table-header">
-				{headersData.map((h) => (
-					<th
-						key={h.key}
-						style={{
-							width: h.width,
-						}}
-						className={`table-header-cell text-left ${h.className}`}
-					>
-						{h.title}
-					</th>
-				))}
-			</tr>
-			<div className="mr-3 table-body">
-				{data.data.map((d) => (
-					<tr className="w-100 d-flex p-4 table-row ">
-						{headersData.map((h) => {
-							return (
-								<td
-									style={{
-										width: h.width,
-									}}
-									className={`d-flex align-items-center text-left table-body-cell ${h.className}`}
-								>
-									<TableBodyCell
-										key={h.key}
-										data={d}
-										{...h}
-										id={h.key}
-									/>
-								</td>
-							);
-						})}
-					</tr>
-				))}
-			</div>
-		</table>
+		<div
+			className={`ml-sm-4 pt-sm-4 overflow-auto w-100 address-book-container`}
+		>
+			<table className="w-100 address-book-table">
+				<tr className="w-100 d-flex p-4 table-header">
+					{headersData.map((h) => (
+						<th
+							key={h.key}
+							style={{
+								width: h.width,
+							}}
+							className={`table-header-cell text-left ${h.className}`}
+						>
+							{h.title}
+						</th>
+					))}
+				</tr>
+				<div className="mr-3 table-body">
+					{data.data.map((d) => (
+						<tr className="w-100 d-flex p-4 table-row ">
+							{headersData.map((h) => {
+								return (
+									<td
+										style={{
+											width: h.width,
+										}}
+										className={`d-flex align-items-center text-left table-body-cell ${h.className}`}
+									>
+										<TableBodyCell
+											key={h.key}
+											data={d}
+											{...h}
+											id={h.key}
+										/>
+									</td>
+								);
+							})}
+						</tr>
+					))}
+				</div>
+			</table>
+		</div>
 	);
 };
 
