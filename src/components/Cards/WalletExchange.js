@@ -24,7 +24,7 @@ function WalletExchange() {
 						</p>
 						<button className="login-btn ">Create Wallet</button>
 					</div>
-					<div className="login-card-no-wallet">
+					<div className="no-wallet">
 						Already have a Wallet? <span>Log in</span>{" "}
 					</div>
 				</div>
