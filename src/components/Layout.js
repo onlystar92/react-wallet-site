@@ -64,6 +64,7 @@ function Layout({ name = "dashboard" }) {
 
 			<div className="body" onClick={() => setopen(false)}>
 				<div className="sidebar-mobile">
+					{isOpen && <div className="modal-back"></div>}
 					<SidebarMobile
 						data={data}
 						isOpen={isOpen}
@@ -102,7 +103,6 @@ function Layout({ name = "dashboard" }) {
 				{modal == 1 && <WalletModal modal={modal} setModal={setModal} />}
 				{modal == 2 && <EditModal modal={modal} setModal={setModal}/>}
 				{modal == 3 && <DeleteModal modal={modal} setModal={setModal}/>}
-
 			</div>
 		</div>
 	);

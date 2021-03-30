@@ -30,3 +30,9 @@
 	position: fixed;
 	z-index: 2;
 }
+
+.sidebar-container{
+	z-index: 9;
+	height: 120%;
+	overflow-y: auto;
+}
