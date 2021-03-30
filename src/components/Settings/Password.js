@@ -4,10 +4,10 @@ import "./styles.css";
 function PasswordRow({ label }) {
 	return (
 		<div className=" password-row-wrapper">
-			<label className="password-row-label" htmlFor="">
+			<label className="password-row-label col-lg-3" htmlFor="">
 				{label}
 			</label>{" "}
-			<input className="password-row-input" type="text" />
+			<input className="password-row-input col-lg-9" type="text" />
 		</div>
 	);
 }
@@ -19,6 +19,7 @@ function Password() {
 				<PasswordRow label="Current Password" />
 				<PasswordRow label="New Password" />
 				<PasswordRow label="Confirm Password" />
+				<div className="col-lg-3"></div>
 				<button className="mt-5 password-btn">Change</button>
 			</div>
 		</div>
