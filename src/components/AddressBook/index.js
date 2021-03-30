@@ -35,18 +35,18 @@ const AssetCell = ({ text }) => {
 	);
 };
 
-const ActionCell = () => {
+const ActionCell = ({modal, setModal}) => {
 	return (
 		<span className="d-flex action-cell">
-			<EditLogo className="action-logo" />
-			<DeleteLogo className="action-logo" />
+			<EditLogo className="action-logo" onClick={() => setModal(2)} />
+			<DeleteLogo className="action-logo" onClick={() => setModal(3)}  />
 			{/* <img src={editLogo} alt="Edit" />
       <img src={deleteLogo} alt="Delete" /> */}
 		</span>
 	);
 };
 
-const TableBodyCell = ({ data, id }) => {
+const TableBodyCell = ({ data, id, modal, setModal }) => {
 	if (id === "asset") {
 		return (
 			<div className="asset-cell">
@@ -54,12 +54,15 @@ const TableBodyCell = ({ data, id }) => {
 			</div>
 		);
 	} else if (id === "actions") {
-		return <ActionCell />;
+		return <ActionCell 
+			modal={modal} 
+			setModal={setModal} 
+		/>;
 	}
 	return <p className="mb-0">{data[id]}</p>;
 };
 
-const AddressBookTable = () => {
+const AddressBookTable = ({modal, setModal}) => {
 	const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
 	const headersData = [
@@ -120,6 +123,8 @@ const AddressBookTable = () => {
 										data={d}
 										{...h}
 										id={h.key}
+										modal={modal}
+										setModal={setModal}
 									/>
 								</td>
 							);
@@ -131,7 +136,7 @@ const AddressBookTable = () => {
 	);
 };
 
-function AddressBook() {
+function AddressBook({modal, setModal}) {
 	return (
 		<div
 			className={`ml-sm-4 pt-sm-4 overflow-auto w-100 address-book-container`}
@@ -140,7 +145,10 @@ function AddressBook() {
 				Address Book
 			</h1>
 			<div className="mt-4 overflow-auto bg-white p-3 w-100 addressBookContainer">
-				<AddressBookTable />
+				<AddressBookTable 
+					modal={modal}
+					setModal={setModal}
+				/>
 			</div>
 		</div>
 	);

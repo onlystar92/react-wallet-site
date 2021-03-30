@@ -5,7 +5,7 @@ import List from "./List";
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
 
-function Sidebar({ isOpen, setsubOpen, subOpen }) {
+function Sidebar({ isOpen, setsubOpen, subOpen, modal, setModal }) {
 	const data = useSelector(selectData);
 	return (
 		<>
@@ -37,7 +37,7 @@ function Sidebar({ isOpen, setsubOpen, subOpen }) {
 						<span className="font-weight-bold addWallet">
 							Add new wallet
 						</span>
-						<i class="far fa-plus-square ml-5 addSquare"></i>
+						<i class="far fa-plus-square ml-5 addSquare" onClick={() => setModal(1)}></i>
 					</div>
 
 					<Link to="/" className="sidebar-link">
