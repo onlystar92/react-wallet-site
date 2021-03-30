@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "./styles.css";
 import ETH from "../../../assets/ETH.svg";
 import Bdot from "../../../assets/Group 7925.svg";
@@ -14,19 +14,6 @@ function BlockElement({ back, imgURL, unit, totalAmount, realAmount }) {
 			<p className="info">{totalAmount}<span>{realAmount + " USD"}</span></p>
 		</div>
 	</div>);
-}
-
-function NumberController({dValue, step, divNum=1, suffix=""}){
-	const [cValue, setCValue] = useState(dValue);
-	return(
-		<>
-			<span className="bottom-text">{cValue/divNum + suffix}</span>
-			<span className="spinner-button">
-				<i className="fa fa-caret-up spinner-up" onClick={()=>setCValue(cValue + step)}/>
-				<i className="fa fa-caret-down spinner-down" onClick={()=>setCValue(cValue - step)}/>
-			</span>
-		</>
-	)
 }
 
 function Swap() {
@@ -49,8 +36,7 @@ function Swap() {
 							<span className="bottom-text">0.1%</span>
 							<span className="bottom-text lft-margin">0.5%</span>
 							<span className="bottom-text active lft-margin">1.0%</span>
-							{/* <span className="bottom-text lft-margin">1.0%</span> */}
-							<NumberController step={1} dValue={10} divNum={10} suffix="%" />
+							<span className="bottom-text lft-margin">1.0%</span>
 						</p>
 					</div>
 				</div>
@@ -73,8 +59,7 @@ function Swap() {
 							Transaction Deadline
 				</h3>
 						<p>
-							{/* <span className="bottom-text">20</span> */}
-							<NumberController step={1} dValue={20} divNum={1} />
+							<span className="bottom-text">20</span>
 							<span className="bottom-text lft-margin">Minutes</span>
 						</p>
 					</div>
@@ -88,8 +73,7 @@ function Swap() {
 					<span className="bottom-text">0.1%</span>
 					<span className="bottom-text lft-margin">0.5%</span>
 					<span className="bottom-text active lft-margin">1.0%</span>
-					{/* <span className="bottom-text lft-margin">1.0%</span> */}
-					<NumberController step={1} dValue={10} divNum={10} suffix="%" />
+					<span className="bottom-text lft-margin">1.0%</span>
 				</p>
 			</div>
 			<div className="mobile-bottom-info">
@@ -97,8 +81,7 @@ function Swap() {
 					Transaction Deadline
 				</h3>
 				<p>
-					{/* <span className="bottom-text">20</span> */}
-					<NumberController step={1} dValue={20} divNum={1} />
+					<span className="bottom-text">20</span>
 					<span className="bottom-text lft-margin">Minutes</span>
 				</p>
 			</div>
