@@ -9,7 +9,7 @@
 	background: #ffffff 0% 0% no-repeat padding-box;
 	box-shadow: 0px 5px 12px #f0f2f77c;
 	border-radius: 12px;
-	padding-left: 2rem;
+	padding-left:0;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	overflow: hidden;
@@ -24,18 +24,35 @@
 	font-weight: bold;
 	color: #656565;
 	font-size: 20px;
+	margin-bottom: 0;
 }
 
 .bottom-right-desc {
-	color: #1d2943;
+	margin-top: 12px;
+	font: normal normal normal 16px/32px Swis721 BT;
+	letter-spacing: 0.05px;
+	color: #1D2943;
+	opacity: 0.5;
+	padding-right: 118px;
+	line-height: 24px;
 }
 
 .bottom-left {
-	width: 200px;
 	font-weight: bold;
 	cursor: pointer;
-	font-size: 22px;
+	font-size: 18px;
 	color: #8e94a1;
+	padding-top: 20px;
+	padding-left: 39px;
+	padding-bottom: 16px;
+	width: 241px;
+	margin: 0;
+	background-color: #F7FAFF;
+	border-bottom: 1px solid #EAECF3;
+}
+
+.border-top-add{
+	border-top: 1px solid #EAECF3;
 }
 
 .input-wrapper {
@@ -59,9 +76,7 @@
 .bottom-left-active {
 	white-space: nowrap;
 	color: #1d2943;
-	border-left: 5px solid #df642b;
-	padding-left: 27px;
-	margin-left: -32px;
+	border-left: 5px solid #53A8F0;
 }
 
 .help-head {
@@ -94,7 +109,7 @@
 	border-left: 2px solid #dddfe2;
 	height: 500px;
 	margin-right: 2rem;
-	margin-left: 2rem;
+	margin-left: 0;
 }
 
 @media (max-width: 768px) {

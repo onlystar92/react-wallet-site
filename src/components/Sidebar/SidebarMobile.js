@@ -12,9 +12,8 @@ function SidebarMobile({ isOpen, setsubOpen, subOpen, setisOpen }) {
 	return (
 		<>
 			<div
-				className={`sidebar-container d-flex    text-left  ${
-					!isOpen ? "sidebar-close-mobile" : "sidebar-open-mobile"
-				}`}
+				className={`sidebar-container d-flex    text-left  ${!isOpen ? "sidebar-close-mobile" : "sidebar-open-mobile"
+					}`}
 			>
 				<div className="innerContainer">
 					<div className="d-flex align-items-center">
@@ -79,16 +78,20 @@ function SidebarMobile({ isOpen, setsubOpen, subOpen, setisOpen }) {
 						</div>
 					</Link>
 					<hr />
-					<div className="dropdown-bottom">
-						<i class="mr-2 fas fa-file-export"></i> Logout
+					<Link
+						to="/Login"
+						className="dropdown-link"
+					>
+						<div className="dropdown-bottom dropdown-link">
+							<i class="mr-2 fas fa-file-export"></i> Logout
 					</div>
+					</Link>
 				</div>
 			</div>
 
 			<div
-				className={`close-box ${
-					isOpen ? "close-box-open" : "close-box-close"
-				}`}
+				className={`close-box ${isOpen ? "close-box-open" : "close-box-close"
+					}`}
 				onClick={() => setisOpen(false)}
 			>
 				<i class="fas fa-times"></i>

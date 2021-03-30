@@ -94,10 +94,15 @@
 }
 
 .external-icon {
-	color: #5b7ada;
-	background-color: #edf0f6;
+	color: #53A8F0;
+	background-color: #e3ecf4;
+	width: 55px;
+	height: 40px;
 	padding: 1rem;
 	border-radius: 9px;
+	text-align: center;
+	font-size: 18px;
+	padding-top: 11px;
 }
 
 .password-row-wrapper {

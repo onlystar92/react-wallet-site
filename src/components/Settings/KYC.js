@@ -1,4 +1,5 @@
 import React from "react";
+import backImg from "../../assets/Icon feather-image.svg"
 import "./styles.css";
 
 function DropLocation({ head }) {
@@ -10,7 +11,7 @@ function DropLocation({ head }) {
 					: "panel-drop-location2"
 			} d-flex justify-content-center align-items-center`}
 		>
-			<i class="far fa-image gallery-icon mb-3"></i>
+			<img src={backImg}/>
 			<div className="drop-location-title mb-2">Front Side</div>
 			<button className="panel-upload-btn">Upload</button>
 		</div>

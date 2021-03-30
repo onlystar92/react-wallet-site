@@ -74,16 +74,16 @@ function BottomLeft() {
 		}
 	};
 	return (
-		<div className="bottom-left">
+		<div>
 			<div
 				onClick={() => dispatch(setHelpTab("Withdrawals"))}
-				className={`mb-5 bottom-left ${getActiveClass("Withdrawals")}`}
+				className={`bottom-left border-top-add ${getActiveClass("Withdrawals")}`}
 			>
 				Withdrawals
 			</div>
 			<div
 				onClick={() => dispatch(setHelpTab("Account Details"))}
-				className={`mb-5 bottom-left ${getActiveClass(
+				className={`bottom-left ${getActiveClass(
 					"Account Details",
 				)}`}
 			>
@@ -91,13 +91,13 @@ function BottomLeft() {
 			</div>
 			<div
 				onClick={() => dispatch(setHelpTab("Deposits"))}
-				className={`mb-5 bottom-left ${getActiveClass("Deposits")}`}
+				className={`bottom-left ${getActiveClass("Deposits")}`}
 			>
 				Deposits
 			</div>
 			<div
 				onClick={() => dispatch(setHelpTab("LaunchPool"))}
-				className={`mb-5 bottom-left ${getActiveClass("LaunchPool")}`}
+				className={`bottom-left ${getActiveClass("LaunchPool")}`}
 			>
 				LaunchPool
 			</div>

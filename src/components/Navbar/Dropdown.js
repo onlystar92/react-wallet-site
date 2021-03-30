@@ -45,9 +45,14 @@ function Dropdown({ setopen }) {
 					</div>
 				</Link>
 			</div>
-			<div className="dropdown-bottom">
-				<i class="mr-2 fas fa-file-export"></i> Logout
+			<Link
+				to="/Login"
+				className="dropdown-link"
+			>
+				<div className="dropdown-bottom dropdown-link">
+					<i class="mr-2 fas fa-file-export"></i> Logout
 			</div>
+			</Link>
 		</div>
 	);
 }
