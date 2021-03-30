@@ -7,8 +7,8 @@ function DeleteModal({ modal, setModal }) {
             <p className="delete-description">This action is irreversible.</p>
             <br/>
             <div>
-                <button className="cancel-button" onClick={() => setModal(0)}>Cancel</button>
-                <button className="delete-button" onClick={() => setModal(0)}>Delete</button>
+                <button className="cancel-button col-lg-5 col-md-10 col-sm-12" onClick={() => setModal(0)}>Cancel</button>
+                <button className="delete-button col-lg-5 col-md-10 col-sm-12" onClick={() => setModal(0)}>Delete</button>
             </div>
         </div>
     );

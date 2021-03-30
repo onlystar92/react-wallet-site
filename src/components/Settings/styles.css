@@ -94,15 +94,10 @@
 }
 
 .external-icon {
-	color: #53A8F0;
-	background-color: #e3ecf4;
-	width: 55px;
-	height: 40px;
+	color: #5b7ada;
+	background-color: #edf0f6;
 	padding: 1rem;
 	border-radius: 9px;
-	text-align: center;
-	font-size: 18px;
-	padding-top: 11px;
 }
 
 .password-row-wrapper {
@@ -119,6 +114,7 @@
 	font-weight: bold;
 	margin-right: 1rem;
 	text-align: right;
+	float:right;
 }
 
 .password-row-input {
@@ -142,7 +138,7 @@
 	padding-right: 3rem;
 	height: 55px;
 	border: none;
-	margin-left: 10rem;
+	margin-left: 15rem;
 }
 
 .profile-container {

@@ -1,35 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "./modal.css";
 import btcLogo from "../../assets/btc.svg";
 import ethLogo from "../../assets/ETH.png";
 import ltcLogo from "../../assets/ltc.svg";
 import bchLogo from "../../assets/bch.svg";
-import xmlLogo from "../../assets/xlm.svg";
+import xlmLogo from "../../assets/xlm.svg";
 
 function WalletModal({ modal, setModal }) {
+	const [search, setSearch] = useState('');
+	const assets = [
+		{ text: "Bitcoin BTC", image: btcLogo },
+		{ text: "Etherium ETH", image: ethLogo },
+		{ text: "Bitcoin Cash BCH", image: bchLogo },
+		{ text: "Chainlink LINK", image: ltcLogo },
+		{ text: "Stellar XML", image: xlmLogo },
+	];
 	return (
 		<div className="walllet-container">
-			<div>
+			<div className="wallet-header">
 				<div className="wallet-heading">Select Asset</div>
 				<button className="wallet-quit" onClick={() => setModal(0)}><i className="fa fa-times"></i></button>
 			</div>
 			<div className="head-line"></div>
-			<input className="wallet-search" type="text" placeholder="search name" />
+			<input className="wallet-search" type="text" placeholder="search name" onChange={e => setSearch(e.target.value)} />
 
-			<div className="item-list">
-				<div className="asset-item">
-					<img className="item-image" src={btcLogo} alt="" />
-					<span className="item-text">Bitcoin BTC</span>
-				</div>
-				<div className="line" />
-				<div className="asset-item"><img className="item-image" src={ethLogo} alt="" /> <span className="item-text">Etherium ETH</span></div>
-				<div className="line" />
-				<div className="asset-item"><img className="item-image" src={bchLogo} alt="" /> <span className="item-text">Bitcoin Cash BCH</span></div>
-				<div className="line" />
-				<div className="asset-item"><img className="item-image" src={ltcLogo} alt="" /> <span className="item-text">Chainlink LINK</span></div>
-				<div className="line" />
-				<div className="asset-item"><img className="item-image" src={xmlLogo} alt="" /> <span className="item-text">Stellar XML</span></div>
-
+			<div className="item-list col-1g-12">
+				{
+					assets.map((value, index) => value.text.toLowerCase().includes(search.toLowerCase()) &&
+						<div>
+							<div className="asset-item">
+								<img className="item-image" src={value.image} alt="" />
+								<span className="item-text">{value.text}</span>
+							</div>
+							<div className="line" />
+						</div>)
+				}
 			</div>
 
 		</div>
