@@ -19,7 +19,7 @@ function IndividualValues({ setsubOpen, subOpen }) {
 				></i>
 			</div>
 
-			<div className="text-left mt-3">
+			<div className="text-left outer-wrapper">
 				<div className="d-flex align-items-center">
 					<div className="wrapper"></div>
 					<span className=" font-weight-bold ml-2 text">

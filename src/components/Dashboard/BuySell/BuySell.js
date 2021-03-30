@@ -23,8 +23,7 @@ function SliderCard({ rate, color }) {
 			</div>
 
 			<div className="slider-card-value">
-				$56,902.43{" "}
-				<span style={{ color: color, fontSize: "10px" }}>{rate}</span>
+				$56,902.43 <span style={{ color: color }}>{rate}</span>
 			</div>
 		</div>
 	);
@@ -75,7 +74,7 @@ function BuySellBox({ dropdown, label, icon, sub }) {
 			<input type="radio" name="buy-sell-radio" />
 			{icon && <img className="ml-3" src={icon} alt="" />}
 			<div className="d-flex flex-column ml-3">
-				<label htmlFor="" className="mt-0  mb-0">
+				<label htmlFor="" className="mt-0  mb-0 buy-sell-label">
 					{label}
 				</label>
 				{sub && <p className=" buy-sell-sub">{sub}</p>}
@@ -110,7 +109,7 @@ function Slider() {
 
 	return (
 		<>
-			<div className="swiper-container mt-5">
+			<div className="swiper-container mt-3 mt-sm-5">
 				<Swiper
 					onSwiper={(s) => {
 						setSwiper(s);
@@ -123,7 +122,7 @@ function Slider() {
 						setIsBeginning(s.isBeginning);
 						setIsEnd(s.isEnd);
 					}}
-					spaceBetween={25}
+					spaceBetween={isMobile ? 0 : 25}
 					slidesPerView={isMobile ? 2 : 5}
 					onSlideChange={() => console.log("slide change")}
 				>
@@ -153,7 +152,7 @@ function Slider() {
 					</SwiperSlide>
 				</Swiper>
 
-				<hr className="mt-5" />
+				<hr className="mt-2 mt-sm-5" />
 			</div>
 
 			<div className="navigation-btns">
@@ -182,7 +181,7 @@ function BuySell({ tab }) {
 	return (
 		<div className="buy-sell-container">
 			<Slider />
-			<div className="mt-3 d-flex flex-column  align-items-center">
+			<div className="mt-1 mt-sm-3 d-flex flex-column  align-items-center">
 				<div className="row">
 					<div className="col-12 col-sm-4"></div>
 					<div className="col-12 col-sm-4 text-center d-flex align-items-center justify-content-center">
@@ -194,7 +193,7 @@ function BuySell({ tab }) {
 						/>
 					</div>
 
-					<span className="col-12 col-sm-4 mt-4 buy-sell-right">
+					<span className="col-12 col-sm-4 mt-2 mt-sm-4 buy-sell-right">
 						{isMobile ? (
 							<>
 								{" "}
@@ -215,7 +214,7 @@ function BuySell({ tab }) {
 					</span>
 				</div>
 
-				<div className="mt-4 font-weight-bold">
+				<div className="mt-4 font-weight-bold payment-methods">
 					{tab === "Sell" ? "I will receive in" : "Payment methods"}
 				</div>
 				<div className="mt-4 buy-sell-bottom">

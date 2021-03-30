@@ -6,6 +6,10 @@
 	z-index: 2;
 }
 
+.outer-wrapper {
+	margin-top: 11px;
+}
+
 .wrapper {
 	display: inline-block;
 	height: 51px;
@@ -19,7 +23,7 @@
 }
 
 .bottomDiv {
-	margin-top: 48px;
+	margin-top: 40px;
 	font-size: 12px;
 	min-height: 1px;
 }

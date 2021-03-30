@@ -3,6 +3,7 @@ import { selectData } from "../../slices/slice";
 import { useSelector } from "react-redux";
 import List from "./List";
 import "./Sidebar.css";
+import { Link } from "react-router-dom";
 
 function Sidebar({ isOpen, setsubOpen, subOpen }) {
 	const data = useSelector(selectData);
@@ -39,7 +40,9 @@ function Sidebar({ isOpen, setsubOpen, subOpen }) {
 						<i class="far fa-plus-square ml-5 addSquare"></i>
 					</div>
 
-					<List data={data} />
+					<Link to="/" className="sidebar-link">
+						<List data={data} />
+					</Link>
 				</div>
 			</div>
 		</>

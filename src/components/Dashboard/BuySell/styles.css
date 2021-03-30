@@ -35,6 +35,10 @@
 	margin-left: 1.8rem;
 }
 
+.slider-card-value > span {
+	font-size: 10px;
+}
+
 .custom-swiper-button {
 	line-height: 0;
 	box-shadow: 0px 4px 8px rgba(#1c84ff, 0.25);
@@ -156,7 +160,7 @@
 
 @media (max-width: 768px) {
 	.buy-sell-bottom {
-		width: 60%;
+		width: 70%;
 		flex-direction: column;
 	}
 
@@ -166,5 +170,87 @@
 
 	.buy-sell-input {
 		text-align: center;
+	}
+
+	.buy-sell-btn {
+		height: 50px;
+		width: 100%;
+		background: #53a8f0 0% 0% no-repeat padding-box;
+		border-radius: 12px;
+		font-size: 13px;
+		font-weight: bold;
+		border: none;
+		color: white;
+		margin-top: 1.5rem;
+	}
+
+	.slider-cards-span {
+		color: #1d2943;
+		font-weight: bold;
+		font-size: 11px;
+	}
+
+	.slider-cards-span {
+		color: #1d2943;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	.slider-card-value {
+		font-size: 9px;
+	}
+
+	.slider-card-value > span {
+		font-size: 7px;
+	}
+
+	.custom-swiper-button {
+		line-height: 0;
+		box-shadow: 0px 4px 8px rgba(#1c84ff, 0.25);
+		cursor: pointer;
+		min-width: 25px;
+		height: 25px;
+		font-size: calc(var(--paragraph-font) * 1.7);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 0.5rem;
+		background: #ffffff 0% 0% no-repeat padding-box;
+		border: 2px solid #f3f3f3;
+		border-radius: 10px;
+	}
+
+	.custom-swiper-button > i {
+		transform: scale(0.8);
+	}
+
+	.navigation-btns {
+		position: absolute;
+		top: 19px;
+		left: -12px;
+		z-index: 1;
+		width: 105%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.swiper-container {
+		width: 91%;
+		margin: auto;
+	}
+
+	.bottom-value {
+		font-size: 11px;
+	}
+
+	.payment-methods {
+		font-size: 11px;
+	}
+
+	.buy-sell-label {
+		font-size: 10px;
+	}
+	.buy-sell-sub {
+		font-size: 7px;
 	}
 }

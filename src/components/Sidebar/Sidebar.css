@@ -1,3 +1,11 @@
+.sidebar-link {
+	text-decoration: none;
+}
+
+.sidebar-link:hover {
+	text-decoration: none;
+}
+
 .balanceStyle {
 	color: #8e94a1;
 	font-size: 14px;
