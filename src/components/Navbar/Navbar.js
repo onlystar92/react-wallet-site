@@ -39,10 +39,10 @@ function Navbar({ setisOpen, isOpen, open, setopen }) {
 					<ul class="navbar-nav mr-auto ">
 						<li
 							class={`nav-item font-weight-bold mr-2 ${
-								path === "/" && "active"
+								path === "/exchange" && "active"
 							}`}
 						>
-							<NavLink className="nav-link" to="/">
+							<NavLink className="nav-link" to="/exchange">
 								Exchange
 							</NavLink>
 						</li>

@@ -8,7 +8,7 @@ import TransactionHistory from "./components/TransactionHistory/TransactionHisto
 import IndividualValues from "./components/IndividualValues/IndividualValues";
 import Card from "./components/Cards/CardContainer";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import Layout from "./components/Layout";
 
 function App() {
@@ -16,7 +16,11 @@ function App() {
 		<Router>
 			<div className="App">
 				<Switch>
-					<Route exact path="/">
+					<Redirect exact from="/" to="/exchange" />
+					{/* <Route exact path="/" >
+						<Redirect to="/exchange" />
+					</Route> */}
+					<Route exact path="/exchange">
 						<Layout />
 					</Route>
 					<Route path="/login">
