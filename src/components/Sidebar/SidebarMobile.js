@@ -2,9 +2,10 @@ import React from "react";
 import { selectData, setSettingsTab } from "../../slices/slice";
 import { useDispatch, useSelector } from "react-redux";
 import List from "./List";
-import Rectangle from "../../assets/Rectangle 337.svg";
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
+
+const Rectangle = "https://eu.ui-avatars.com/api/?name=Adam+Sydanus&background=edf6fd&color=53A8F0&font-size=0.33&bold=true&size=56";
 
 function SidebarMobile({ isOpen, setsubOpen, subOpen, setisOpen }) {
 	const data = useSelector(selectData);
@@ -19,7 +20,7 @@ function SidebarMobile({ isOpen, setsubOpen, subOpen, setisOpen }) {
 					<div className="d-flex align-items-center">
 						<img
 							width="50px"
-							className="mr-3"
+							className="mr-3 profile-img-avatar"
 							src={Rectangle}
 							alt=""
 						/>

@@ -154,3 +154,7 @@
 		display: block;
 	}
 }
+
+.profile-img-avatar {
+	border-radius: 15px;
+}

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Logo from "../../assets/2local logo wht.svg";
 import Toggler from "../../assets/Group 7942.svg";
-import Profile from "../../assets/Rectangle 337.svg";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import NavigatorMobile from "./NavigatorMobile";
+
+const Profile = "https://eu.ui-avatars.com/api/?name=Adam+Sydanus&background=edf6fd&color=53A8F0&font-size=0.33&bold=true&size=56";
 
 function Navbar({ setisOpen, isOpen, open, setopen }) {
 	const path = typeof window !== undefined && window.location.pathname;
@@ -90,7 +91,7 @@ function Navbar({ setisOpen, isOpen, open, setopen }) {
 							Connect Wallet
 						</button>
 						<div className=" profile-right">
-							<img className="mr-4 " src={Profile} alt="" />
+							<img className="mr-4 profile-img-avatar" src= {Profile} alt="" />
 							<span className="m-0 mb-1 font-weight-bold profile">
 								Adam Sydanus{" "}
 							</span>

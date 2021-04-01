@@ -235,3 +235,7 @@
 
 	animation-fill-mode: forwards;
 }
+
+.profile-img-avatar {
+	border-radius: 15px;
+}
