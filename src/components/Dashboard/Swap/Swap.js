@@ -49,7 +49,7 @@ function Swap() {
 						<h3 className="bottom-header">
 							Slippage Tolerane
 				</h3>
-						<p>
+						<p  className="slip-bottom">
 							<span className="bottom-text">0.1%</span>
 							<span className="bottom-text lft-margin">0.5%</span>
 							<span className="bottom-text active lft-margin">1.0%</span>
@@ -78,7 +78,7 @@ function Swap() {
 						<h3 className="bottom-header">
 							Transaction Deadline
 				</h3>
-						<p>
+						<p  className="slip-bottom">
 							{/* <span className="bottom-text">20</span> */}
 							<NumberController step={1} dValue={20} divNum={1} />
 							<span className="bottom-text lft-margin">Minutes</span>
@@ -90,7 +90,7 @@ function Swap() {
 				<h3 className="bottom-header">
 					Slippage Tolerane
 				</h3>
-				<p>
+				<p  className="slip-bottom">
 					<span className="bottom-text">0.1%</span>
 					<span className="bottom-text lft-margin">0.5%</span>
 					<span className="bottom-text active lft-margin">1.0%</span>
