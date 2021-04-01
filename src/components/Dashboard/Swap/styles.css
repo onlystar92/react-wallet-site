@@ -122,6 +122,15 @@ span.lft-margin{
 	margin-top: 20px;
 }
 
+.swap-modal-container{
+    top: 95px;
+    left: 0px;
+    width: 100vw;
+    height: 96vh;
+    position: fixed;
+    z-index: 2;
+}
+
 .right-side-btn{
 	float: right;
 	width: 38px;

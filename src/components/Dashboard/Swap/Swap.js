@@ -2,13 +2,14 @@ import React, {useState} from "react";
 import "./styles.css";
 import ETH from "../../../assets/ETH.svg";
 import Bdot from "../../../assets/Group 7925.svg";
+import WalletModal from "../../Modal/WalletModal";
 
-function BlockElement({ back, imgURL, unit, totalAmount, realAmount }) {
+function BlockElement({ back, imgURL, unit, totalAmount, realAmount, modal, setModal }) {
 	return (<div className="block" style={{ background: back }}>
 		<div className="inner-container">
 			<img className="container-img" src={imgURL} />
 			<h2 className="inner-title">{unit}</h2>
-			<button className="right-side-btn">
+			<button className="right-side-btn" onClick={() => setModal(1)} >
 				<i className="fas fa-caret-down" />
 			</button>
 			<p className="info">{totalAmount}<span>{realAmount + " USD"}</span></p>
@@ -16,20 +17,21 @@ function BlockElement({ back, imgURL, unit, totalAmount, realAmount }) {
 	</div>);
 }
 
-function NumberController({dValue, step, divNum=1, suffix=""}){
+function NumberController({ dValue, step, divNum = 1, suffix = "" }) {
 	const [cValue, setCValue] = useState(dValue);
 	return(
 		<>
-			<span className="bottom-text">{cValue/divNum + suffix}</span>
+			<span className="bottom-text">{cValue / divNum + suffix}</span>
 			<span className="spinner-button">
-				<i className="fa fa-caret-up spinner-up" onClick={()=>setCValue(cValue + step)}/>
-				<i className="fa fa-caret-down spinner-down" onClick={()=>setCValue(cValue - step)}/>
+				<i className="fa fa-caret-up spinner-up" onClick={() => setCValue(cValue + step)} />
+				<i className="fa fa-caret-down spinner-down" onClick={() => setCValue(cValue - step)} />
 			</span>
 		</>
 	)
 }
 
 function Swap() {
+	const [modal, setModal] = useState(0);
 	return (
 		<div className="swaping-container">
 			<div className="flex-container">
@@ -40,6 +42,8 @@ function Swap() {
 						unit="ETH"
 						totalAmount="4ETH"
 						realAmount="5849.20"
+						modal={modal}
+						setModal={setModal}
 					/>
 					<div className="web-bottom-info">
 						<h3 className="bottom-header">
@@ -67,6 +71,8 @@ function Swap() {
 						unit="BTC"
 						totalAmount="0.12BTC"
 						realAmount="5690.17"
+						modal={modal}
+						setModal={setModal}
 					/>
 					<div className="web-bottom-info">
 						<h3 className="bottom-header">
@@ -102,6 +108,8 @@ function Swap() {
 					<span className="bottom-text lft-margin">Minutes</span>
 				</p>
 			</div>
+			{modal != 0 && <div className="modal-back"></div>}
+			{modal == 1 && <div className="swap-modal-container"><WalletModal modal={modal} setModal={setModal} /></div>}
 			<div className='change-line' />
 			<button className="swap-button">Swap</button>
 		</div>
