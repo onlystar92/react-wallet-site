@@ -90,6 +90,7 @@
 	letter-spacing: 0.04px;
 	color: #1D2943;
 	opacity: 0.5;
+	cursor: pointer;
 }
 span.active{
 	background: #53A8F0 0% 0% no-repeat padding-box;
@@ -130,6 +131,8 @@ span.lft-margin{
     position: fixed;
     z-index: 2;
 }
+
+
 
 .right-side-btn{
 	float: right;

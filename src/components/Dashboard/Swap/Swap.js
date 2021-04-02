@@ -3,6 +3,7 @@ import "./styles.css";
 import ETH from "../../../assets/ETH.svg";
 import Bdot from "../../../assets/Group 7925.svg";
 import WalletModal from "../../Modal/WalletModal";
+import { setSidebarActive } from "../../../slices/slice";
 
 function BlockElement({ back, imgURL, unit, totalAmount, realAmount, modal, setModal }) {
 	return (<div className="block" style={{ background: back }}>
@@ -18,10 +19,12 @@ function BlockElement({ back, imgURL, unit, totalAmount, realAmount, modal, setM
 }
 
 function NumberController({ dValue, step, divNum = 1, suffix = "" }) {
-	const [cValue, setCValue] = useState(dValue);
+	console.log("dValue",dValue);
+	const [cValue, setCValue] = useState(0);
+	// setCValue(dValue);
 	return(
 		<>
-			<span className="bottom-text">{cValue / divNum + suffix}</span>
+			<span className="bottom-text">{dValue / divNum + suffix}</span>
 			<span className="spinner-button">
 				<i className="fa fa-caret-up spinner-up" onClick={() => setCValue(cValue + step)} />
 				<i className="fa fa-caret-down spinner-down" onClick={() => setCValue(cValue - step)} />
@@ -32,6 +35,8 @@ function NumberController({ dValue, step, divNum = 1, suffix = "" }) {
 
 function Swap() {
 	const [modal, setModal] = useState(0);
+	const [slipageStatus, setSlipageStatus] = useState(1);
+	
 	return (
 		<div className="swaping-container">
 			<div className="flex-container">
@@ -50,11 +55,11 @@ function Swap() {
 							Slippage Tolerane
 				</h3>
 						<p  className="slip-bottom">
-							<span className="bottom-text">0.1%</span>
-							<span className="bottom-text lft-margin">0.5%</span>
-							<span className="bottom-text active lft-margin">1.0%</span>
-							{/* <span className="bottom-text lft-margin">1.0%</span> */}
-							<NumberController step={1} dValue={10} divNum={10} suffix="%" />
+							<span className={"bottom-text " + (slipageStatus == 1 ? 'active' : '')} onClick={() => { setSlipageStatus(1) }} >0.1%</span>
+							<span className={"bottom-text lft-margin " + (slipageStatus == 5? 'active' : '')} onClick={() => { setSlipageStatus(5) }}>0.5%</span>
+							<span className={"bottom-text lft-margin " + (slipageStatus == 10 ? 'active' : '')} onClick={() => { setSlipageStatus(10) }}>1.0%</span>
+							{/* <span className="bottom-text lft-margin">1.0%</span>	 */}
+							<NumberController step={1} dValue={ slipageStatus } divNum={10} suffix="%" />
 						</p>
 					</div>
 				</div>
@@ -91,7 +96,7 @@ function Swap() {
 					Slippage Tolerane
 				</h3>
 				<p  className="slip-bottom">
-					<span className="bottom-text">0.1%</span>
+					<span className="bottom-text" >0.1%</span>
 					<span className="bottom-text lft-margin">0.5%</span>
 					<span className="bottom-text active lft-margin">1.0%</span>
 					{/* <span className="bottom-text lft-margin">1.0%</span> */}
