@@ -40,7 +40,7 @@ function Sidebar({ isOpen, setsubOpen, subOpen, modal, setModal }) {
 						<i class="far fa-plus-square ml-5 addSquare" onClick={() => setModal(4)}></i>
 					</div>
 
-					<Link to="/" className="sidebar-link">
+					<Link to="/exchange" className="sidebar-link">
 						<List data={data} />
 					</Link>
 				</div>
