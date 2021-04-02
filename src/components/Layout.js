@@ -17,6 +17,7 @@ import SidebarMobile from "./Sidebar/SidebarMobile";
 
 import WalletModal from "./Modal/WalletModal";
 import EditModal from "./Modal/EditModal";
+import AddressModal from "./Modal/AddressModal";
 import DeleteModal from "./Modal/DeleteModal";
 
 function Layout({ name = "dashboard" }) {
@@ -103,6 +104,7 @@ function Layout({ name = "dashboard" }) {
 				{modal == 1 && <WalletModal modal={modal} setModal={setModal} />}
 				{modal == 2 && <EditModal modal={modal} setModal={setModal}/>}
 				{modal == 3 && <DeleteModal modal={modal} setModal={setModal}/>}
+				{modal == 4 && <AddressModal modal={modal} setModal={setModal}/>}
 			</div>
 		</div>
 	);

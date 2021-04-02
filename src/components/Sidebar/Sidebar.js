@@ -37,7 +37,7 @@ function Sidebar({ isOpen, setsubOpen, subOpen, modal, setModal }) {
 						<span className="font-weight-bold addWallet">
 							Add new wallet
 						</span>
-						<i class="far fa-plus-square ml-5 addSquare"></i>
+						<i class="far fa-plus-square ml-5 addSquare" onClick={() => setModal(4)}></i>
 					</div>
 
 					<Link to="/" className="sidebar-link">
