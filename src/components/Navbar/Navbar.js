@@ -8,7 +8,7 @@ import NavigatorMobile from "./NavigatorMobile";
 
 const Profile = "https://eu.ui-avatars.com/api/?name=Adam+Sydanus&background=edf6fd&color=53A8F0&font-size=0.33&bold=true&size=56";
 
-function Navbar({ setisOpen, isOpen, open, setopen }) {
+function Navbar({ setisOpen, isOpen, open, setopen, modal, setModal }) {
 	const path = typeof window !== undefined && window.location.pathname;
 
 	console.log("history", window.location.pathname);
@@ -87,7 +87,7 @@ function Navbar({ setisOpen, isOpen, open, setopen }) {
 
 				<div className="d-flex align-items-center nav-right">
 					<div className="text-left mx-xs-3 d-flex">
-						<button className="mr-sm-4 connect-wallet-btn">
+						<button className="mr-sm-4 connect-wallet-btn" onClick={() => setModal(5)}>
 							Connect Wallet
 						</button>
 						<div className=" profile-right">

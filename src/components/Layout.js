@@ -16,6 +16,7 @@ import "./Layout.css";
 import SidebarMobile from "./Sidebar/SidebarMobile";
 
 import WalletModal from "./Modal/WalletModal";
+import ConnectModal from "./Modal/ConnectModal";
 import EditModal from "./Modal/EditModal";
 import AddressModal from "./Modal/AddressModal";
 import DeleteModal from "./Modal/DeleteModal";
@@ -61,6 +62,8 @@ function Layout({ name = "dashboard" }) {
 				isOpen={isOpen}
 				open={open}
 				setopen={setopen}
+				modal={modal}
+				setModal={setModal}
 			/>
 
 			<div className="body" onClick={() => setopen(false)}>
@@ -105,6 +108,7 @@ function Layout({ name = "dashboard" }) {
 				{modal == 2 && <EditModal modal={modal} setModal={setModal}/>}
 				{modal == 3 && <DeleteModal modal={modal} setModal={setModal}/>}
 				{modal == 4 && <AddressModal modal={modal} setModal={setModal}/>}
+				{modal == 5 && <ConnectModal modal={modal} setModal={setModal}/>}
 			</div>
 		</div>
 	);
